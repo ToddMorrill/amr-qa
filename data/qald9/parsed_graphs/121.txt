@@ -1,0 +1,7 @@
+# ::snt Which poet wrote the most books?
+(w / write-01
+      :ARG0 (a / amr-unknown
+            :mod (p / poet))
+      :ARG1 (b / book
+            :ARG1-of (h / have-quant-91
+                  :ARG3 (m / most))))

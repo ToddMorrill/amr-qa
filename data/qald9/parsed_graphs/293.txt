@@ -1,0 +1,7 @@
+# ::snt How high is the lighthouse in Colombo?
+(h / high
+      :degree (a / amr-unknown)
+      :domain (l / lighthouse
+            :location (c / city
+                  :name (n / name
+                        :op1 "Colombo"))))

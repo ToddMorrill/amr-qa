@@ -1,0 +1,11 @@
+# ::snt Who is the current federal minister of finance in Germany?
+(p / person
+      :ARG0-of (h / have-org-role-91
+            :ARG1 (c / country
+                  :name (n / name
+                        :op1 "Germany"))
+            :ARG2 (m / minister
+                  :topic (f / finance)
+                  :mod (f2 / federal))
+            :time (c2 / current))
+      :domain (a / amr-unknown))

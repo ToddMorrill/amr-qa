@@ -1,0 +1,11 @@
+# ::snt Is Michelle Obama the wife of Barack Obama?
+(h / have-rel-role-91
+      :ARG0 (p / person
+            :name (n / name
+                  :op1 "Michelle"))
+      :ARG1 (p2 / person
+            :name (n2 / name
+                  :op1 "Barack"
+                  :op2 "Obama"))
+      :ARG2 (w / wife)
+      :polarity (a / amr-unknown))

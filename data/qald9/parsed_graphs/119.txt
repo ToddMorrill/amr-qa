@@ -1,0 +1,14 @@
+# ::snt What other books have been written by the author of The Fault in Our Stars?
+(w / write-01
+      :ARG0 (p / person
+            :ARG0-of (a / author-01
+                  :ARG1 (b / book
+                        :name (n / name
+                              :op1 "The"
+                              :op2 "Fault"
+                              :op3 "in"
+                              :op4 "Our"
+                              :op5 "Stars"))))
+      :ARG1 (b2 / book
+            :mod (o / other)
+            :mod (a2 / amr-unknown)))

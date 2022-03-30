@@ -1,0 +1,8 @@
+# ::snt What country is Mount Everest in?
+(b / be-located-at-91
+      :ARG1 (m / mountain
+            :name (n / name
+                  :op1 "Mount"
+                  :op2 "Everest"))
+      :ARG2 (c / country
+            :mod (a / amr-unknown)))

@@ -1,0 +1,10 @@
+# ::snt What is the timezone in San Pedro de Atacama?
+(z / zone
+      :mod (t / time)
+      :location (c / city
+            :name (n / name
+                  :op1 "San"
+                  :op2 "Pedro"
+                  :op3 "de"
+                  :op4 "Atacama"))
+      :domain (a / amr-unknown))

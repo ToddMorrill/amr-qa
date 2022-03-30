@@ -1,0 +1,7 @@
+# ::snt how much is the elevation of Düsseldorf Airport ?
+(e / elevate-01
+      :ARG1 (a / airport
+            :name (n / name
+                  :op1 "Düsseldorf"
+                  :op2 "Airport"))
+      :ARG2 (a2 / amr-unknown))

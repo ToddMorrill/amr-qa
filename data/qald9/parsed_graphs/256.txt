@@ -1,0 +1,8 @@
+# ::snt How many theories did Albert Einstein come up with?
+(c / come-up-11
+      :ARG0 (p / person
+            :name (n / name
+                  :op1 "Albert"
+                  :op2 "Einstein"))
+      :ARG1 (t / theory
+            :quant (a / amr-unknown)))

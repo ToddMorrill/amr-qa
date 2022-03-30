@@ -1,0 +1,15 @@
+# ::snt What was Brazil's lowest rank in the FIFA World Ranking?
+(r / rank-01
+      :ARG2 (a / amr-unknown)
+      :ARG5 (c / country
+            :name (n / name
+                  :op1 "Brazil"))
+      :ARG1-of (h / have-degree-91
+            :ARG2 (l / low-04
+                  :ARG1 r)
+            :ARG3 (m / most)
+            :ARG5 r
+            :ARG0 (o / organization
+                  :name (n2 / name
+                        :op1 "FIFA"))
+            :ARG2 (w / world)))

@@ -1,0 +1,9 @@
+# ::snt In which state Penn State University is located?
+(b / be-located-at-91
+      :ARG1 (u / university
+            :name (n / name
+                  :op1 "Penn"
+                  :op2 "State"
+                  :op3 "University"))
+      :ARG2 (s / state
+            :mod (a / amr-unknown)))

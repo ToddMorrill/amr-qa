@@ -1,0 +1,7 @@
+# ::snt Who writes the Farmers' Almanac?
+(w / write-01
+      :ARG0 (a / amr-unknown)
+      :ARG1 (p / publication
+            :name (n / name
+                  :op1 "Farmers'"
+                  :op2 "Almanac")))

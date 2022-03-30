@@ -1,0 +1,9 @@
+# ::snt how big is the total area of North Rhine- Westphalia?
+(b / big
+      :degree (a / amr-unknown)
+      :domain (a2 / area
+            :ARG2-of (t / total-01)
+            :part-of (c / country
+                  :name (n / name
+                        :op1 "North"
+                        :op2 "Rhine-Westphalia"))))

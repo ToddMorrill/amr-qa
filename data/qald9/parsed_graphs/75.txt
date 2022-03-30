@@ -1,0 +1,6 @@
+# ::snt Who is the owner of Rolls-Royce?
+(o / own-01
+      :ARG0 (a / amr-unknown)
+      :ARG1 (c / car-make
+            :name (n / name
+                  :op1 "Rolls-Royce")))

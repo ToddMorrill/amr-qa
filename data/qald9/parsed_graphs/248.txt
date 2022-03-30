@@ -1,0 +1,7 @@
+# ::snt How many Aldi stores are there?
+(s / store
+      :location (t / there)
+      :mod (c / company
+            :name (n / name
+                  :op1 "Aldi"))
+      :quant (a / amr-unknown))

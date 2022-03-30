@@ -1,0 +1,10 @@
+# ::snt Which Greek parties are pro-European?
+(f / favor-01
+      :ARG0 (p / political-party
+            :mod (c / country
+                  :name (n / name
+                        :op1 "Greece"))
+            :mod (a / amr-unknown))
+      :ARG1 (c2 / continent
+            :name (n2 / name
+                  :op1 "Europe")))

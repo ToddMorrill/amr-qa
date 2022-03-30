@@ -1,0 +1,6 @@
+# ::snt Where was JFK assassinated?
+(a / assassinate-01
+      :ARG1 (p / person
+            :name (n / name
+                  :op1 "JFK"))
+      :location (a2 / amr-unknown))

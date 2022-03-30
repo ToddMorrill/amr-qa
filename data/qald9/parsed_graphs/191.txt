@@ -1,0 +1,6 @@
+# ::snt Who discovered Ceres?
+(d / discover-01
+      :ARG0 (a / amr-unknown)
+      :ARG1 (p / planet
+            :name (n / name
+                  :op1 "Ceres")))

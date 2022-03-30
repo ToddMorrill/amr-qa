@@ -1,0 +1,7 @@
+# ::snt How many states are in Mexico?
+(b / be-located-at-91
+      :ARG1 (s / state
+            :quant (a / amr-unknown))
+      :ARG2 (c / country
+            :name (n / name
+                  :op1 "Mexico")))

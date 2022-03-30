@@ -1,0 +1,9 @@
+# ::snt Was Marc Chagall a jew?
+(r / religious-group
+      :polarity (a / amr-unknown)
+      :name (n / name
+            :op1 "Jew")
+      :domain (p / person
+            :name (n2 / name
+                  :op1 "Marc"
+                  :op2 "Chagall")))

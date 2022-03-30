@@ -1,0 +1,9 @@
+# ::snt Which holidays are celebrated around the world? test2
+(m / multi-sentence
+      :snt1 (c / celebrate-01
+            :ARG1 (h / holiday
+                  :mod (a / amr-unknown))
+            :location (a2 / around
+                  :op1 (w / world)))
+      :snt2 (t / test-01
+            :mod 2))

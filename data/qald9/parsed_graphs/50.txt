@@ -1,0 +1,8 @@
+# ::snt How many films did Hal Roach produce?
+(p / produce-01
+      :ARG0 (p2 / person
+            :name (n / name
+                  :op1 "Hal"
+                  :op2 "Roach"))
+      :ARG1 (f / film
+            :quant (a / amr-unknown)))

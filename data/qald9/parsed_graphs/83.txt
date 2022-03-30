@@ -1,0 +1,5 @@
+# ::snt How much carbs does peanut butter have?
+(h / have-03
+      :ARG0 (p / peanut)
+      :ARG1 (c / carbohydrate
+            :quant (a / amr-unknown)))

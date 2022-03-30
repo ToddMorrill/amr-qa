@@ -1,0 +1,7 @@
+# ::snt How much did Pulp Fiction cost?
+(c / cost-01
+      :ARG1 (w / work-of-art
+            :name (n / name
+                  :op1 "Pulp"
+                  :op2 "Fiction"))
+      :ARG2 (a / amr-unknown))

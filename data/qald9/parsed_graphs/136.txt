@@ -1,0 +1,17 @@
+# ::snt Show me all songs from Bruce Springsteen released between 1980 and 1990.
+(s / show-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (s2 / song
+            :mod (a / all)
+            :ARG1-of (r / release-01
+                  :ARG0 (p / person
+                        :name (n / name
+                              :op1 "Bruce"
+                              :op2 "Springsteen"))
+                  :time (d / date-interval
+                        :op1 (d2 / date-entity
+                              :year 1980)
+                        :op2 (d3 / date-entity
+                              :year 1990))))
+      :ARG2 (ii / i))

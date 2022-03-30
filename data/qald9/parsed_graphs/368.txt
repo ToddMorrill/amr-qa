@@ -1,0 +1,16 @@
+# ::snt Which subsidiary of Lufthansa serves both Dortmund and Berlin Tegel?
+(s / serve-02
+      :ARG0 (s2 / subsidiary
+            :poss (c / company
+                  :name (n / name
+                        :op1 "Lufthansa"))
+            :mod (a / amr-unknown))
+      :ARG2 (a2 / and
+            :op1 (c2 / city
+                  :name (n2 / name
+                        :op1 "Dortmund"))
+            :op2 (c3 / city
+                  :name (n3 / name
+                        :op1 "Berlin"
+                        :op2 "Tegel"))
+            :mod (b / both)))

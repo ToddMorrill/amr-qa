@@ -1,0 +1,14 @@
+# ::snt Give me all video games published by Mean Hamster Software.
+(g / give-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (g2 / game
+            :mod (v / video)
+            :ARG1-of (p / publish-01
+                  :ARG0 (c / company
+                        :name (n / name
+                              :op1 "Mean"
+                              :op2 "Hamster"
+                              :op3 "Software")))
+            :mod (a / all))
+      :ARG2 (ii / i))

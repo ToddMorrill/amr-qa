@@ -1,0 +1,10 @@
+# ::snt List all boardgames by GMT.
+(l / list-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (g / game
+            :mod (b / board)
+            :mod (a / all))
+      :time (b2 / by
+            :op1 (d / date-entity
+                  :time "GMT")))

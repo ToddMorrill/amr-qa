@@ -1,0 +1,8 @@
+# ::snt Which types of grapes grow in Oregon?
+(g / grow-03
+      :ARG1 (g2 / grape
+            :mod (t / type
+                  :mod (a / amr-unknown)))
+      :location (s / state
+            :name (n / name
+                  :op1 "Oregon")))

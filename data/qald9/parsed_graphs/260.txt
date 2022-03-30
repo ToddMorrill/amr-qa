@@ -1,0 +1,8 @@
+# ::snt Which electronics companies were founded in Beijing?
+(f / found-01
+      :ARG1 (c / company
+            :mod (e / electronics)
+            :mod (a / amr-unknown))
+      :location (c2 / city
+            :name (n / name
+                  :op1 "Beijing")))

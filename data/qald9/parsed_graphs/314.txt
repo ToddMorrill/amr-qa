@@ -1,0 +1,7 @@
+# ::snt How many pages does War and Peace have?
+(h / have-03
+      :ARG0 (a / and
+            :op1 (w / war)
+            :op2 (p / peace))
+      :ARG1 (p2 / page
+            :quant (a2 / amr-unknown)))

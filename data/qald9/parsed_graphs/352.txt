@@ -1,0 +1,9 @@
+# ::snt What is the bridge with the longest span?
+(b / bridge
+      :domain (a / amr-unknown)
+      :ARG0-of (h / have-03
+            :ARG1 (s / span
+                  :ARG1-of (h2 / have-degree-91
+                        :ARG2 (l / long-03
+                              :ARG1 s)
+                        :ARG3 (m / most)))))

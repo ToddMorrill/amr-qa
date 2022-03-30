@@ -1,0 +1,4 @@
+# ::snt How many programming languages are there?
+(l / language
+      :ARG3-of (p / program-01)
+      :quant (a / amr-unknown))

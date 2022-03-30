@@ -1,0 +1,9 @@
+# ::snt In which ancient empire could you pay with cocoa beans?
+(p / possible-01
+      :ARG1 (p2 / pay-01
+            :ARG0 (y / you)
+            :ARG1 (b / bean
+                  :source (c / cocoa))
+            :location (e / empire
+                  :mod (a / ancient)
+                  :domain (a2 / amr-unknown))))

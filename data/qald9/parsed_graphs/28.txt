@@ -1,0 +1,7 @@
+# ::snt How deep is Lake Placid?
+(d / deep-02
+      :ARG1 (l / lake
+            :name (n / name
+                  :op1 "Lake"
+                  :op2 "Placid"))
+      :ARG2 (a / amr-unknown))

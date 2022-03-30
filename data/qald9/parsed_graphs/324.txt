@@ -1,0 +1,7 @@
+# ::snt How much did the Lego Movie cost?
+(c / cost-01
+      :ARG1 (m / movie
+            :name (n / name
+                  :op1 "Legible"
+                  :op2 "Movie"))
+      :ARG2 (a / amr-unknown))

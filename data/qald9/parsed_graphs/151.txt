@@ -1,0 +1,8 @@
+# ::snt What is the birth name of Angela Merkel?
+(n / name-01
+      :ARG1 (p / person
+            :name (n2 / name
+                  :op1 "Angela"
+                  :op2 "Merkel")
+            :ARG1-of (b / bear-02))
+      :ARG2 (a / amr-unknown))

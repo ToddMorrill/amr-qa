@@ -1,0 +1,9 @@
+# ::snt Show me Hemingway's autobiography.
+(s / show-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (a / autobiography
+            :poss (p / person
+                  :name (n / name
+                        :op1 "Hemingway")))
+      :ARG2 (ii / i))

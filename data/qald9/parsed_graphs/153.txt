@@ -1,0 +1,11 @@
+# ::snt Which weapons did Heckler & Koch develop?
+(d / develop-02
+      :ARG0 (a / and
+            :op1 (p / person
+                  :name (n / name
+                        :op1 "Heckler"))
+            :op2 (p2 / person
+                  :name (n2 / name
+                        :op1 "Koch")))
+      :ARG1 (w / weapon
+            :mod (a2 / amr-unknown)))

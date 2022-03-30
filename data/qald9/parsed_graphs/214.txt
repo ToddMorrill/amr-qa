@@ -1,0 +1,6 @@
+# ::snt Are tree frogs a type of amphibian?
+(a / amphibian
+      :mod (t / type)
+      :domain (f / frog
+            :mod (t2 / tree))
+      :polarity (a2 / amr-unknown))

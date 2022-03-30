@@ -1,0 +1,9 @@
+# ::snt Which U.S. states possess gold minerals?
+(p / possess-01
+      :ARG0 (s / state
+            :mod (c / country
+                  :name (n / name
+                        :op1 "U.S."))
+            :mod (a / amr-unknown))
+      :ARG1 (m / mineral
+            :mod (g / gold)))

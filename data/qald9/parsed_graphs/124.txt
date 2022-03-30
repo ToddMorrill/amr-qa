@@ -1,0 +1,10 @@
+# ::snt Which films starring Clint Eastwood did he direct himself?
+(d / direct-01
+      :ARG0 (h / he)
+      :ARG1 (f / film
+            :ARG2-of (s / star-01
+                  :ARG1 (p / person
+                        :name (n / name
+                              :op1 "Clint"
+                              :op2 "Eastwood")))
+            :mod (a / amr-unknown)))

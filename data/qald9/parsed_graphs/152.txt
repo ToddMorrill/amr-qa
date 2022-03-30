@@ -1,0 +1,7 @@
+# ::snt Who has Tom Cruise been married to?
+(m / marry-01
+      :ARG1 (p / person
+            :name (n / name
+                  :op1 "Tom"
+                  :op2 "Cruise"))
+      :ARG2 (a / amr-unknown))

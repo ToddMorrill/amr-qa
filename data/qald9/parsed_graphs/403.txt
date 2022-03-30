@@ -1,0 +1,11 @@
+# ::snt Which museum in New York has the most visitors?
+(h / have-03
+      :ARG0 (m / museum
+            :location (c / city
+                  :name (n / name
+                        :op1 "New"
+                        :op2 "York"))
+            :mod (a / amr-unknown))
+      :ARG1 (p / person
+            :ARG0-of (v / visit-01)
+            :quant (m2 / most)))

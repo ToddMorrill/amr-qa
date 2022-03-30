@@ -1,0 +1,10 @@
+# ::snt Show me all museums in London.
+(s / show-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (m / museum
+            :mod (a / all)
+            :location (c / city
+                  :name (n / name
+                        :op1 "London")))
+      :ARG2 (ii / i))

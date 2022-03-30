@@ -1,0 +1,11 @@
+# ::snt For which label did Elvis record his first album?
+(r / record-01
+      :ARG0 (p / person
+            :name (n / name
+                  :op1 "Elvis"))
+      :ARG1 (a / album
+            :ord (o / ordinal-entity
+                  :value 1)
+            :poss p)
+      :purpose (l / label-01
+            :ARG2 (a2 / amr-unknown)))

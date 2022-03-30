@@ -1,0 +1,9 @@
+# ::snt Which television shows were created by John Cleese?
+(c / create-01
+      :ARG0 (p / person
+            :name (n / name
+                  :op1 "John"
+                  :op2 "Cleese"))
+      :ARG1 (s / show-04
+            :ARG3 (t / television)
+            :mod (a / amr-unknown)))

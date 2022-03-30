@@ -1,0 +1,8 @@
+# ::snt When was the Statue of Liberty built?
+(b / build-01
+      :ARG1 (s / statue
+            :name (n / name
+                  :op1 "Statue"
+                  :op2 "of"
+                  :op3 "Liberty"))
+      :time (a / amr-unknown))

@@ -1,0 +1,7 @@
+# ::snt How many people live in Poland?
+(l / live-01
+      :ARG0 (p / person
+            :quant (a / amr-unknown))
+      :location (c / country
+            :name (n / name
+                  :op1 "Poland")))

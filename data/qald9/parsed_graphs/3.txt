@@ -1,0 +1,7 @@
+# ::snt Which people were born in Heraklion?
+(b / bear-02
+      :ARG1 (a / amr-unknown
+            :mod (p / person))
+      :location (c / city
+            :name (n / name
+                  :op1 "Heraklion")))

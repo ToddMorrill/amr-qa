@@ -1,0 +1,10 @@
+# ::snt Where did the architect of the Eiffel Tower study?
+(s / study-01
+      :ARG0 (p / person
+            :ARG0-of (h / have-org-role-91
+                  :ARG1 (b / building
+                        :name (n / name
+                              :op1 "Eiffel"
+                              :op2 "Tower"))
+                  :ARG2 (a / architect)))
+      :location (a2 / amr-unknown))

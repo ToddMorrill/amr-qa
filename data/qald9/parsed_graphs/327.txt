@@ -1,0 +1,6 @@
+# ::snt Which city has the least inhabitants?
+(ii / inhabit-01
+      :ARG0 (a / amr-unknown)
+      :ARG1 (c / city
+            :mod a)
+      :quant (l / least))

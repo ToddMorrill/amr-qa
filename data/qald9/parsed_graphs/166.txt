@@ -1,0 +1,14 @@
+# ::snt Is Egypts largest city also its capital?
+(h / have-org-role-91
+      :ARG0 (c / city
+            :ARG1-of (h2 / have-degree-91
+                  :ARG2 (l / large)
+                  :ARG3 (m / most)
+                  :ARG5 (c2 / city
+                        :location (c3 / country
+                              :name (n / name
+                                    :op1 "Egypt")))))
+      :ARG1 c3
+      :ARG2 (c4 / capital)
+      :polarity (a / amr-unknown)
+      :mod (a2 / also))

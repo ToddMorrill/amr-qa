@@ -1,0 +1,7 @@
+# ::snt Which spaceflights were launched from Baikonur?
+(l / launch-01
+      :ARG1 (s / spaceship
+            :mod (a / amr-unknown))
+      :source (f / facility
+            :name (n / name
+                  :op1 "Baikonur")))

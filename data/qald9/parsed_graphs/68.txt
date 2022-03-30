@@ -1,0 +1,15 @@
+# ::snt Give me all world heritage sites designated within the past two years.
+(g / give-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (s / site
+            :mod (h / heritage
+                  :mod (w / world))
+            :mod (a / all)
+            :ARG1-of (d / designate-01
+                  :time (b / before
+                        :op1 (n / now)
+                        :quant (t / temporal-quantity
+                              :quant 2
+                              :unit (y2 / year)))))
+      :ARG2 (ii / i))

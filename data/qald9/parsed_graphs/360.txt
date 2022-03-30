@@ -1,0 +1,7 @@
+# ::snt Who created Family Guy?
+(c / create-01
+      :ARG0 (a / amr-unknown)
+      :ARG1 (b / broadcast-program
+            :name (n / name
+                  :op1 "Family"
+                  :op2 "Guy")))

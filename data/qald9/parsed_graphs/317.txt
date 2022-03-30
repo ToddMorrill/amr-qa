@@ -1,0 +1,6 @@
+# ::snt What does IYCM stand for?
+(s / stand-08
+      :ARG0 (o / organization
+            :name (n / name
+                  :op1 "IYCM"))
+      :ARG1 (a / amr-unknown))

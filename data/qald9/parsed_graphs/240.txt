@@ -1,0 +1,7 @@
+# ::snt Where is the origin of Carolina reaper?
+(o / originate-01
+      :ARG1 (p / person
+            :name (n / name
+                  :op1 "Carolina"
+                  :op2 "Reaper"))
+      :ARG2 (a / amr-unknown))

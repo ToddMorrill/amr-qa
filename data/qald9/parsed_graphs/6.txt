@@ -1,0 +1,8 @@
+# ::snt Which countries have places with more than two caves?
+(h / have-03
+      :ARG0 (c / country
+            :mod (a / amr-unknown))
+      :ARG1 (p / place
+            :location-of (c2 / cave
+                  :quant (m / more-than
+                        :op1 2))))

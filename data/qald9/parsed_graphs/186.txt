@@ -1,0 +1,11 @@
+# ::snt Who is the heaviest player of the Chicago Bulls?
+(h / have-degree-91
+      :ARG1 (a / amr-unknown)
+      :ARG2 (h2 / heavy)
+      :ARG3 (m / most)
+      :ARG5 (p / person
+            :ARG0-of (p2 / play-01)
+            :part-of (t / team
+                  :name (n / name
+                        :op1 "Chicago"
+                        :op2 "Bulls"))))

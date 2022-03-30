@@ -1,0 +1,8 @@
+# ::snt Which instruments does Cat Stevens play?
+(p / play-11
+      :ARG0 (p2 / person
+            :name (n / name
+                  :op1 "Cat"
+                  :op2 "Stevens"))
+      :ARG2 (ii / instrument
+            :mod (a / amr-unknown)))

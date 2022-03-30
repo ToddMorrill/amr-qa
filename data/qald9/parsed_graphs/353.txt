@@ -1,0 +1,7 @@
+# ::snt Is there a video game called Battle Chess?
+(g / game
+      :name (n / name
+            :op1 "Battle"
+            :op2 "Chess")
+      :polarity (a / amr-unknown)
+      :mod (v / video))

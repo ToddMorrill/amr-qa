@@ -1,0 +1,10 @@
+# ::snt Who is 8th president of US?
+(p / person
+      :ARG0-of (h / have-org-role-91
+            :ARG1 (c / country
+                  :name (n / name
+                        :op1 "US"))
+            :ARG2 (p2 / president
+                  :ord (o / ordinal-entity
+                        :value 8)))
+      :domain (a / amr-unknown))

@@ -1,0 +1,8 @@
+# ::snt Who was the doctoral supervisor of Albert Einstein?
+(s / supervise-01
+      :ARG0 (a / amr-unknown)
+      :ARG1 (p / person
+            :name (n / name
+                  :op1 "Albert"
+                  :op2 "Einstein"))
+      :mod (d / doctoral))

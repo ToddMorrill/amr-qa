@@ -1,0 +1,7 @@
+# ::snt How often did Jane Fonda marry?
+(m / marry-01
+      :ARG1 (p / person
+            :name (n / name
+                  :op1 "Jane"
+                  :op2 "Fonda"))
+      :frequency (a / amr-unknown))

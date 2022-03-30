@@ -1,0 +1,11 @@
+# ::snt In which UK city are the headquarters of the MI6?
+(b / be-located-at-91
+      :ARG1 (h / headquarters
+            :poss (g / government-organization
+                  :name (n / name
+                        :op1 "MI6")))
+      :ARG2 (c / city
+            :location (a / amr-unknown
+                  :mod (c2 / country
+                        :name (n2 / name
+                              :op1 "UK")))))

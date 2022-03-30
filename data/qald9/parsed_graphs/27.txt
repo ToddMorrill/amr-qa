@@ -1,0 +1,9 @@
+# ::snt Who is the daughter of Ingrid Bergman married to?
+(h / have-rel-role-91
+      :ARG0 (a / amr-unknown)
+      :ARG1 (p / person
+            :name (n / name
+                  :op1 "Ingrid"
+                  :op2 "Bergman")
+            :ARG1-of (m / marry-01))
+      :ARG2 (d / daughter))

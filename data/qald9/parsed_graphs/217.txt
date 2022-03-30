@@ -1,0 +1,6 @@
+# ::snt How much is the population of mexico city ?
+(p / populate-01
+      :ARG1 (c / city
+            :name (n / name
+                  :op1 "Mexico"))
+      :ARG2 (a / amr-unknown))

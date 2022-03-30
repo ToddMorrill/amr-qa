@@ -1,0 +1,14 @@
+# ::snt Give me all writers that won the Nobel Prize in literature.
+(g / give-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (p / person
+            :ARG0-of (w / write-01)
+            :mod (a / all)
+            :ARG0-of (w2 / win-01
+                  :ARG1 (a2 / award
+                        :name (n / name
+                              :op1 "Nobel"
+                              :op2 "Prize")
+                        :mod (l / literature))))
+      :ARG2 (ii / i))

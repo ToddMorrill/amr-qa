@@ -1,0 +1,10 @@
+# ::snt What is the highest place of the Urals?
+(h / have-degree-91
+      :ARG1 (p / place
+            :poss (r / river
+                  :name (n / name
+                        :op1 "Urals"))
+            :location (a / amr-unknown))
+      :ARG2 (h2 / high-02
+            :ARG1 p)
+      :ARG3 (m / most))

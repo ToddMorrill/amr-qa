@@ -1,0 +1,8 @@
+# ::snt What is Donald Trump's main business?
+(b / business
+      :mod (m / main)
+      :poss (p / person
+            :name (n / name
+                  :op1 "Donald"
+                  :op2 "Trump"))
+      :domain (a / amr-unknown))

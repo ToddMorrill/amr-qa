@@ -1,0 +1,11 @@
+# ::snt Give me all Australian metalcore bands.
+(g / give-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (b / band
+            :mod (m / metalcore)
+            :mod (c / country
+                  :name (n / name
+                        :op1 "Australia"))
+            :mod (a / all))
+      :ARG2 (ii / i))

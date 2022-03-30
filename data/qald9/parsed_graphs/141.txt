@@ -1,0 +1,13 @@
+# ::snt Give me the birthdays of all actors of the television show Charmed.
+(g / give-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (b / birthday
+            :poss (p / person
+                  :ARG0-of (a / act-01
+                        :ARG1 (s / show
+                              :name (n / name
+                                    :op1 "Charmed")
+                              :medium (t / television)))
+                  :mod (a2 / all)))
+      :ARG2 (ii / i))

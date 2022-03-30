@@ -1,0 +1,13 @@
+# ::snt In which city was the former Dutch queen Juliana buried?
+(b / bury-01
+      :ARG1 (p / person
+            :name (n / name
+                  :op1 "Juliana")
+            :ARG0-of (h / have-org-role-91
+                  :ARG1 (c / country
+                        :name (n2 / name
+                              :op1 "Netherlands"))
+                  :ARG2 (q / queen)
+                  :time (f / former)))
+      :location (c2 / city
+            :mod (a / amr-unknown)))

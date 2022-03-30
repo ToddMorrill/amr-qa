@@ -1,0 +1,10 @@
+# ::snt In which U.S. state is Area 51 located?
+(l / locate-01
+      :ARG1 (a / area
+            :name (n / name
+                  :op1 "Area"
+                  :op2 51))
+      :location (s / state
+            :part-of (c / country
+                  :name (n2 / name
+                        :op1 "U.S."))))

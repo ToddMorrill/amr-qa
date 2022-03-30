@@ -1,0 +1,8 @@
+# ::snt Who is the editor of Forbes?
+(p / person
+      :ARG0-of (h / have-org-role-91
+            :ARG1 (m / magazine
+                  :name (n / name
+                        :op1 "Forbes"))
+            :ARG2 (e / editor))
+      :domain (a / amr-unknown))

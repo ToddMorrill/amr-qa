@@ -1,0 +1,17 @@
+# ::snt Give me all films produced by Steven Spielberg with a budget of at least $80 million.
+(g / give-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (f / film
+            :ARG1-of (p / produce-01
+                  :ARG0 (p2 / person
+                        :name (n / name
+                              :op1 "Steven"
+                              :op2 "Spielberg")))
+            :ARG1-of (b / budget-01
+                  :ARG2 (a / at-least
+                        :op1 (m / monetary-quantity
+                              :quant 80000000
+                              :unit (d / dollar))))
+            :mod (a2 / all))
+      :ARG2 (ii / i))

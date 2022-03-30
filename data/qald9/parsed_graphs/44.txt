@@ -1,0 +1,9 @@
+# ::snt What kind of music did Lou Reed play?
+(p / play-11
+      :ARG0 (p2 / person
+            :name (n / name
+                  :op1 "Lou"
+                  :op2 "Reed"))
+      :ARG1 (m / music
+            :mod (k / kind
+                  :mod (a / amr-unknown))))

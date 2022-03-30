@@ -1,0 +1,8 @@
+# ::snt What is the location of the Houses of Parliament?
+(b / be-located-at-91
+      :ARG1 (g / government-organization
+            :name (n / name
+                  :op1 "Houses"
+                  :op2 "of"
+                  :op3 "Parliament"))
+      :ARG2 (a / amr-unknown))

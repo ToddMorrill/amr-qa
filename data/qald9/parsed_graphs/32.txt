@@ -1,0 +1,12 @@
+# ::snt What are the top-10 action role-playing video games according to IGN?
+(s / say-01
+      :ARG0 (p / publication
+            :name (n / name
+                  :op1 "IGN"))
+      :ARG1 (g / game
+            :quant 10
+            :mod (a / action)
+            :mod (r / role-play)
+            :mod (v / video)
+            :mod (t / top)
+            :domain (a2 / amr-unknown)))

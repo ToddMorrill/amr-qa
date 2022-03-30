@@ -1,0 +1,9 @@
+# ::snt When did Latvia join the EU?
+(j / join-01
+      :ARG0 (c / country
+            :name (n / name
+                  :op1 "Latvia"))
+      :ARG1 (o / organization
+            :name (n2 / name
+                  :op1 "EU"))
+      :time (a / amr-unknown))

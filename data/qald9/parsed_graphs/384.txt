@@ -1,0 +1,13 @@
+# ::snt Which movies starring Mickey Rourke were directed by Guy Ritchie?
+(d / direct-01
+      :ARG0 (p / person
+            :name (n / name
+                  :op1 "Guy"
+                  :op2 "Ritchie"))
+      :ARG1 (m / movie
+            :mod (a / amr-unknown)
+            :ARG2-of (s / star-01
+                  :ARG1 (p2 / person
+                        :name (n2 / name
+                              :op1 "Mickey"
+                              :op2 "Rourke")))))

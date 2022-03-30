@@ -1,0 +1,7 @@
+# ::snt Which states border Illinois?
+(b / border-01
+      :ARG1 (s / state
+            :name (n / name
+                  :op1 "Illinois"))
+      :ARG2 (s2 / state
+            :mod (a / amr-unknown)))

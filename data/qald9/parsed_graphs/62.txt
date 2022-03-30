@@ -1,0 +1,7 @@
+# ::snt Which companies have more than 1 million employees?
+(c / company
+      :polarity (a / amr-unknown)
+      :ARG0-of (e / employ-01
+            :ARG1 (p / person
+                  :quant (m / more-than
+                        :op1 1000000))))

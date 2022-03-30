@@ -1,0 +1,6 @@
+# ::snt Where is Sungkyunkwan University?
+(u / university
+      :name (n / name
+            :op1 "Sungkyunkwan"
+            :op2 "University")
+      :location (a / amr-unknown))

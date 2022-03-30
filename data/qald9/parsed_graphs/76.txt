@@ -1,0 +1,7 @@
+# ::snt How many museums does Paris have?
+(h / have-03
+      :ARG0 (c / city
+            :name (n / name
+                  :op1 "Paris"))
+      :ARG1 (m / museum
+            :quant (a / amr-unknown)))

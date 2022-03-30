@@ -1,0 +1,7 @@
+# ::snt Who are the developers of DBpedia?
+(p / person
+      :ARG0-of (d / develop-02
+            :ARG1 (p2 / publication
+                  :name (n / name
+                        :op1 "DBpedia")))
+      :domain (a / amr-unknown))

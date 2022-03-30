@@ -1,0 +1,8 @@
+# ::snt Which countries have more than two official languages?
+(h / have-03
+      :ARG0 (c / country
+            :mod (a / amr-unknown))
+      :ARG1 (l / language
+            :mod (o / official)
+            :quant (m / more-than
+                  :op1 2)))

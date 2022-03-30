@@ -1,0 +1,10 @@
+# ::snt Who was the first King of England?
+(p / person
+      :ARG0-of (h / have-org-role-91
+            :ARG1 (c / country
+                  :name (n / name
+                        :op1 "England"))
+            :ARG2 (k / king))
+      :ord (o / ordinal-entity
+            :value 1)
+      :domain (a / amr-unknown))

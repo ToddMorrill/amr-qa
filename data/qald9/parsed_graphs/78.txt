@@ -1,0 +1,13 @@
+# ::snt Give me all federal chancellors of Germany.
+(g / give-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (p / person
+            :ARG0-of (h / have-org-role-91
+                  :ARG1 (c / country
+                        :name (n / name
+                              :op1 "Germany"))
+                  :ARG2 (c2 / chancellor
+                        :mod (f / federal)))
+            :mod (a / all))
+      :ARG2 (ii / i))

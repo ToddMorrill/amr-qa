@@ -1,0 +1,6 @@
+# ::snt Who created Goofy?
+(c / create-01
+      :ARG0 (a / amr-unknown)
+      :ARG1 (a2 / animal
+            :name (n / name
+                  :op1 "Goofy")))

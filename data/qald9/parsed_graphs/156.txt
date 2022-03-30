@@ -1,0 +1,11 @@
+# ::snt How heavy is Jupiter's lightest moon?
+(h / have-degree-91
+      :ARG1 (m / moon
+            :poss (p / planet
+                  :name (n / name
+                        :op1 "Jupiter"))
+            :mod (h2 / heavy
+                  :degree (a / amr-unknown)))
+      :ARG2 (l / light-07
+            :ARG1 m)
+      :ARG3 (m2 / most))

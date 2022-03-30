@@ -1,0 +1,15 @@
+# ::snt Give me all actors starring in movies directed by William Shatner.
+(g / give-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (p / person
+            :ARG0-of (a / act-01)
+            :ARG0-of (s / star-01
+                  :ARG1 (m / movie
+                        :ARG1-of (d / direct-01
+                              :ARG0 (p2 / person
+                                    :name (n / name
+                                          :op1 "William"
+                                          :op2 "Shatner")))))
+            :mod (a2 / all))
+      :ARG2 (ii / i))

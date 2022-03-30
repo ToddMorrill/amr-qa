@@ -1,0 +1,7 @@
+# ::snt In which country does the Ganges start?
+(s / start-01
+      :ARG1 (r / river
+            :name (n / name
+                  :op1 "Ganges"))
+      :location (c / country
+            :mod (a / amr-unknown)))

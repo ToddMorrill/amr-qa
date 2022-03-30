@@ -1,0 +1,10 @@
+# ::snt Does Neymar play for Real Madrid?
+(p / play-01
+      :ARG0 (p2 / person
+            :name (n / name
+                  :op1 "Neymar"))
+      :ARG3 (t / team
+            :name (n2 / name
+                  :op1 "Real"
+                  :op2 "Madrid"))
+      :polarity (a / amr-unknown))

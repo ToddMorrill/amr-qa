@@ -1,0 +1,5 @@
+# ::snt Which species does an elephant belong?
+(b / belong-01
+      :ARG0 (e / elephant)
+      :ARG1 (s / species
+            :mod (a / amr-unknown)))

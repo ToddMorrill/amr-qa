@@ -1,0 +1,3 @@
+# ::snt How many airlines are there?
+(a / airline
+      :quant (a2 / amr-unknown))

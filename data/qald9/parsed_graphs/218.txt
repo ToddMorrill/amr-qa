@@ -1,0 +1,10 @@
+# ::snt when was the founding date of french fifth republic?
+(d / date
+      :time-of (f / found-01
+            :ARG1 (r / republic
+                  :ord (o / ordinal-entity
+                        :value 5)
+                  :location (c / country
+                        :name (n / name
+                              :op1 "France"))))
+      :time (a / amr-unknown))

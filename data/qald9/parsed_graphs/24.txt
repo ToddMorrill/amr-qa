@@ -1,0 +1,13 @@
+# ::snt Give me a list of all trumpet players that were bandleaders.
+(g / give-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (t / thing
+            :ARG2-of (l / list-01
+                  :ARG1 (p / person
+                        :ARG0-of (p2 / play-11
+                              :ARG2 (t2 / trumpet))
+                        :mod (a / all)
+                        :ARG0-of (l2 / lead-02
+                              :ARG1 (b / band)))))
+      :ARG2 (ii / i))

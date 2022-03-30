@@ -1,0 +1,14 @@
+# ::snt Which movies star both Liz Taylor and Richard Burton?
+(s / star-01
+      :ARG1 (a / and
+            :op1 (p / person
+                  :name (n / name
+                        :op1 "Liz"
+                        :op2 "Taylor"))
+            :op2 (p2 / person
+                  :name (n2 / name
+                        :op1 "Richard"
+                        :op2 "Burton"))
+            :mod (b / both))
+      :ARG2 (m / movie
+            :mod (a2 / amr-unknown)))

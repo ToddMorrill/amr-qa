@@ -1,0 +1,7 @@
+# ::snt Which bridges cross the Seine?
+(c / cross-02
+      :ARG0 (b / bridge
+            :mod (a / amr-unknown))
+      :ARG1 (r / river
+            :name (n / name
+                  :op1 "Seine")))

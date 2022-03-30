@@ -1,0 +1,7 @@
+# ::snt What is the largest country in the world?
+(h / have-degree-91
+      :ARG1 (c / country
+            :domain (a / amr-unknown))
+      :ARG2 (l / large)
+      :ARG3 (m / most)
+      :ARG5 (w / world))
