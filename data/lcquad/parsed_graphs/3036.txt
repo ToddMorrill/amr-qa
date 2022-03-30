@@ -1,0 +1,9 @@
+# ::snt Bridge that starts at Seberang Perai crosses over what?
+(c / cross-02
+      :ARG0 (b / bridge
+            :ARG1-of (s / start-01
+                  :location (r / river
+                        :name (n / name
+                              :op1 "Seberang"
+                              :op2 "Perai"))))
+      :ARG1 (a / amr-unknown))

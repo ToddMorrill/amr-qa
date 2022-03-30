@@ -1,0 +1,10 @@
+# ::snt Is Mona Lisa in the Louvre museum?
+(b / be-located-at-91
+      :ARG1 (p / person
+            :name (n / name
+                  :op1 "Mona"
+                  :op2 "Lisa"))
+      :ARG2 (m / museum
+            :name (n2 / name
+                  :op1 "Louvre"))
+      :polarity (a / amr-unknown))

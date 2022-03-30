@@ -1,0 +1,18 @@
+# ::snt List the total number of executive producer of TV show which have one of the executiive producer as Steven Moffat ?
+(l / list-01
+      :ARG1 (n / number
+            :quant-of (p / person
+                  :ARG0-of (p2 / produce-01
+                        :ARG1 (s / show
+                              :medium (t / television)
+                              :ARG0-of (h / have-03
+                                    :ARG1 (p3 / person
+                                          :name (n2 / name
+                                                :op1 "Steven"
+                                                :op2 "Moffat")
+                                          :ARG1-of (ii / include-91
+                                                :ARG2 (p4 / person
+                                                      :ARG0-of (p5 / produce-01)
+                                                      :ARG0-of (e / execute-02)))))))
+                  :ARG0-of e)
+            :ARG2-of (t2 / total-01)))

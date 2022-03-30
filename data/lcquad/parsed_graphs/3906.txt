@@ -1,0 +1,11 @@
+# ::snt Does the Toyota Verossa have the front engine design platform?
+(h / have-03
+      :ARG0 (c / car-make
+            :name (n / name
+                  :op1 "Toyota"
+                  :op2 "Verossa"))
+      :ARG1 (p / platform
+            :mod (d / design-01
+                  :ARG1 (e / engine
+                        :mod (f / front))))
+      :polarity (a / amr-unknown))

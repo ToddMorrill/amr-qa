@@ -1,0 +1,8 @@
+# ::snt How many albums were released under the Victor Entertainment label?
+(r / release-01
+      :ARG1 (a / album
+            :quant (a2 / amr-unknown))
+      :prep-under (l / label
+            :name (n / name
+                  :op1 "Victory"
+                  :op2 "Entertainment")))

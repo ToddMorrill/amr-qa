@@ -1,0 +1,13 @@
+# ::snt Is Judy Garland a character of End of the Rainbow?
+(c / character
+      :polarity (a / amr-unknown)
+      :domain (p / person
+            :name (n / name
+                  :op1 "Judy"
+                  :op2 "Garland"))
+      :poss (w / work-of-art
+            :name (n2 / name
+                  :op1 "End"
+                  :op2 "of"
+                  :op3 "the"
+                  :op4 "Rainbow")))

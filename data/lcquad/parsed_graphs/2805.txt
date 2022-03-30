@@ -1,0 +1,9 @@
+# ::snt Who is on the board of Kate Spade and company?
+(b / board-01
+      :ARG0 (a / amr-unknown)
+      :ARG1 (a2 / and
+            :op1 (p / person
+                  :name (n / name
+                        :op1 "Kate"
+                        :op2 "Spade"))
+            :op2 (c / company)))

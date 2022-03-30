@@ -1,9 +1,7 @@
-# ::snt Which holidays are celebrated around the world? test2
-(m / multi-sentence
-      :snt1 (c / celebrate-01
-            :ARG1 (h / holiday
-                  :mod (a / amr-unknown))
-            :location (a2 / around
-                  :op1 (w / world)))
-      :snt2 (t / test-01
-            :mod 2))
+# ::snt Who is the mayor of Rotterdam?
+(m / mayor
+      :ARG2-of (h / have-org-role-91
+            :ARG0 (a / amr-unknown)
+            :ARG1 (c / city
+                  :name (n / name
+                        :op1 "Rutterdam"))))

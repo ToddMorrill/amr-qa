@@ -1,0 +1,18 @@
+# ::snt Which river's mouth is located in Gulf of Mexico and has source location as Itasca State Park ?
+(r / river
+      :part (m / mouth)
+      :location (g / gulf
+            :name (n / name
+                  :op1 "Gulf"
+                  :op2 "of"
+                  :op3 "Mexico"))
+      :ARG0-of (h / have-03
+            :ARG1 (l / location
+                  :ARG2-of (s / source-01
+                        :ARG1 r)
+                  :ARG1-of (r2 / resemble-01
+                        :ARG2 (p / park
+                              :name (n2 / name
+                                    :op1 "Itasca"
+                                    :op2 "State"
+                                    :op3 "Park"))))))

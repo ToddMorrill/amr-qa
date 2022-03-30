@@ -1,0 +1,13 @@
+# ::snt What is the common award won by geoffrey Rush and Laemmle Theatres ?
+(a / award-01
+      :ARG0 (a2 / and
+            :op1 (p / person
+                  :name (n / name
+                        :op1 "Geoffrey"
+                        :op2 "Rush"))
+            :op2 (t / theater
+                  :name (n2 / name
+                        :op1 "Laemmle"
+                        :op2 "Theatres")))
+      :ARG1 (a3 / amr-unknown)
+      :mod (c / common))

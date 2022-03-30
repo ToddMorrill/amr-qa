@@ -1,0 +1,6 @@
+# ::snt In which country is the Duong river?
+(r / river
+      :name (n / name
+            :op1 "Duong")
+      :location (c / country
+            :mod (a / amr-unknown)))

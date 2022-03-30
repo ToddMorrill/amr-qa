@@ -1,0 +1,10 @@
+# ::snt What is the resting place of the politician who succeeded Samuel Hayes?
+(p / place
+      :location-of (r / rest-01
+            :ARG1 (p2 / politician
+                  :ARG0-of (s / succeed-02
+                        :ARG1 (p3 / person
+                              :name (n / name
+                                    :op1 "Samuel"
+                                    :op2 "Hayes")))))
+      :domain (a / amr-unknown))

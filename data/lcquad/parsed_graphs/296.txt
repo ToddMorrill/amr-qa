@@ -1,0 +1,12 @@
+# ::snt Was Duanne Allman known to play the Les Paul?
+(k / know-01
+      :ARG1 (p / play-02
+            :ARG0 (p2 / person
+                  :name (n / name
+                        :op1 "Duanne"
+                        :op2 "Allman"))
+            :ARG1 (m / music-key
+                  :name (n2 / name
+                        :op1 "Les"
+                        :op2 "Paul")))
+      :polarity (a / amr-unknown))

@@ -1,6 +1,8 @@
-# ::snt Where is Sungkyunkwan University?
-(u / university
-      :name (n / name
-            :op1 "Sungkyunkwan"
-            :op2 "University")
-      :location (a / amr-unknown))
+# ::snt What is the last work of Dan Brown?
+(w / work-01
+      :ARG0 (p / person
+            :name (n / name
+                  :op1 "Dan"
+                  :op2 "Brown"))
+      :ARG1 (a / amr-unknown)
+      :mod (l / last))

@@ -1,0 +1,13 @@
+# ::snt Through which states does the road go, which has a junction on Keningston Maryland?
+(g / go-02
+      :ARG0 (r / road
+            :ARG0-of (h / have-03
+                  :ARG1 (j / junction
+                        :location (c / city
+                              :name (n / name
+                                    :op1 "Keningston")
+                              :location (s / state
+                                    :name (n2 / name
+                                          :op1 "Maryland"))))))
+      :ARG1 (s2 / state
+            :mod (a / amr-unknown)))

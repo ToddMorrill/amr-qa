@@ -1,0 +1,7 @@
+# ::snt What are some cars similar to luxury cars?
+(r / resemble-01
+      :ARG1 (c / car
+            :quant (s / some))
+      :ARG2 (c2 / car
+            :mod (l / luxury))
+      :polarity (a / amr-unknown))

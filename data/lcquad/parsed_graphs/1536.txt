@@ -1,0 +1,9 @@
+# ::snt Who all are buried in Arlington national cementary?
+(b / bury-01
+      :ARG1 (a / amr-unknown
+            :mod (a2 / all))
+      :location (f / facility
+            :name (n / name
+                  :op1 "Arlington"
+                  :op2 "National"
+                  :op3 "Cementary")))

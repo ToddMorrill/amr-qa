@@ -1,0 +1,19 @@
+# ::snt What is the common governing body of the Naval Air Facility Adak and Oahu Railway and Land Company?
+(b / body
+      :ARG0-of (g / govern-01
+            :ARG1 (a / and
+                  :op1 (f / facility
+                        :name (n / name
+                              :op1 "Naval"
+                              :op2 "Air"
+                              :op3 "Facility"
+                              :op4 "Adak"))
+                  :op2 (c / company
+                        :name (n2 / name
+                              :op1 "Oahu"
+                              :op2 "Railway"
+                              :op3 "and"
+                              :op4 "Land"
+                              :op5 "Company"))))
+      :mod (c2 / common)
+      :domain (a2 / amr-unknown))

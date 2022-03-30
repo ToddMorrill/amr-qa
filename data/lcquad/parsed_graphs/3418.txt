@@ -1,0 +1,7 @@
+# ::snt What are some short story kind of Books?
+(b / book
+      :mod (k / kind
+            :mod (s / story
+                  :ARG1-of (s2 / short-07)))
+      :mod (a / amr-unknown)
+      :mod (s3 / some))

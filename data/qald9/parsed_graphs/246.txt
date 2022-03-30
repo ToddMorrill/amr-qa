@@ -1,8 +1,7 @@
-# ::snt Which university did Angela Merkel attend?
-(a / attend-01
-      :ARG0 (p / person
+# ::snt Which cities does the Weser flow through?
+(f / flow-01
+      :ARG1 (r / river
             :name (n / name
-                  :op1 "Angela"
-                  :op2 "Merkel"))
-      :ARG1 (u / university
-            :mod (a2 / amr-unknown)))
+                  :op1 "Weser"))
+      :path (c / city
+            :mod (a / amr-unknown)))

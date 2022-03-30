@@ -1,0 +1,12 @@
+# ::snt Which show's theme music composer's label is MapleMusic Recordings?
+(l / label-01
+      :ARG1 (c / company
+            :name (n / name
+                  :op1 "MapleMusic"
+                  :op2 "Recordings"))
+      :ARG2 (p / person
+            :ARG0-of (c2 / compose-02
+                  :ARG1 (m / music
+                        :mod (t / theme)
+                        :poss (s / show-04
+                              :mod (a / amr-unknown))))))

@@ -1,0 +1,21 @@
+# ::snt Name the basketball player who played for Phoenix Suns and Los Angeles Clippers was his draft team?
+(n / name-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (p / person
+            :ARG0-of (p2 / play-01
+                  :ARG1 (b / basketball))
+            :ARG0-of (h / have-org-role-91
+                  :ARG1 (a / and
+                        :op1 (t / team
+                              :name (n2 / name
+                                    :op1 "Phoenix"
+                                    :op2 "Suns"))
+                        :op2 (t2 / team
+                              :name (n3 / name
+                                    :op1 "Los"
+                                    :op2 "Angeles"
+                                    :op3 "Clippers"))))
+            :domain (t3 / team
+                  :ARG1-of (d / draft-01)
+                  :poss p)))

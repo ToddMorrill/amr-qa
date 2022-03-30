@@ -1,0 +1,19 @@
+# ::snt Which band had the members of The Conglomerate, and has made 'Before I let you go'?
+(b / band
+      :polarity (a / amr-unknown)
+      :ARG0-of (h / have-03
+            :ARG1 (p / person
+                  :ARG0-of (h2 / have-org-role-91
+                        :ARG1 (o / organization
+                              :name (n / name
+                                    :op1 "The"
+                                    :op2 "Conglomerate"))
+                        :ARG2 (m / member))))
+      :ARG0-of (m2 / make-01
+            :ARG1 (t / thing
+                  :ARG1-of (s / say-01
+                        :time (b2 / before
+                              :op1 (l / let-01
+                                    :ARG0 (ii / i)
+                                    :ARG1 (g / go-02
+                                          :ARG0 (y / you))))))))

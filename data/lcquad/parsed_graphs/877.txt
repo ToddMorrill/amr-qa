@@ -1,0 +1,9 @@
+# ::snt Count all the things licensed as Software as a service.
+(c / count-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (t / thing
+            :mod (a / all)
+            :ARG1-of (l / license-01
+                  :ARG2 (s / software
+                        :prep-as (s2 / service)))))

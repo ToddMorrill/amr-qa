@@ -1,0 +1,8 @@
+# ::snt What are some scientists who have stateless citizenship?
+(s / scientist
+      :quant (s2 / some)
+      :ARG0-of (h / have-03
+            :ARG1 (c / citizenship
+                  :mod (s3 / state
+                        :polarity -)))
+      :domain (a / amr-unknown))

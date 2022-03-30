@@ -1,9 +1,9 @@
-# ::snt Give me the currency of China.
-(g / give-01
-      :mode imperative
-      :ARG0 (y / you)
-      :ARG1 (c / currency
-            :poss (c2 / country
+# ::snt Who wrote the Game of Thrones theme?
+(w / write-01
+      :ARG0 (a / amr-unknown)
+      :ARG1 (t / theme
+            :poss (b / broadcast-program
                   :name (n / name
-                        :op1 "China")))
-      :ARG2 (ii / i))
+                        :op1 "Game"
+                        :op2 "of"
+                        :op3 "Thrones"))))

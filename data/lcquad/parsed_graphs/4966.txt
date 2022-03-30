@@ -1,0 +1,17 @@
+# ::snt Which office holder's constituency is Haight-Ashbury and has military unit as USS Kittiwake ?
+(a / and
+      :op1 (c / constituency
+            :domain (c2 / city-district
+                  :name (n / name
+                        :op1 "Haight-Ashbury"))
+            :poss (p / person
+                  :ARG0-of (h / hold-01
+                        :ARG1 (o / office))))
+      :op2 (h2 / have-03
+            :ARG0 c
+            :ARG1 (u / unit
+                  :mod (m / military)
+                  :example (s / ship
+                        :name (n2 / name
+                              :op1 "USS"
+                              :op2 "Kittiwake")))))

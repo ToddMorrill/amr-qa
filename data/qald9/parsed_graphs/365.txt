@@ -1,10 +1,7 @@
-# ::snt What is the timezone in San Pedro de Atacama?
-(z / zone
-      :mod (t / time)
-      :location (c / city
+# ::snt Who created Family Guy?
+(c / create-01
+      :ARG0 (a / amr-unknown)
+      :ARG1 (b / broadcast-program
             :name (n / name
-                  :op1 "San"
-                  :op2 "Pedro"
-                  :op3 "de"
-                  :op4 "Atacama"))
-      :domain (a / amr-unknown))
+                  :op1 "Family"
+                  :op2 "Guy")))

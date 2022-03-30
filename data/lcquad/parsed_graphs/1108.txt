@@ -1,0 +1,9 @@
+# ::snt Which source of broad creek is the Audenried tunnel located ?
+(l / locate-01
+      :ARG1 (t / tunnel
+            :name (n / name
+                  :op1 "Audenried"))
+      :location (a / amr-unknown
+            :ARG2-of (s / source-02
+                  :ARG1 (c / creek
+                        :ARG1-of (b / broad-02)))))

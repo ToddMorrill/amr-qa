@@ -1,0 +1,17 @@
+# ::snt Name the president served by a lieutenant who succeeded Bob C Riley.
+(n / name-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (p / person
+            :ARG0-of (h / have-org-role-91
+                  :ARG2 (p2 / president))
+            :ARG1-of (s / serve-01
+                  :ARG0 (p3 / person
+                        :ARG0-of (s2 / succeed-02
+                              :ARG1 (p4 / person
+                                    :name (n2 / name
+                                          :op1 "Bob"
+                                          :op2 "C."
+                                          :op3 "Riley")))
+                        :ARG0-of (h2 / have-org-role-91
+                              :ARG2 (l / lieutenant))))))

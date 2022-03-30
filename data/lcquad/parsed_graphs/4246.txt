@@ -1,0 +1,10 @@
+# ::snt How many countries surround the sea into which the Upper Neratva flow?
+(s / surround-01
+      :ARG1 (c / country
+            :quant (a / amr-unknown))
+      :ARG2 (s2 / sea
+            :ARG2-of (f / flow-01
+                  :ARG1 (t / thing
+                        :name (n / name
+                              :op1 "Upper"
+                              :op2 "Neratva")))))

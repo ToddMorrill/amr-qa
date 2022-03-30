@@ -1,0 +1,11 @@
+# ::snt What is the mascot of the military unit whose commander is Herbert Bautista ?
+(m / mascot
+      :domain (a / amr-unknown)
+      :poss (u / unit
+            :mod (m2 / military)
+            :ARG1-of (h / have-org-role-91
+                  :ARG0 (p / person
+                        :name (n / name
+                              :op1 "Herbert"
+                              :op2 "Bautista"))
+                  :ARG2 (c / commander))))

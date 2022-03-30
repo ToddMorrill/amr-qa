@@ -1,8 +1,9 @@
-# ::snt Who is the president of Eritrea?
-(p / person
-      :ARG0-of (h / have-org-role-91
-            :ARG1 (c / country
-                  :name (n / name
-                        :op1 "Eritrea"))
-            :ARG2 (p2 / president))
-      :domain (a / amr-unknown))
+# ::snt What are the five boroughs of New York?
+(h / have-mod-91
+      :ARG1 (c / city
+            :name (n / name
+                  :op1 "New"
+                  :op2 "York"))
+      :ARG2 (b / borough
+            :quant 5
+            :mod (a / amr-unknown)))

@@ -1,0 +1,9 @@
+# ::snt Which colonel consort is Dolley Madison?
+(h / have-org-role-91
+      :ARG0 (p / person
+            :name (n / name
+                  :op1 "Dolley"
+                  :op2 "Madison"))
+      :ARG2 (c / colonel)
+      :ARG3 (c2 / consort)
+      :polarity (a / amr-unknown))

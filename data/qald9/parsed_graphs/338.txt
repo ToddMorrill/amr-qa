@@ -1,5 +1,16 @@
-# ::snt Is proinsulin a protein?
-(p / protein
-      :name (n / name
-            :op1 "proinsulin")
+# ::snt Does Breaking Bad have more episodes than Game of Thrones?
+(h / have-03
+      :ARG0 (b / broadcast-program
+            :name (n / name
+                  :op1 "Breaking"
+                  :op2 "Bad"))
+      :ARG1 (e / episode
+            :ARG1-of (h2 / have-quant-91
+                  :ARG3 (m / more)
+                  :ARG4 (e2 / episode
+                        :poss (b2 / broadcast-program
+                              :name (n2 / name
+                                    :op1 "Game"
+                                    :op2 "of"
+                                    :op3 "Thrones")))))
       :polarity (a / amr-unknown))

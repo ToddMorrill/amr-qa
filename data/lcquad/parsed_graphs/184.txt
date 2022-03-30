@@ -1,0 +1,11 @@
+# ::snt For which clubs do the players of Azam F.C. play for?
+(p / play-01
+      :ARG0 (p2 / person
+            :ARG0-of (h / have-org-role-91
+                  :ARG1 (t / team
+                        :name (n / name
+                              :op1 "Azam"
+                              :op2 "F.C."))
+                  :ARG3 (m / member)))
+      :ARG2 (c / club
+            :mod (a / amr-unknown)))

@@ -1,0 +1,8 @@
+# ::snt Who are the people which ITV(TV network) has employed?
+(p / person
+      :domain (a / amr-unknown)
+      :ARG1-of (e / employ-01
+            :ARG0 (n / network
+                  :name (n2 / name
+                        :op1 "ITV")
+                  :mod (t / television))))

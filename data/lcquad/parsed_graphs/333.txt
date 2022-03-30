@@ -1,0 +1,22 @@
+# ::snt Name the mountain whose range is Sierra Nevada (U.S.) and parent mountain peak is Nevado de Toluca?
+(n / name-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (m / mountain
+            :ARG1-of (r / range-01
+                  :ARG2 (m2 / mountain
+                        :name (n2 / name
+                              :op1 "Sierra"
+                              :op2 "Nevada")
+                        :location (c / country
+                              :name (n3 / name
+                                    :op1 "U.S."))))
+            :ARG1-of (p / peak-01
+                  :ARG2 (m3 / mountain
+                        :name (n4 / name
+                              :op1 "Nevado"
+                              :op2 "de"
+                              :op3 "Toluca")
+                        :ARG0-of (h / have-rel-role-91
+                              :ARG1 m
+                              :ARG2 (p2 / parent))))))

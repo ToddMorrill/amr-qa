@@ -1,0 +1,11 @@
+# ::snt What are the political parties whose leaders have lived in the Prime Minister's House?
+(p / political-party
+      :domain (a / amr-unknown)
+      :ARG1-of (l / lead-02
+            :ARG0 (p2 / person)
+            :ARG0-of (l2 / live-01
+                  :location (h / house
+                        :poss (p3 / person
+                              :ARG0-of (h2 / have-org-role-91
+                                    :ARG2 (m / minister
+                                          :mod (p4 / prime))))))))

@@ -1,0 +1,7 @@
+# ::snt Is Guatemala a unitary state?
+(s / state
+      :polarity (a / amr-unknown)
+      :mod (u / unit)
+      :domain (c / country
+            :name (n / name
+                  :op1 "Guatemala")))

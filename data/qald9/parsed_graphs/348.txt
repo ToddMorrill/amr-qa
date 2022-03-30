@@ -1,10 +1,6 @@
-# ::snt What is the total population of Melbourne, Florida?
-(p / population
-      :quant (a / amr-unknown)
-      :ARG2-of (t / total-01)
-      :poss (c / city
+# ::snt Where was Bach born?
+(b / bear-02
+      :ARG1 (p / person
             :name (n / name
-                  :op1 "Melbourne")
-            :location (s / state
-                  :name (n2 / name
-                        :op1 "Florida"))))
+                  :op1 "Bach"))
+      :location (a / amr-unknown))

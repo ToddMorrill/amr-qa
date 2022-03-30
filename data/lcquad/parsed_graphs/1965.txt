@@ -1,0 +1,11 @@
+# ::snt Whose wife is a presenter at WWE?
+(h / have-rel-role-91
+      :ARG0 (p / person)
+      :ARG1 (p2 / person)
+      :ARG2 (w / wife)
+      :ARG3 (p3 / presenter
+            :ARG2-of (h2 / have-org-role-91
+                  :ARG1 (c / company
+                        :name (n / name
+                              :op1 "WWE"))))
+      :polarity (a / amr-unknown))

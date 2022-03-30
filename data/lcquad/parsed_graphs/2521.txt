@@ -1,0 +1,8 @@
+# ::snt Where does the publisher of Kathimerini live?
+(l / live-01
+      :ARG0 (p / person
+            :ARG0-of (p2 / publish-01
+                  :ARG1 (n / newspaper
+                        :name (n2 / name
+                              :op1 "Kathimerini"))))
+      :location (a / amr-unknown))

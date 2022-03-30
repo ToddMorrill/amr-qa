@@ -1,0 +1,8 @@
+# ::snt Martin AN/GSG-5 is a part of the building in which city?
+(h / have-part-91
+      :ARG1 (b / building
+            :location (a / amr-unknown))
+      :ARG2 (b2 / building
+            :name (n / name
+                  :op1 "Martin"
+                  :op2 "AN/GSG-5")))

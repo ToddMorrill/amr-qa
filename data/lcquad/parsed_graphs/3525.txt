@@ -1,0 +1,14 @@
+# ::snt Who is the headcoach of 2014-15 Virginia Tech Hokies men's basketball team ?
+(p / person
+      :ARG0-of (h / head-coach-01
+            :ARG1 (t / team
+                  :name (n / name
+                        :op1 "Virginia"
+                        :op2 "Tech"
+                        :op3 "Hokies")
+                  :mod (b / basketball)
+                  :time (d / date-entity
+                        :year 2014)
+                  :time (d2 / date-entity
+                        :year 2015)))
+      :domain (a / amr-unknown))

@@ -1,0 +1,7 @@
+# ::snt What are the things built by Eristoff ?
+(t / thing
+      :ARG1-of (b / build-01
+            :ARG0 (p / person
+                  :name (n / name
+                        :op1 "Eristoff")))
+      :domain (a / amr-unknown))

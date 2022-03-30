@@ -1,9 +1,9 @@
-# ::snt What is the bridge with the longest span?
-(b / bridge
-      :domain (a / amr-unknown)
-      :ARG0-of (h / have-03
-            :ARG1 (s / span
-                  :ARG1-of (h2 / have-degree-91
-                        :ARG2 (l / long-03
-                              :ARG1 s)
-                        :ARG3 (m / most)))))
+# ::snt Who is the host of the BBC Wildlife Specials?
+(p / person
+      :ARG0-of (h / host-01
+            :ARG1 (b / broadcast-program
+                  :name (n / name
+                        :op1 "BBC"
+                        :op2 "Wildlife"
+                        :op3 "Specials")))
+      :domain (a / amr-unknown))

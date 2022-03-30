@@ -1,0 +1,13 @@
+# ::snt Does the merlin express have a hub at the cibano international airport?
+(h / have-03
+      :ARG0 (c / company
+            :name (n / name
+                  :op1 "Merlin"
+                  :op2 "Express"))
+      :ARG1 (h2 / hub)
+      :location (a / airport
+            :name (n2 / name
+                  :op1 "Cibano"
+                  :op2 "International"
+                  :op3 "Airport"))
+      :polarity (a2 / amr-unknown))

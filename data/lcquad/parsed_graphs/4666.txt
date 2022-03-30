@@ -1,0 +1,11 @@
+# ::snt Did Chant Mas originate in West Africa?
+(o / originate-01
+      :ARG1 (p / person
+            :name (n / name
+                  :op1 "Chant"
+                  :op2 "Mas"))
+      :ARG2 (w / world-region
+            :name (n2 / name
+                  :op1 "West"
+                  :op2 "Africa"))
+      :polarity (a / amr-unknown))

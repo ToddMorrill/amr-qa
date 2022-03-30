@@ -1,0 +1,10 @@
+# ::snt Where did the film director of Kala Pani die?
+(d / die-01
+      :ARG1 (p / person
+            :ARG0-of (h / have-org-role-91
+                  :ARG1 (f / film
+                        :name (n / name
+                              :op1 "Kala"
+                              :op2 "Pani"))
+                  :ARG2 (d2 / director)))
+      :location (a / amr-unknown))

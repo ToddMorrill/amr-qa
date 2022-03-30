@@ -1,0 +1,14 @@
+# ::snt What is the place of death of the royalties one of whose parents was Adam Ludwik Czartoryski?
+(p / place
+      :location-of (d / die-01
+            :ARG1 (r / royalty
+                  :ARG2-of (ii / include-91
+                        :ARG1 (p2 / person
+                              :name (n / name
+                                    :op1 "Adam"
+                                    :op2 "Ludwik"
+                                    :op3 "Czartoryski")
+                              :ARG0-of (h / have-rel-role-91
+                                    :ARG1 r
+                                    :ARG2 (p3 / parent))))))
+      :ARG2 (a / amr-unknown))

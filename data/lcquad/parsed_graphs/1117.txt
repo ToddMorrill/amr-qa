@@ -1,0 +1,7 @@
+# ::snt what are some common surnames of female people?
+(s / surname
+      :mod (c / common)
+      :quant (s2 / some)
+      :poss (p / person
+            :mod (f / female))
+      :domain (a / amr-unknown))

@@ -1,8 +1,11 @@
-# ::snt Which types of grapes grow in Oregon?
-(g / grow-03
-      :ARG1 (g2 / grape
-            :mod (t / type
-                  :mod (a / amr-unknown)))
-      :location (s / state
+# ::snt Was Natalie Portman born in the United States?
+(b / bear-02
+      :ARG1 (p / person
             :name (n / name
-                  :op1 "Oregon")))
+                  :op1 "Natalie"
+                  :op2 "Portman"))
+      :location (c / country
+            :name (n2 / name
+                  :op1 "United"
+                  :op2 "States"))
+      :polarity (a / amr-unknown))

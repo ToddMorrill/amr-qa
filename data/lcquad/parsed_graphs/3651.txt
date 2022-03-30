@@ -1,0 +1,18 @@
+# ::snt What things canonized John of Damascus and and also venerated the Edwin of Northumbria ?
+(a / and
+      :op1 (c / canonize-01
+            :ARG0 (t / thing)
+            :ARG1 (p / person
+                  :name (n / name
+                        :op1 "John"
+                        :op2 "of"
+                        :op3 "Damascus")))
+      :op2 (v / venerate-01
+            :ARG0 t
+            :ARG1 (p2 / person
+                  :name (n2 / name
+                        :op1 "Edwin"
+                        :op2 "of"
+                        :op3 "Northumbria"))
+            :mod (a2 / also))
+      :domain (a3 / amr-unknown))

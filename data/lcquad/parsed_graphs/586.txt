@@ -1,0 +1,12 @@
+# ::snt List the opponents of the relatives of Thomas Helwys?
+(l / list-01
+      :ARG1 (p / person
+            :ARG0-of (o / oppose-01
+                  :ARG1 (p2 / person
+                        :ARG0-of (h / have-rel-role-91
+                              :ARG1 (p3 / person
+                                    :name (n / name
+                                          :op1 "Thomas"
+                                          :op2 "Helwys"))
+                              :ARG2 (r / relative)))))
+      :polarity (a / amr-unknown))

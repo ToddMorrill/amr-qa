@@ -1,0 +1,9 @@
+# ::snt what cities are located on the sides of mediterranean sea?
+(b / be-located-at-91
+      :ARG1 (c / city
+            :mod (a / amr-unknown))
+      :ARG2 (s / side
+            :part-of (s2 / sea
+                  :name (n / name
+                        :op1 "Mediterranean"
+                        :op2 "Sea"))))

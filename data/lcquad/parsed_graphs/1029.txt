@@ -1,0 +1,8 @@
+# ::snt Which statesman is married to Dolley Madison?
+(m / marry-01
+      :ARG1 (s / statesman
+            :mod (a / amr-unknown))
+      :ARG2 (p / person
+            :name (n / name
+                  :op1 "Dolley"
+                  :op2 "Madison")))

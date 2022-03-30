@@ -1,0 +1,7 @@
+# ::snt Where did the people die who were known for Young Life?
+(d / die-01
+      :ARG1 (p / person
+            :ARG1-of (k / know-02
+                  :ARG3 (l / life
+                        :mod (y / young))))
+      :location (a / amr-unknown))

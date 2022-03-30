@@ -1,0 +1,12 @@
+# ::snt Which country's engineered have studied at Aero Klub in Wroclaw?
+(s / study-01
+      :ARG0 (c / country
+            :mod (a / amr-unknown)
+            :ARG1-of (e / engineer-01))
+      :location (u / university
+            :name (n / name
+                  :op1 "Aero"
+                  :op2 "Kub")
+            :location (c2 / city
+                  :name (n2 / name
+                        :op1 "Wroclaw"))))

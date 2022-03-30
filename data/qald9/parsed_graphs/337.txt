@@ -1,7 +1,8 @@
-# ::snt How much did Pulp Fiction cost?
-(c / cost-01
-      :ARG1 (w / work-of-art
+# ::snt Who was the doctoral supervisor of Albert Einstein?
+(s / supervise-01
+      :ARG0 (a / amr-unknown)
+      :ARG1 (p / person
             :name (n / name
-                  :op1 "Pulp"
-                  :op2 "Fiction"))
-      :ARG2 (a / amr-unknown))
+                  :op1 "Albert"
+                  :op2 "Einstein"))
+      :mod (d / doctoral))

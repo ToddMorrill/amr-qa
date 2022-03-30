@@ -1,0 +1,5 @@
+# ::snt which person created the women in the garden?
+(c / create-01
+      :ARG0 (a / amr-unknown)
+      :ARG1 (w / woman
+            :location (g / garden)))

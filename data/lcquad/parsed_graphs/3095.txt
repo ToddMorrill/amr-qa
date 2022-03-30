@@ -1,0 +1,10 @@
+# ::snt Who is the mayor of the city under which is the constituency of Zora Singh Maan?
+(m / mayor
+      :domain (a / amr-unknown)
+      :mod (c / city
+            :location (c2 / constituency
+                  :poss (p / person
+                        :name (n / name
+                              :op1 "Zora"
+                              :op2 "Singh"
+                              :op3 "Maan")))))

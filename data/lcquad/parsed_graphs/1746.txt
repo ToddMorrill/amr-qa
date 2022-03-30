@@ -1,0 +1,20 @@
+# ::snt Which composer subsequent work of Moondog Matinee and also composed The TImes They are A changin ?
+(m / multi-sentence
+      :snt1 (p / person
+            :ARG0-of (c / compose-02)
+            :ARG0-of (w / work-01
+                  :ARG1 (m2 / music
+                        :name (n / name
+                              :op1 "Moondog"
+                              :op2 "Matinee"))
+                  :time (s / subsequent))
+            :ARG0-of (c2 / compose-02
+                  :ARG1 (m3 / music
+                        :name (n2 / name
+                              :op1 "The"
+                              :op2 "TImes"
+                              :op3 "Are"
+                              :op4 "A"
+                              :op5 "Changers"))
+                  :mod (a / also))
+            :polarity (a2 / amr-unknown)))

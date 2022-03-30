@@ -1,10 +1,7 @@
-# ::snt Who was the first to climb Mount Everest?
-(p / person
-      :ord (o / ordinal-entity
-            :value 1)
-      :ARG0-of (c / climb-01
-            :ARG1 (m / mountain
-                  :name (n / name
-                        :op1 "Mount"
-                        :op2 "Everest")))
-      :domain (a / amr-unknown))
+# ::snt Who wrote the song Hotel California?
+(w / write-01
+      :ARG0 (a / amr-unknown)
+      :ARG1 (s / song
+            :name (n / name
+                  :op1 "Hotel"
+                  :op2 "California")))

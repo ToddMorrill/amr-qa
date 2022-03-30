@@ -1,0 +1,6 @@
+# ::snt Is camel  of the chordate phylum?
+(ii / include-91
+      :ARG1 (c / camel)
+      :ARG2 (p / phylum
+            :mod (c2 / chordate))
+      :polarity (a / amr-unknown))

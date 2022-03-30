@@ -1,0 +1,13 @@
+# ::snt Which mountain range is the one with Ponte d'Aveneyre and Le Gibloux?
+(m / mountain-range
+      :mod (a / amr-unknown)
+      :ARG2-of (ii / include-91
+            :ARG1 (a2 / and
+                  :op1 (m2 / mountain
+                        :name (n / name
+                              :op1 "Ponte"
+                              :op2 "d'Aveneyre"))
+                  :op2 (m3 / mountain
+                        :name (n2 / name
+                              :op1 "Le"
+                              :op2 "Gibloux")))))

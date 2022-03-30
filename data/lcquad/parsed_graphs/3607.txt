@@ -1,0 +1,12 @@
+# ::snt What is the total number of politicians whose predecessor's deputy is Jenny Macklin?
+(n / number
+      :quant-of (p / politician
+            :ARG0-of (h / have-org-role-91
+                  :ARG2 (d / deputy
+                        :poss (p2 / person
+                              :name (n2 / name
+                                    :op1 "Jenny"
+                                    :op2 "Macklin")
+                              :ARG1-of (p3 / precede-01)))))
+      :ARG2-of (t / total-01)
+      :domain (a / amr-unknown))

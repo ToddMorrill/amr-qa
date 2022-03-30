@@ -1,0 +1,14 @@
+# ::snt Which district of Fort Heath radar station is also the state of Joesph Story ?
+(s / state
+      :poss (p / person
+            :name (n / name
+                  :op1 "Joesph"
+                  :op2 "Story"))
+      :domain (a / amr-unknown
+            :part-of (d / district
+                  :part-of (s2 / station
+                        :name (n2 / name
+                              :op1 "Fort"
+                              :op2 "Heath")
+                        :mod (r / radar))))
+      :mod (a2 / also))

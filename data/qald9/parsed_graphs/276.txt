@@ -1,12 +1,7 @@
-# ::snt When will start the final match of the football world cup 2018?
-(s / start-01
-      :ARG1 (m / match-03
-            :mod (f / final)
-            :subevent-of (g / game
-                  :name (n / name
-                        :op1 "Football"
-                        :op2 "World"
-                        :op3 "Cup")
-                  :time (d / date-entity
-                        :year 2018)))
-      :time (a / amr-unknown))
+# ::snt From which region is the Melon de Bourgogne?
+(r / region
+      :name (n / name
+            :op1 "Melon"
+            :op2 "de"
+            :op3 "Bourke")
+      :source (a / amr-unknown))

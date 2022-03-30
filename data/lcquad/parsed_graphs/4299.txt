@@ -1,0 +1,13 @@
+# ::snt Count the different religions followed by Second Lieutenants in military.
+(c / count-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (r / religion
+            :ARG1-of (d / differ-02)
+            :ARG1-of (f / follow-02
+                  :ARG0 (p / person
+                        :ARG0-of (h / have-org-role-91
+                              :ARG1 (m / military)
+                              :ARG2 (l / lieutenant
+                                    :ord (o / ordinal-entity
+                                          :value 2)))))))

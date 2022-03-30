@@ -1,0 +1,13 @@
+# ::snt What are shows whose theme music composer's home town is New York?
+(s / show-04
+      :polarity (a / amr-unknown)
+      :ARG0-of (h / have-03
+            :ARG1 (c / city
+                  :name (n / name
+                        :op1 "New"
+                        :op2 "York")
+                  :mod (h2 / home
+                        :poss (p / person
+                              :ARG0-of (c2 / compose-02
+                                    :ARG1 (m / music
+                                          :mod (t / theme))))))))

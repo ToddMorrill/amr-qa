@@ -1,0 +1,8 @@
+# ::snt In what wars was Steve Buyer involved?
+(ii / involve-01
+      :ARG1 (p / person
+            :name (n / name
+                  :op1 "Steve"
+                  :op2 "Buyer"))
+      :ARG2 (w / war
+            :mod (a / amr-unknown)))

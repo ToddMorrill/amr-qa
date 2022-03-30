@@ -1,0 +1,13 @@
+# ::snt List the other members of the band of which Juelz Santana is a part?
+(l / list-01
+      :ARG1 (p / person
+            :mod (o / other)
+            :ARG0-of (h / have-org-role-91
+                  :ARG1 (b / band
+                        :ARG0 (p2 / person
+                              :name (n / name
+                                    :op1 "Juelz"
+                                    :op2 "Santana"))
+                        :ARG2 (p3 / part))
+                  :ARG1 b)
+            :ARG2 (m / member)))

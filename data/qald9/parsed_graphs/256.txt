@@ -1,8 +1,10 @@
-# ::snt How many theories did Albert Einstein come up with?
-(c / come-up-11
+# ::snt How many people live in the capital of Australia?
+(l / live-01
       :ARG0 (p / person
-            :name (n / name
-                  :op1 "Albert"
-                  :op2 "Einstein"))
-      :ARG1 (t / theory
-            :quant (a / amr-unknown)))
+            :quant (a / amr-unknown))
+      :location (c / city
+            :ARG0-of (h / have-org-role-91
+                  :ARG1 (c2 / country
+                        :name (n / name
+                              :op1 "Australia"))
+                  :ARG2 (c3 / capital))))

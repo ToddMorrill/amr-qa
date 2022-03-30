@@ -1,0 +1,15 @@
+# ::snt Which party does Iqbal Singh and B Shiva Rao currently belong to?
+(b / belong-01
+      :ARG0 (a / and
+            :op1 (p / person
+                  :name (n / name
+                        :op1 "Iqbal"
+                        :op2 "Singh"))
+            :op2 (p2 / person
+                  :name (n2 / name
+                        :op1 "B"
+                        :op2 "Shiva"
+                        :op3 "Rao")))
+      :ARG1 (a2 / amr-unknown
+            :mod (p3 / party))
+      :time (c / current))

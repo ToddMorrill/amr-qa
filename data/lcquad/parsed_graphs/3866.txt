@@ -1,0 +1,16 @@
+# ::snt Name the television show which was developed by Brian Graden and distributed by Comedy Central?
+(n / name-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (s / show-04
+            :ARG3 (t / television)
+            :ARG1-of (d / develop-02
+                  :ARG0 (p / person
+                        :name (n2 / name
+                              :op1 "Brian"
+                              :op2 "Graden")))
+            :ARG1-of (d2 / distribute-01
+                  :ARG0 (c / company
+                        :name (n3 / name
+                              :op1 "Comedy"
+                              :op2 "Central")))))

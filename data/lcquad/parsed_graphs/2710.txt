@@ -1,0 +1,16 @@
+# ::snt Count the different religions practiced by people who are in the Malaysian and Chinese association.
+(c / count-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (r / religion
+            :ARG1-of (d / differ-02)
+            :ARG1-of (p / practice-01
+                  :ARG0 (p2 / person
+                        :ARG1-of (ii / include-91
+                              :ARG2 (a / association
+                                    :mod (c2 / country
+                                          :name (n / name
+                                                :op1 "Malaysia"))
+                                    :mod (c3 / country
+                                          :name (n2 / name
+                                                :op1 "China"))))))))

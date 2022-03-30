@@ -1,0 +1,6 @@
+# ::snt How many subjects have been covered in fantasy novels?
+(c / cover-03
+      :ARG0 (n / novel
+            :mod (f / fantasy))
+      :ARG1 (s / subject
+            :quant (a / amr-unknown)))

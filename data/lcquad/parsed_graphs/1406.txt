@@ -1,0 +1,8 @@
+# ::snt Who was the writer of the novel Maniac Magee?
+(p / person
+      :ARG0-of (w / write-01
+            :ARG1 (n / novel
+                  :name (n2 / name
+                        :op1 "Maniac"
+                        :op2 "Magee")))
+      :domain (a / amr-unknown))

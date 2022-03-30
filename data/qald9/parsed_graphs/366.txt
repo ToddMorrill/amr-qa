@@ -1,14 +1,11 @@
-# ::snt Give me all books by William Goldman with more than 300 pages.
-(g / give-01
-      :mode imperative
-      :ARG0 (y / you)
-      :ARG1 (b / book
-            :mod (a / all)
-            :source (p / person
-                  :name (n / name
-                        :op1 "William"
-                        :op2 "Goldman"))
-            :ARG1-of (p2 / page-01
-                  :quant (m / more-than
-                        :op1 300)))
-      :ARG2 (ii / i))
+# ::snt In which city does the Chile Route 68 end?
+(e / end-01
+      :ARG1 (r / road
+            :name (n / name
+                  :op1 "Route"
+                  :op2 68)
+            :mod (c / country
+                  :name (n2 / name
+                        :op1 "Chile")))
+      :location (c2 / city
+            :mod (a / amr-unknown)))

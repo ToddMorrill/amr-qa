@@ -1,0 +1,10 @@
+# ::snt Who is the father of Barbara Ann Crancer?
+(p / person
+      :ARG0-of (h / have-rel-role-91
+            :ARG1 (p2 / person
+                  :name (n / name
+                        :op1 "Barbara"
+                        :op2 "Ann"
+                        :op3 "Crancer"))
+            :ARG2 (f / father))
+      :domain (a / amr-unknown))

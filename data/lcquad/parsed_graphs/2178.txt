@@ -1,0 +1,13 @@
+# ::snt The pope whose shrine is in St Peter's Basilica was venerated in which sects?
+(v / venerate-01
+      :ARG1 (p / person
+            :ARG0-of (h / have-org-role-91
+                  :ARG2 (p2 / pope))
+            :poss-of (s / shrine
+                  :location (b / building
+                        :name (n / name
+                              :op1 "St"
+                              :op2 "Peter's"
+                              :op3 "Basilica"))))
+      :location (s2 / sect
+            :mod (a / amr-unknown)))

@@ -1,0 +1,23 @@
+# ::snt Name the sitcom with theme music composer as Julian Gingell and channel as Fox Broadcasting Company?
+(a / and
+      :op1 (n / name-01
+            :mode imperative
+            :ARG0 (y / you)
+            :ARG1 (s / sitcom
+                  :poss (p / person
+                        :ARG0-of (c / compose-02
+                              :ARG1 (m / music
+                                    :mod (t / theme)))))
+            :ARG2 (p2 / person
+                  :name (n2 / name
+                        :op1 "Julian"
+                        :op2 "Gingell")))
+      :op2 (n3 / name-01
+            :mode imperative
+            :ARG0 y
+            :ARG1 (c2 / channel)
+            :ARG2 (c3 / company
+                  :name (n4 / name
+                        :op1 "Fox"
+                        :op2 "Broadcasting"
+                        :op3 "Company"))))

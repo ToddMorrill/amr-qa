@@ -1,0 +1,9 @@
+# ::snt In which state is the alma mater of Ben Ysursa located ?
+(l / locate-01
+      :ARG1 (a / alma-mater
+            :poss (p / person
+                  :name (n / name
+                        :op1 "Ben"
+                        :op2 "Ysursa")))
+      :location (s / state
+            :mod (a2 / amr-unknown)))

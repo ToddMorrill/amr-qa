@@ -1,0 +1,10 @@
+# ::snt Name the serving line of Daund Junction railway station?
+(n / name-01
+      :ARG1 (l / line
+            :ARG0-of (s / serve-01
+                  :ARG1 (s2 / station
+                        :name (n2 / name
+                              :op1 "Daund"
+                              :op2 "Junction")
+                        :mod (r / railway))))
+      :polarity (a / amr-unknown))

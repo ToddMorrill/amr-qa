@@ -1,0 +1,11 @@
+# ::snt Is Joe Schilling the trainer of Nick Diaz?
+(t / train-01
+      :ARG0 (p / person
+            :name (n / name
+                  :op1 "Joe"
+                  :op2 "Schilling"))
+      :ARG2 (p2 / person
+            :name (n2 / name
+                  :op1 "Nick"
+                  :op2 "Diaz"))
+      :polarity (a / amr-unknown))

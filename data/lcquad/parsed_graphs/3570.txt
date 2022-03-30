@@ -1,0 +1,11 @@
+# ::snt List the interest of the scientists whose one of the field is Chinese poetry ?
+(l / list-01
+      :ARG1 (ii / interest-01
+            :ARG1 (s / scientist
+                  :poss-of (f / field
+                        :ARG1-of (ii2 / include-91
+                              :ARG2 (p / poetry
+                                    :mod (c / country
+                                          :name (n / name
+                                                :op1 "China")))))))
+      :polarity (a / amr-unknown))

@@ -1,0 +1,12 @@
+# ::snt Was Marie Curie a doctoral student of Henri Becquerel?
+(s / study-01
+      :ARG0 (p / person
+            :name (n / name
+                  :op1 "Marie"
+                  :op2 "Curie"))
+      :ARG2 (p2 / person
+            :name (n2 / name
+                  :op1 "Henri"
+                  :op2 "Becquerel"))
+      :mod (d / doctoral)
+      :polarity (a / amr-unknown))

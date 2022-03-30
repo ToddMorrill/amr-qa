@@ -1,0 +1,12 @@
+# ::snt What was the first name of the band Queens of the Stone Age?
+(n / name-01
+      :ARG1 (b / band
+            :name (n2 / name
+                  :op1 "Queens"
+                  :op2 "of"
+                  :op3 "the"
+                  :op4 "Stone"
+                  :op5 "Age"))
+      :ARG2 (a / amr-unknown)
+      :ord (o / ordinal-entity
+            :value 1))

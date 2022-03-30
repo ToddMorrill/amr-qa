@@ -1,0 +1,8 @@
+# ::snt Which type of  building is Qun Thnh Temple ?
+(b / building
+      :name (n / name
+            :op1 "Qun"
+            :op2 "Thnh"
+            :op3 "Temple")
+      :mod (t / type
+            :mod (a / amr-unknown)))

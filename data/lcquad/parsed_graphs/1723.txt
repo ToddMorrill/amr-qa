@@ -1,0 +1,11 @@
+# ::snt In which television shows has Eliza Schneider given her voice?
+(g / give-01
+      :ARG0 (p / person
+            :name (n / name
+                  :op1 "Eliza"
+                  :op2 "Schneider"))
+      :ARG1 (v / voice
+            :poss p)
+      :ARG2 (s / show
+            :medium (t / television)
+            :mod (a / amr-unknown)))

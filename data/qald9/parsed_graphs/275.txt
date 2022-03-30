@@ -1,8 +1,9 @@
-# ::snt What is Donald Trump's main business?
-(b / business
-      :mod (m / main)
-      :poss (p / person
-            :name (n / name
-                  :op1 "Donald"
-                  :op2 "Trump"))
-      :domain (a / amr-unknown))
+# ::snt List the children of Margaret Thatcher.
+(l / list-01
+      :ARG1 (p / person
+            :ARG0-of (h / have-rel-role-91
+                  :ARG1 (p2 / person
+                        :name (n / name
+                              :op1 "Margaret"
+                              :op2 "Thatcher"))
+                  :ARG2 (c / child))))

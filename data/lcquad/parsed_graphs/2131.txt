@@ -1,0 +1,10 @@
+# ::snt Which office's people have died on the US Route 165?
+(d / die-01
+      :ARG1 (p / person
+            :poss (o / office
+                  :mod (a / amr-unknown)))
+      :location (r / road
+            :name (n / name
+                  :op1 "US"
+                  :op2 "Route"
+                  :op3 165)))

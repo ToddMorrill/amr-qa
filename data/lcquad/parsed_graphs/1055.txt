@@ -1,0 +1,7 @@
+# ::snt What is the allegiance of John Kotelawala ?
+(a / allegiance
+      :poss (p / person
+            :name (n / name
+                  :op1 "John"
+                  :op2 "Kotelawala"))
+      :domain (a2 / amr-unknown))

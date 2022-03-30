@@ -1,0 +1,17 @@
+# ::snt Which television show's theme music composer is Gary Portnoy and subsequent work is Frasier?
+(a / and
+      :op1 (p / person
+            :name (n / name
+                  :op1 "Gary"
+                  :op2 "Portnoy")
+            :ARG0-of (c / compose-02
+                  :ARG1 (m / music
+                        :mod (t / theme)
+                        :poss (s / show-04
+                              :ARG3 (t2 / television)
+                              :mod (a2 / amr-unknown)))))
+      :op2 (w / work-01
+            :ARG0 (p2 / person
+                  :name (n2 / name
+                        :op1 "Frasier"))
+            :time (s2 / subsequent)))

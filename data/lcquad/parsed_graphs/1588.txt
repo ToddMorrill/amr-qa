@@ -1,0 +1,9 @@
+# ::snt How many dishes are made with an ingredient belonging to the flowering plant species?
+(m / make-01
+      :ARG1 (d / dish
+            :quant (a / amr-unknown))
+      :ARG2 (ii / ingredient
+            :ARG0-of (b / belong-01
+                  :ARG1 (s / species
+                        :mod (p / plant)
+                        :ARG1-of (f / flower-01)))))

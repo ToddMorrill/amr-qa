@@ -1,0 +1,9 @@
+# ::snt How many different genres led to other genres where drums are important?
+(l / lead-01
+      :ARG0 (g / genre
+            :ARG1-of (d / differ-02)
+            :quant (a / amr-unknown))
+      :ARG4 (g2 / genre
+            :mod (o / other)
+            :location-of (ii / important-01
+                  :ARG1 (d2 / drum))))

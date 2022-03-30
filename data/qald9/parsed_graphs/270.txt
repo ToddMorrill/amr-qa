@@ -1,10 +1,10 @@
-# ::snt Is Barack Obama a democrat?
-(h / have-org-role-91
-      :ARG0 (p / person
-            :name (n / name
-                  :op1 "Barack"
-                  :op2 "Obama"))
-      :ARG1 (p2 / political-party
-            :name (n2 / name
-                  :op1 "Democrat"))
-      :polarity (a / amr-unknown))
+# ::snt Who was John F. Kennedy's vice president?
+(p / president
+      :mod (v / vice)
+      :ARG2-of (h / have-org-role-91
+            :ARG0 (p2 / person
+                  :name (n / name
+                        :op1 "John"
+                        :op2 "F."
+                        :op3 "Kennedy")))
+      :domain (a / amr-unknown))

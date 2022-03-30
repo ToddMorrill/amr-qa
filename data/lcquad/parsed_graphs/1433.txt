@@ -1,0 +1,20 @@
+# ::snt What academic discipline of the Journal of Cerebral Blood Flow & Metabolism is also the record label of the Double Diamond (album)?
+(l / label-01
+      :ARG0 (d / discipline
+            :mod (a / academia)
+            :poss (j / journal
+                  :name (n / name
+                        :op1 "Journal"
+                        :op2 "of"
+                        :op3 "Cerebral"
+                        :op4 "Blood"
+                        :op5 "Flow"
+                        :op6 "&"
+                        :op7 "Metabolism"))
+            :mod (a2 / amr-unknown))
+      :ARG1 (a3 / album
+            :name (n2 / name
+                  :op1 "Double"
+                  :op2 "Diamond"))
+      :ARG2 (r / record-01)
+      :mod (a4 / also))

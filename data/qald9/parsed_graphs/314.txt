@@ -1,7 +1,11 @@
-# ::snt How many pages does War and Peace have?
-(h / have-03
-      :ARG0 (a / and
-            :op1 (w / war)
-            :op2 (p / peace))
-      :ARG1 (p2 / page
-            :quant (a2 / amr-unknown)))
+# ::snt Is Christian Bale starring in Velvet Goldmine?
+(s / star-01
+      :ARG1 (p / person
+            :name (n / name
+                  :op1 "Christian"
+                  :op2 "Bale"))
+      :ARG2 (w / work-of-art
+            :name (n2 / name
+                  :op1 "Velvet"
+                  :op2 "Goldmine"))
+      :polarity (a / amr-unknown))

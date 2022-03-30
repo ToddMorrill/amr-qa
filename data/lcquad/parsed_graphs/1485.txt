@@ -1,0 +1,10 @@
+# ::snt What are some other services of the company whose service is Onedrive?
+(s / service
+      :mod (o / other)
+      :mod (a / amr-unknown)
+      :quant (s2 / some)
+      :poss (c / company
+            :ARG0-of (p / provide-01
+                  :ARG1 (s3 / service
+                        :name (n / name
+                              :op1 "Onedrive")))))

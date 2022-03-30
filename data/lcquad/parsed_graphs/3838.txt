@@ -1,0 +1,13 @@
+# ::snt Count the different number of academic areas covered by publications of SAGE?
+(c / count-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (n / number
+            :quant-of (a / area
+                  :mod (a2 / academia)
+                  :ARG1-of (c2 / cover-01
+                        :ARG0 (p / publication-91
+                              :ARG0 (o / organization
+                                    :name (n2 / name
+                                          :op1 "SAGE")))))
+            :ARG1-of (d / differ-02)))

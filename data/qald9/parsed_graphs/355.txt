@@ -1,13 +1,12 @@
-# ::snt Does the Ford Motor Company have a manufacturing plant in Malaysia?
-(h / have-03
-      :ARG0 (c / company
-            :name (n / name
-                  :op1 "Ford"
-                  :op2 "Motor"
-                  :op3 "Company"))
-      :ARG1 (p / plant
-            :ARG0-of (m / manufacture-01)
-            :location (c2 / country
-                  :name (n2 / name
-                        :op1 "Malaysia")))
-      :polarity (a / amr-unknown))
+# ::snt To which artistic movement did the painter of The Three Dancers belong?
+(b / belong-01
+      :ARG0 (p / person
+            :ARG0-of (p2 / paint-02
+                  :ARG1 (t / thing
+                        :name (n / name
+                              :op1 "The"
+                              :op2 "Three"
+                              :op3 "Dancers"))))
+      :ARG1 (m / movement-07
+            :ARG1 (a / art)
+            :mod (a2 / amr-unknown)))

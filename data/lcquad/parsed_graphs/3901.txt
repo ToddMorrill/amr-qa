@@ -1,0 +1,19 @@
+# ::snt Which office holder's  military branch is Continental Army and vice president is John Adams?
+(a / and
+      :op1 (b / branch
+            :mod (m / military)
+            :poss (p / person
+                  :ARG0-of (h / hold-01
+                        :ARG1 (o / office)))
+            :domain m
+            :name (n / name
+                  :op1 "Continental"
+                  :op2 "Army"))
+      :op2 (p2 / person
+            :name (n2 / name
+                  :op1 "John"
+                  :op2 "Adams")
+            :ARG0-of (h2 / have-org-role-91
+                  :ARG1 m
+                  :ARG2 (p3 / president
+                        :mod (v / vice)))))

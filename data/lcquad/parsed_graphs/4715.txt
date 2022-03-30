@@ -1,0 +1,18 @@
+# ::snt Which famous commander led the Siege of forn meigs and was involved in the battle of fort stephenson?
+(a / and
+      :op1 (l / lead-02
+            :ARG0 (a2 / amr-unknown
+                  :ARG1-of (f / fame-01
+                        :ARG2 (c / commander)))
+            :ARG1 (s / Siege-01
+                  :ARG1 (c2 / city
+                        :name (n / name
+                              :op1 "Forn"
+                              :op2 "Meigs"))))
+      :op2 (ii / involve-01
+            :ARG1 a2
+            :ARG2 (b / battle-01
+                  :ARG2 (f2 / facility
+                        :name (n2 / name
+                              :op1 "Fort"
+                              :op2 "Stephenson")))))

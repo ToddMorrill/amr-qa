@@ -1,0 +1,8 @@
+# ::snt Does Gibby Haynes play the saxophone?
+(p / play-11
+      :ARG0 (p2 / person
+            :name (n / name
+                  :op1 "Gibby"
+                  :op2 "Haynes"))
+      :ARG1 (s / saxophone)
+      :polarity (a / amr-unknown))

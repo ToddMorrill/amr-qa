@@ -1,0 +1,12 @@
+# ::snt What company made the front row and distributed big top ballet?
+(a / and
+      :op1 (m / make-18
+            :ARG0 (c / company
+                  :mod (a2 / amr-unknown))
+            :ARG1 (r / row
+                  :mod (f / front)))
+      :op2 (d / distribute-01
+            :ARG0 c
+            :ARG1 (b / ballet
+                  :mod (t / top
+                        :mod (b2 / big)))))

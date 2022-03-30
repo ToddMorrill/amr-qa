@@ -1,0 +1,12 @@
+# ::snt List everything governed by the Democratic Party of US?
+(l / list-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (e / everything
+            :ARG1-of (g / govern-01
+                  :ARG0 (p / political-party
+                        :name (n / name
+                              :op1 "Democratic"
+                              :op2 "Party"
+                              :op3 "of"
+                              :op4 "US")))))

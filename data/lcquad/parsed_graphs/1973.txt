@@ -1,0 +1,8 @@
+# ::snt How many different mascots are there of the NCAA teams?
+(m / mascot
+      :ARG1-of (d / differ-02)
+      :quant (a / amr-unknown)
+      :poss (t / team
+            :mod (u / university
+                  :name (n / name
+                        :op1 "NCAA"))))

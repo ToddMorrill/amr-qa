@@ -1,0 +1,7 @@
+# ::snt What are the nicknames of the schools whose color is royal blue?
+(n / nickname-01
+      :ARG1 (s / school
+            :poss-of (c / color
+                  :mod (b / blue
+                        :mod (r / royal))))
+      :ARG2 (a / amr-unknown))

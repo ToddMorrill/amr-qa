@@ -1,6 +1,7 @@
-# ::snt What is in a chocolate chip cookie?
-(b / be-located-at-91
-      :ARG1 (a / amr-unknown)
-      :ARG2 (c / cookie
-            :consist-of (c2 / chip
-                  :mod (c3 / chocolate))))
+# ::snt how much is the population densty rank of germany?
+(r / rank-01
+      :ARG1 (p / population)
+      :ARG2 (c / country
+            :name (n / name
+                  :op1 "Germany"))
+      :ARG3 (a / amr-unknown))

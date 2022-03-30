@@ -1,0 +1,12 @@
+# ::snt Which company's division is Audi India? Correct Question
+(m / multi-sentence
+      :snt1 (d / division
+            :domain (c / company
+                  :name (n / name
+                        :op1 "Audi")
+                  :mod (c2 / country
+                        :name (n2 / name
+                              :op1 "India")))
+            :poss (c3 / company))
+      :snt2 (c4 / correct-02
+            :ARG1 (q / question-01)))

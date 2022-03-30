@@ -1,0 +1,13 @@
+# ::snt Name the company founded in US and provides OneDrive as service ?
+(n / name-01
+      :ARG1 (c / company
+            :ARG1-of (f / found-01
+                  :location (c2 / country
+                        :name (n2 / name
+                              :op1 "US")))
+            :ARG0-of (p / provide-01
+                  :ARG1 (s / service
+                        :domain (p2 / product
+                              :name (n3 / name
+                                    :op1 "OneDrive")))))
+      :polarity (a / amr-unknown))

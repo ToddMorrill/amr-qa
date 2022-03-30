@@ -1,0 +1,17 @@
+# ::snt What is the total number of other restingplace of the politicians whose one of the restingplace is East Norwalk Historical Cemetery?
+(t / total-01
+      :ARG1 (n / number
+            :quant-of (r / rest-01
+                  :ARG1 (p / politician
+                        :ARG1-of (r2 / rest-01
+                              :location (f / facility
+                                    :name (n2 / name
+                                          :op1 "East"
+                                          :op2 "Norwalk"
+                                          :op3 "Historical"
+                                          :op4 "Cemetery")
+                                    :ARG1-of (ii / include-91
+                                          :ARG2 (r3 / rest-01
+                                                :ARG1 p)))))
+                  :mod (o / other)))
+      :ARG2 (a / amr-unknown))

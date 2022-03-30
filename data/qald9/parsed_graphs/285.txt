@@ -1,9 +1,9 @@
-# ::snt List all games by GMT.
-(l / list-01
-      :mode imperative
-      :ARG0 (y / you)
-      :ARG1 (g / game
-            :mod (a / all))
-      :time (b / by
-            :op1 (d / date-entity
-                  :time "GMT")))
+# ::snt Who is the mayor of the capital of French Polynesia?
+(m / mayor
+      :domain (a / amr-unknown)
+      :ARG2-of (h / have-org-role-91
+            :ARG1 (c / country
+                  :name (n / name
+                        :op1 "French"
+                        :op2 "Polynesia"))
+            :ARG2 (c2 / capital)))

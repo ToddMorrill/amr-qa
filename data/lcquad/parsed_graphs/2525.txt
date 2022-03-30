@@ -1,0 +1,16 @@
+# ::snt What sports are played at institutes affiliated by the Association of Southeast Asian Institutes of Higher Learning?
+(p / play-01
+      :ARG1 (s / sport
+            :mod (a / amr-unknown))
+      :location (ii / institute
+            :ARG1-of (a2 / affiliate-01
+                  :ARG2 (o / organization
+                        :name (n / name
+                              :op1 "Association"
+                              :op2 "of"
+                              :op3 "Southeast"
+                              :op4 "Asian"
+                              :op5 "Institute"
+                              :op6 "of"
+                              :op7 "Higher"
+                              :op8 "Learning")))))

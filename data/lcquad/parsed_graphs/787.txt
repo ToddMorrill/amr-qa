@@ -1,0 +1,11 @@
+# ::snt List the origin of the weapons which were used in the American Revolutionary War.
+(l / list-01
+      :ARG1 (t / thing
+            :ARG2-of (o / originate-01
+                  :ARG1 (w / weapon
+                        :ARG1-of (u / use-01
+                              :time (w2 / war
+                                    :name (n / name
+                                          :op1 "American"
+                                          :op2 "Revolutionary"
+                                          :op3 "War")))))))

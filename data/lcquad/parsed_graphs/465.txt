@@ -1,0 +1,11 @@
+# ::snt List the show related to the which was followed by Doctor Who Extra?
+(l / list-01
+      :ARG1 (s / show
+            :ARG1-of (r / relate-01
+                  :ARG2 (f / follow-01
+                        :ARG1 (b / broadcast-program
+                              :name (n / name
+                                    :op1 "Doctor"
+                                    :op2 "Who"
+                                    :op3 "Extra")))))
+      :polarity (a / amr-unknown))

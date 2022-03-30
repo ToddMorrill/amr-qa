@@ -1,0 +1,21 @@
+# ::snt Which creator of Theme Time Radio Hour has also given the  musical score of the The Times They Are a-Changin' (musical)?
+(g / give-01
+      :ARG0 (a / amr-unknown
+            :ARG0-of (c / create-01
+                  :ARG1 (b / broadcast-program
+                        :name (n / name
+                              :op1 "Theme"
+                              :op2 "Time"
+                              :op3 "Radio"
+                              :op4 "Hour"))))
+      :ARG1 (s / score-01
+            :ARG1 (m / music
+                  :poss (n2 / newspaper
+                        :name (n3 / name
+                              :op1 "The"
+                              :op2 "Times"
+                              :op3 "They"
+                              :op4 "Are"
+                              :op5 "A-Changin")))
+            :ARG2 (m2 / music))
+      :mod (a2 / also))

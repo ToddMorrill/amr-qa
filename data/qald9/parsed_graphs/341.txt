@@ -1,14 +1,10 @@
-# ::snt Is Lake Baikal bigger than the Great Bear Lake?
-(h / have-degree-91
-      :ARG1 (l / lake
+# ::snt What was the final result of the War of the Roses?
+(r / result-01
+      :ARG1 (w / war
             :name (n / name
-                  :op1 "Lake"
-                  :op2 "Baikal"))
-      :ARG2 (b / big)
-      :ARG3 (m / more)
-      :ARG4 (l2 / lake
-            :name (n2 / name
-                  :op1 "Great"
-                  :op2 "Bear"
-                  :op3 "Lake"))
-      :polarity (a / amr-unknown))
+                  :op1 "War"
+                  :op2 "of"
+                  :op3 "the"
+                  :op4 "Roses"))
+      :ARG2 (a / amr-unknown)
+      :mod (f / final))

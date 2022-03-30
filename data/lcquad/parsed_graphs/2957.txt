@@ -1,0 +1,10 @@
+# ::snt Who is the composer of Girl from the North Country ?
+(c / compose-02
+      :ARG0 (a / amr-unknown)
+      :ARG1 (m / music
+            :name (n / name
+                  :op1 "Girl"
+                  :op2 "from"
+                  :op3 "the"
+                  :op4 "North"
+                  :op5 "Country")))

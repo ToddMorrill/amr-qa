@@ -1,0 +1,15 @@
+# ::snt What country provides a citizenship too Newin Chidchob and Seni Pramoj?
+(p / provide-01
+      :ARG0 (c / country
+            :mod (a / amr-unknown))
+      :ARG1 (c2 / citizenship)
+      :ARG2 (a2 / and
+            :op1 (p2 / person
+                  :name (n / name
+                        :op1 "Newin"
+                        :op2 "Chidchob"))
+            :op2 (p3 / person
+                  :name (n2 / name
+                        :op1 "Seni"
+                        :op2 "Pramoj")))
+      :mod (t / too))

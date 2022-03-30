@@ -1,0 +1,22 @@
+# ::snt Name the F1 racer with relative as Ralf Schumacher and has child named Mick Schumacher?
+(n / name-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (p / person
+            :ARG0-of (r / race-01
+                  :ARG3 (e / event
+                        :name (n2 / name
+                              :op1 "F1")))
+            :ARG1-of (r2 / related-04
+                  :ARG2 (p2 / person
+                        :name (n3 / name
+                              :op1 "Ralf"
+                              :op2 "Schumacher")))
+            :ARG0-of (h / have-05
+                  :ARG1 (p3 / person
+                        :name (n4 / name
+                              :op1 "Mick"
+                              :op2 "Schumacher")
+                        :ARG0-of (h2 / have-rel-role-91
+                              :ARG1 p
+                              :ARG2 (c / child))))))

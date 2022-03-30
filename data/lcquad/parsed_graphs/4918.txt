@@ -1,0 +1,10 @@
+# ::snt During the reigns of which monarchs was the name to the  Israelite kingdom as United Monarch?
+(n / name-01
+      :ARG1 (k / kingdom
+            :mod (e / ethnic-group
+                  :name (n2 / name
+                        :op1 "Israelite")))
+      :ARG2 (m / monarch
+            :ARG1-of (u / unite-01))
+      :time (r / reign-01
+            :ARG0 (m2 / monarch)))

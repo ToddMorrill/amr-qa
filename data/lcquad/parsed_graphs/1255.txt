@@ -1,0 +1,11 @@
+# ::snt Whose famous works have been illustrated by E W Kemble?
+(ii / illustrate-01
+      :ARG0 (p / person
+            :name (n / name
+                  :op1 "E"
+                  :op2 "W"
+                  :op3 "Kemble"))
+      :ARG1 (t / thing
+            :ARG1-of (w / work-12
+                  :ARG0 (a / amr-unknown))
+            :ARG1-of (f / fame-01)))

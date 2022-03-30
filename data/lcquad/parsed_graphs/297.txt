@@ -1,0 +1,12 @@
+# ::snt For which other teams do members of tanzanian national football team play?
+(p / play-01
+      :ARG0 (m / member
+            :part-of (t / team
+                  :mod (f / football)
+                  :mod (n / nation)
+                  :mod (c / country
+                        :name (n2 / name
+                              :op1 "Tanzania"))))
+      :ARG3 (t2 / team
+            :mod (o / other)
+            :mod (a / amr-unknown)))

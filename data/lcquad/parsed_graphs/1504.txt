@@ -1,0 +1,10 @@
+# ::snt In how many different places can I fnd Modern Architectural buildings?
+(p / possible-01
+      :ARG1 (f / find-01
+            :ARG0 (ii / i)
+            :ARG1 (b / building
+                  :mod (a / architect
+                        :mod (m / modern)))
+            :location (p2 / place
+                  :ARG1-of (d / differ-02)
+                  :quant (a2 / amr-unknown))))

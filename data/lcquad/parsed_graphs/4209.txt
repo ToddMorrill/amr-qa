@@ -1,0 +1,9 @@
+# ::snt What are the movies whose music is given by Laurie Johnson?
+(m / movie
+      :domain (a / amr-unknown)
+      :poss-of (m2 / music
+            :ARG1-of (g / give-01
+                  :ARG0 (p / person
+                        :name (n / name
+                              :op1 "Laurie"
+                              :op2 "Johnson")))))

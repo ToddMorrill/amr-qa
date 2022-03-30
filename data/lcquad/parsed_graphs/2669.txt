@@ -1,0 +1,9 @@
+# ::snt In which states are there bridges over the Pequea Creek?
+(b / bridge
+      :location (o / over
+            :op1 (c / creek
+                  :name (n / name
+                        :op1 "Pequea"
+                        :op2 "Creek")))
+      :location (s / state
+            :mod (a / amr-unknown)))

@@ -1,0 +1,11 @@
+# ::snt How many other Guests are there of the television episodes whose Guests is Brian d'Arcy James ?
+(g / guest
+      :mod (o / other)
+      :quant (a / amr-unknown)
+      :location (e / episode
+            :mod (t / television)
+            :poss (g2 / guest
+                  :name (n / name
+                        :op1 "Brian"
+                        :op2 "d'Arcy"
+                        :op3 "James"))))

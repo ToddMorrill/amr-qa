@@ -1,5 +1,7 @@
-# ::snt Which species does an elephant belong?
-(b / belong-01
-      :ARG0 (e / elephant)
-      :ARG1 (s / species
-            :mod (a / amr-unknown)))
+# ::snt Which companies produce hovercrafts?
+(p / produce-01
+      :ARG0 (c / company
+            :mod (a / amr-unknown))
+      :ARG1 (a2 / aircraft-type
+            :name (n / name
+                  :op1 "H hovercraft")))

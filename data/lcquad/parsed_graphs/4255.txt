@@ -1,0 +1,13 @@
+# ::snt Which city is the resting place of the Martin Ragaway and Chuck Connors ?
+(p / place
+      :location-of (r / rest-01
+            :ARG1 (a / and
+                  :op1 (p2 / person
+                        :name (n / name
+                              :op1 "Martin"
+                              :op2 "Ragaway"))
+                  :op2 (p3 / person
+                        :name (n2 / name
+                              :op1 "Chuck"
+                              :op2 "Connors"))))
+      :domain (a2 / amr-unknown))

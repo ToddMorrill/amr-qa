@@ -1,0 +1,12 @@
+# ::snt Did Paul Weatherwax an editor of Behave Yourself?
+(p / person
+      :name (n / name
+            :op1 "Paul"
+            :op2 "Weatherwax")
+      :ARG0-of (h / have-org-role-91
+            :ARG1 (p2 / publication
+                  :name (n2 / name
+                        :op1 "Behave"
+                        :op2 "Byself"))
+            :ARG2 (e / editor))
+      :polarity (a / amr-unknown))

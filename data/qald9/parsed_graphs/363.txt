@@ -1,6 +1,7 @@
-# ::snt When did the Ming dynasty dissolve?
-(d / dissolve-01
-      :ARG1 (d2 / dynasty
+# ::snt How tall is Michael Jordan?
+(t / tall
+      :quant (a / amr-unknown)
+      :domain (p / person
             :name (n / name
-                  :op1 "Ming"))
-      :time (a / amr-unknown))
+                  :op1 "Michael"
+                  :op2 "Jordan")))

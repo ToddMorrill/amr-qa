@@ -1,0 +1,16 @@
+# ::snt Which animator of Tommy Ticker's Tooth is also the director of The Haunted house ?
+(h / have-org-role-91
+      :ARG0 (a / amr-unknown
+            :ARG0-of (a2 / animate-01
+                  :ARG1 (p / product
+                        :name (n / name
+                              :op1 "Tommy"
+                              :op2 "Ticker's"
+                              :op3 "Tooth"))))
+      :ARG1 (h2 / house
+            :name (n2 / name
+                  :op1 "The"
+                  :op2 "Haunted"
+                  :op3 "House"))
+      :ARG2 (d / director)
+      :mod (a3 / also))

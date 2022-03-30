@@ -1,0 +1,9 @@
+# ::snt Brian Dunkleman is the presenter of what TV show?
+(p / present-01
+      :ARG0 (p2 / person
+            :name (n / name
+                  :op1 "Brian"
+                  :op2 "Dunkleman"))
+      :ARG1 (s / show-04
+            :ARG3 (t / television)
+            :mod (a / amr-unknown)))

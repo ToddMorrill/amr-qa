@@ -1,13 +1,8 @@
-# ::snt Which scientist is known for the Manhattan Project and the Nobel Peace Prize?
-(k / know-02
-      :ARG1 (a / amr-unknown)
-      :ARG3 (a2 / and
-            :op1 (p / project
-                  :name (n / name
-                        :op1 "Manhattan"
-                        :op2 "Project"))
-            :op2 (a3 / award
-                  :name (n2 / name
-                        :op1 "Nobel"
-                        :op2 "Peace"
-                        :op3 "Prize"))))
+# ::snt Which types of grapes grow in Oregon?
+(g / grow-03
+      :ARG1 (g2 / grape
+            :mod (t / type
+                  :mod (a / amr-unknown)))
+      :location (s / state
+            :name (n / name
+                  :op1 "Oregon")))

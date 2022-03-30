@@ -1,0 +1,10 @@
+# ::snt Name the regions served by Toll Global Express ?
+(n / name-01
+      :ARG1 (r / region
+            :ARG1-of (s / serve-01
+                  :ARG0 (c / company
+                        :name (n2 / name
+                              :op1 "Toll"
+                              :op2 "Global"
+                              :op3 "Express"))))
+      :polarity (a / amr-unknown))

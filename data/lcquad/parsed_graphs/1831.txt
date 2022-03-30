@@ -1,0 +1,9 @@
+# ::snt Name the current club of Abdelhameed Amarri ?
+(n / name-01
+      :ARG1 (c / club
+            :time (c2 / current)
+            :poss (p / person
+                  :name (n2 / name
+                        :op1 "Abdelhameed"
+                        :op2 "Amarri")))
+      :polarity (a / amr-unknown))

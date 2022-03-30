@@ -1,0 +1,7 @@
+# ::snt Starwood operates in which places?
+(o / operate-01
+      :ARG0 (c / company
+            :name (n / name
+                  :op1 "Starwood"))
+      :location (p / place
+            :mod (a / amr-unknown)))

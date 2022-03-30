@@ -1,0 +1,10 @@
+# ::snt Who all play for the Ivory Coast football team?
+(p / play-01
+      :ARG0 (a / amr-unknown
+            :mod (a2 / all))
+      :ARG3 (t / team
+            :mod (f / football)
+            :mod (c / country
+                  :name (n / name
+                        :op1 "Ivory"
+                        :op2 "Coast"))))

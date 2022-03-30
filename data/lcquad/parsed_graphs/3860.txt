@@ -1,0 +1,11 @@
+# ::snt Where did the relatives of Gustavo Rojas Pinilla study?
+(s / study-01
+      :ARG0 (p / person
+            :ARG0-of (h / have-rel-role-91
+                  :ARG1 (p2 / person
+                        :name (n / name
+                              :op1 "Gustavo"
+                              :op2 "Rojas"
+                              :op3 "Pinilla"))
+                  :ARG2 (r / relative)))
+      :location (a / amr-unknown))

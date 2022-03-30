@@ -1,9 +1,8 @@
-# ::snt What form of government does Russia have?
-(h / have-03
-      :ARG0 (c / country
+# ::snt In which city does Sylvester Stallone live?
+(l / live-01
+      :ARG0 (p / person
             :name (n / name
-                  :op1 "Russia"))
-      :ARG1 (f / form
-            :mod (g / government-organization
-                  :ARG0-of (g2 / govern-01))
+                  :op1 "Sylvester"
+                  :op2 "Stallone"))
+      :location (c / city
             :mod (a / amr-unknown)))

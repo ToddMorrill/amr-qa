@@ -1,11 +1,10 @@
-# ::snt Which museum in New York has the most visitors?
-(h / have-03
-      :ARG0 (m / museum
-            :location (c / city
+# ::snt Give me all Swedish oceanographers.
+(g / give-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (o / oceanographer
+            :mod (c / country
                   :name (n / name
-                        :op1 "New"
-                        :op2 "York"))
-            :mod (a / amr-unknown))
-      :ARG1 (p / person
-            :ARG0-of (v / visit-01)
-            :quant (m2 / most)))
+                        :op1 "Sweden"))
+            :mod (a / all))
+      :ARG2 (ii / i))

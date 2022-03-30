@@ -1,0 +1,9 @@
+# ::snt Which astronauts went on the Gemini 8 mission?
+(g / go-02
+      :ARG0 (a / astronaut
+            :mod (a2 / amr-unknown))
+      :ARG4 (m / mission-01
+            :ARG1 (p / program
+                  :name (n / name
+                        :op1 "Geminium"
+                        :op2 8))))

@@ -1,0 +1,11 @@
+# ::snt Who authored the works published in the Jump Square Magazine?
+(a / author-01
+      :ARG0 (a2 / amr-unknown)
+      :ARG1 (t / thing
+            :ARG1-of (w / work-12)
+            :ARG1-of (p / publish-01
+                  :ARG4 (m / magazine
+                        :name (n / name
+                              :op1 "Jump"
+                              :op2 "Square"
+                              :op3 "Magazine")))))

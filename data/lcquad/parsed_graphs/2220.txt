@@ -1,0 +1,10 @@
+# ::snt Name the broadcast area of  Radio Philippines Network ?
+(n / name-01
+      :ARG1 (a / area
+            :location-of (b / broadcast-01
+                  :ARG0 (c / company
+                        :name (n2 / name
+                              :op1 "Radio"
+                              :op2 "Philippines"
+                              :op3 "Network"))))
+      :polarity (a2 / amr-unknown))

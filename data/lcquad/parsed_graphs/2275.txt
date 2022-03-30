@@ -1,0 +1,9 @@
+# ::snt What are the baseball teams who belongs to  Guggenheim Partners?
+(t / team
+      :mod (b / baseball)
+      :domain (a / amr-unknown)
+      :ARG0-of (b2 / belong-01
+            :ARG1 (c / company
+                  :name (n / name
+                        :op1 "Guggenheim"
+                        :op2 "Partners"))))

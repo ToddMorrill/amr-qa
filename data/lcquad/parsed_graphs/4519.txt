@@ -1,0 +1,16 @@
+# ::snt What show had NTSC format and theme music composed by  Ron Grainer?
+(h / have-03
+      :ARG0 (s / show-04
+            :mod (a / amr-unknown))
+      :ARG1 (a2 / and
+            :op1 (f / format
+                  :mod (c / company
+                        :name (n / name
+                              :op1 "NTSC")))
+            :op2 (m / music
+                  :mod (t / theme)
+                  :ARG1-of (c2 / compose-02
+                        :ARG0 (p / person
+                              :name (n2 / name
+                                    :op1 "Ron"
+                                    :op2 "Grainer"))))))

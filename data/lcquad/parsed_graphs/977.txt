@@ -1,0 +1,10 @@
+# ::snt  Erik Jendresen is the writer of which television show?
+(p / person
+      :ARG0-of (w / write-01
+            :ARG1 (s / show-04
+                  :ARG3 (t / television)
+                  :mod (a / amr-unknown)))
+      :domain (p2 / person
+            :name (n / name
+                  :op1 "Erik"
+                  :op2 "Jendresen")))

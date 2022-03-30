@@ -1,0 +1,20 @@
+# ::snt Name the fictional character whose species is American Pekin duck and has relatives named Ludwig Von Drake?
+(n / name-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (c / character
+            :mod (f / fiction)
+            :poss-of (s / species
+                  :name (n2 / name
+                        :op1 "Pekin"
+                        :op2 "Duck")
+                  :mod (c2 / country
+                        :name (n3 / name
+                              :op1 "America")))
+            :ARG1-of (h / have-rel-role-91
+                  :ARG0 (p / person
+                        :name (n4 / name
+                              :op1 "Ludwig"
+                              :op2 "Von"
+                              :op3 "Drake"))
+                  :ARG2 (r / relative))))

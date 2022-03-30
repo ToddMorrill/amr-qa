@@ -1,0 +1,9 @@
+# ::snt What is the Ceremonial County of Port of Tilbury ?
+(c / county
+      :mod (c2 / ceremonial)
+      :domain (a / amr-unknown)
+      :location (p / port
+            :name (n / name
+                  :op1 "Port"
+                  :op2 "of"
+                  :op3 "Tilbury")))

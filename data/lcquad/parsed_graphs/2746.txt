@@ -1,0 +1,8 @@
+# ::snt What is the ideology of Palang Dharma Party ?
+(ii / ideology
+      :domain (a / amr-unknown)
+      :poss (p / political-party
+            :name (n / name
+                  :op1 "Palang"
+                  :op2 "Dharma"
+                  :op3 "Party")))

@@ -1,0 +1,15 @@
+# ::snt List the pole drivers in the grand prixes where Williams Grand Prix Engineering was a first team?
+(l / list-01
+      :ARG1 (p / person
+            :ARG0-of (d / drive-01
+                  :ARG1 (p2 / pole)
+                  :subevent-of (e / event
+                        :mod (g / grand-prix)
+                        :subevent (t / team
+                              :name (n / name
+                                    :op1 "Williams"
+                                    :op2 "Grand"
+                                    :op3 "Prix"
+                                    :op4 "Engineering")
+                              :ord (o / ordinal-entity
+                                    :value 1))))))

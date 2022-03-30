@@ -1,0 +1,10 @@
+# ::snt How many titles were given to people who engaged in the Operation Dragoon?
+(g / give-01
+      :ARG1 (t / title
+            :quant (a / amr-unknown))
+      :ARG2 (p / person
+            :ARG1-of (e / engage-01
+                  :ARG2 (e2 / event
+                        :name (n / name
+                              :op1 "Operation"
+                              :op2 "Dragoon")))))

@@ -1,0 +1,9 @@
+# ::snt Who all have rented the stadium whose architect is Populous?
+(r / rent-01
+      :ARG0 (a / amr-unknown
+            :mod (a2 / all))
+      :ARG1 (s / stadium
+            :poss-of (a3 / architect
+                  :mod (p / person
+                        :name (n / name
+                              :op1 "Populous")))))

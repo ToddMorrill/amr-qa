@@ -1,0 +1,9 @@
+# ::snt How many bands are signed up with Kobalt Label Services?
+(s / sign-up-03
+      :ARG1 (b / band
+            :quant (a / amr-unknown))
+      :ARG3 (c / company
+            :name (n / name
+                  :op1 "Kobalt"
+                  :op2 "Label"
+                  :op3 "Services")))

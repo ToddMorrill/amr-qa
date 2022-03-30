@@ -1,0 +1,15 @@
+# ::snt Was the cover of The adventures of Tom Sawyer designed by Mark Twain?
+(d / design-01
+      :ARG0 (p / person
+            :name (n / name
+                  :op1 "Mark"
+                  :op2 "Twain"))
+      :ARG1 (c / cover
+            :poss (b / book
+                  :name (n2 / name
+                        :op1 "The"
+                        :op2 "Adventures"
+                        :op3 "of"
+                        :op4 "Tom"
+                        :op5 "Sawyer")))
+      :polarity (a / amr-unknown))

@@ -1,0 +1,10 @@
+# ::snt What is the county seat of the district through which the Beckler River flows?
+(s / seat
+      :poss (c / county)
+      :location (d / district
+            :ARG2-of (f / flow-01
+                  :ARG1 (r / river
+                        :name (n / name
+                              :op1 "Beckler"
+                              :op2 "River"))))
+      :domain (a / amr-unknown))

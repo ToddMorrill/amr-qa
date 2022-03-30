@@ -1,0 +1,12 @@
+# ::snt What is the common genere of Abhijit Kunte and Kasparov ?
+(g / genere
+      :mod (c / common)
+      :poss (a / and
+            :op1 (p / person
+                  :name (n / name
+                        :op1 "Abhijit"
+                        :op2 "Kunte"))
+            :op2 (p2 / person
+                  :name (n2 / name
+                        :op1 "Kasparov")))
+      :domain (a2 / amr-unknown))

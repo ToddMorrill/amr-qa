@@ -1,0 +1,15 @@
+# ::snt Comcast SportsNet is broadcasted in what area, which also has the Michigan Renaissance Festival?
+(b / broadcast-01
+      :ARG1 (b2 / broadcast-program
+            :name (n / name
+                  :op1 "Comcast"
+                  :op2 "SportsNet"))
+      :ARG3 (a / area
+            :ARG0-of (h / have-03
+                  :ARG1 (f / festival
+                        :name (n2 / name
+                              :op1 "Michigan"
+                              :op2 "Renaissance"
+                              :op3 "Festival"))
+                  :mod (a2 / also))
+            :mod (a3 / amr-unknown)))

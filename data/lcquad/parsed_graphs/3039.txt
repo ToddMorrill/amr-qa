@@ -1,0 +1,10 @@
+# ::snt What awards did Jos Rivera (playwright) win?
+(w / win-01
+      :ARG0 (p / person
+            :name (n / name
+                  :op1 "Jos"
+                  :op2 "Rivera")
+            :ARG0-of (w2 / write-01
+                  :ARG1 (p2 / play-11)))
+      :ARG1 (a / award
+            :mod (a2 / amr-unknown)))

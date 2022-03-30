@@ -1,12 +1,10 @@
-# ::snt Is Rita Wilson the wife of Tom Hanks?
-(h / have-rel-role-91
-      :ARG0 (p / person
+# ::snt What is the highest mountain in Australia?
+(h / have-degree-91
+      :ARG1 (m / mountain
+            :domain (a / amr-unknown))
+      :ARG2 (h2 / high-02
+            :ARG1 m)
+      :ARG3 (m2 / most)
+      :ARG5 (c / country
             :name (n / name
-                  :op1 "Rita"
-                  :op2 "Wilson"))
-      :ARG1 (p2 / person
-            :name (n2 / name
-                  :op1 "Tom"
-                  :op2 "Hanks"))
-      :ARG2 (w / wife)
-      :polarity (a / amr-unknown))
+                  :op1 "Australia")))

@@ -1,0 +1,15 @@
+# ::snt Which college has been attended  by both Mr. Hubert Wiggs and Mr. Alvin Bell?
+(c / college
+      :ARG1-of (a / attend-01
+            :ARG0 (b / both
+                  :op1 (p / person
+                        :name (n / name
+                              :op1 "Mr."
+                              :op2 "Hubert"
+                              :op3 "Wiggs"))
+                  :op2 (p2 / person
+                        :name (n2 / name
+                              :op1 "Mr."
+                              :op2 "Alvin"
+                              :op3 "Bell"))))
+      :polarity (a2 / amr-unknown))

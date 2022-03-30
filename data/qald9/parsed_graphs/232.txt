@@ -1,7 +1,10 @@
-# ::snt What is the birth name of Adele?
-(n / name
-      :ARG1-of (b / bear-02
-            :ARG1 (p / person
-                  :name (n2 / name
-                        :op1 "Adele")))
-      :domain (a / amr-unknown))
+# ::snt Who developed the video game World of Warcraft?
+(d / develop-02
+      :ARG0 (a / amr-unknown)
+      :ARG1 (g / game
+            :name (n / name
+                  :op1 "World"
+                  :op2 "of"
+                  :op3 "War"
+                  :op4 "Woorea")
+            :mod (v / video)))

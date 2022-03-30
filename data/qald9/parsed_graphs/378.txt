@@ -1,11 +1,11 @@
-# ::snt Show me the book that Muhammad Ali wrote.
-(s / show-01
-      :mode imperative
-      :ARG0 (y / you)
+# ::snt Which books by Kerouac were published by Viking Press?
+(p / publish-01
+      :ARG0 (c / company
+            :name (n / name
+                  :op1 "Viking"
+                  :op2 "Press"))
       :ARG1 (b / book
-            :ARG1-of (w / write-01
-                  :ARG0 (p / person
-                        :name (n / name
-                              :op1 "Muhammad"
-                              :op2 "Ali"))))
-      :ARG2 (ii / i))
+            :mod (a / amr-unknown)
+            :source (p2 / person
+                  :name (n2 / name
+                        :op1 "Kerouac"))))

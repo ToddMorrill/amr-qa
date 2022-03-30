@@ -1,0 +1,9 @@
+# ::snt What did the people buried in Toronto die of?
+(d / die-01
+      :ARG1 (p / person
+            :ARG1-of (b / bury-01
+                  :location (c / city
+                        :name (n / name
+                              :op1 "Toronto"))))
+      :ARG1-of (c2 / cause-01
+            :ARG0 (a / amr-unknown)))

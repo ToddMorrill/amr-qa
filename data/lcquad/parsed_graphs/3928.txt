@@ -1,0 +1,6 @@
+# ::snt What countries used Solidus as currency?
+(u / use-01
+      :ARG0 (c / country
+            :mod (a / amr-unknown))
+      :ARG1 (s / solidus)
+      :ARG2 (c2 / currency))

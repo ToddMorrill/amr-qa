@@ -1,0 +1,7 @@
+# ::snt Who is the successor of McDonnell Douglas ?
+(s / succeed-02
+      :ARG0 (a / amr-unknown)
+      :ARG1 (p / person
+            :name (n / name
+                  :op1 "McDonnell"
+                  :op2 "Douglas")))

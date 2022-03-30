@@ -1,0 +1,11 @@
+# ::snt Do the White Plains Road lie in the Bronx county?
+(l / lie-07
+      :ARG1 (r / road
+            :name (n / name
+                  :op1 "White"
+                  :op2 "Plains"
+                  :op3 "Road"))
+      :ARG2 (c / county
+            :name (n2 / name
+                  :op1 "Bronx"))
+      :polarity (a / amr-unknown))

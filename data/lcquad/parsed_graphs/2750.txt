@@ -1,0 +1,15 @@
+# ::snt What is the common palce of study for jack McGregor and Philip W. Pillsbury ?
+(p / palce
+      :mod (c / common)
+      :ARG1-of (s / study-01
+            :ARG0 (a / and
+                  :op1 (p2 / person
+                        :name (n / name
+                              :op1 "Jack"
+                              :op2 "McGregor"))
+                  :op2 (p3 / person
+                        :name (n2 / name
+                              :op1 "Philip"
+                              :op2 "W."
+                              :op3 "Pillsbury"))))
+      :domain (a2 / amr-unknown))

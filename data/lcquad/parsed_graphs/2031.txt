@@ -1,0 +1,16 @@
+# ::snt Which mountain is located in inyo National Forest and has a parent peak named Nevado de Toluca ?
+(m / mountain
+      :domain (a / amr-unknown)
+      :location (f / forest
+            :name (n / name
+                  :op1 "Inyo"
+                  :op2 "National"
+                  :op3 "Forest"))
+      :ARG0-of (h / have-03
+            :ARG1 (p / peak
+                  :mod (p2 / parent)
+                  :ARG1-of (n2 / name-01
+                        :ARG2 (n3 / name
+                              :op1 "Nevado"
+                              :op2 "de"
+                              :op3 "Toluca")))))

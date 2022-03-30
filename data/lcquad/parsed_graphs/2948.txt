@@ -1,0 +1,7 @@
+# ::snt Name the tiemzone of Banlung ?
+(n / name-01
+      :ARG1 (c / city
+            :name (n2 / name
+                  :op1 "Banlung"))
+      :ARG2 (t / tiemzone)
+      :polarity (a / amr-unknown))

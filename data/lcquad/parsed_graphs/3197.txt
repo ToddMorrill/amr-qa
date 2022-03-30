@@ -1,0 +1,10 @@
+# ::snt What is that show whose theme was composed by Joel Goodman?
+(s / show-04
+      :ARG1 (a / amr-unknown)
+      :mod (t / that)
+      :poss (t2 / theme
+            :ARG1-of (c / compose-02
+                  :ARG0 (p / person
+                        :name (n / name
+                              :op1 "Joel"
+                              :op2 "Goodman")))))

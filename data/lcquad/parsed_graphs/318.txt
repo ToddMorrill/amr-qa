@@ -1,0 +1,8 @@
+# ::snt Eric roth wrote how many screenplays?
+(w / write-01
+      :ARG0 (p / person
+            :name (n / name
+                  :op1 "Eric"
+                  :op2 "Roth"))
+      :ARG1 (s / screenplay
+            :quant (a / amr-unknown)))

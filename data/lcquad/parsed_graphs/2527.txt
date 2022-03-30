@@ -1,0 +1,17 @@
+# ::snt What sport amongst the one Lagos Preparatory School practices, did Willian Garne play for?
+(p / play-01
+      :ARG0 (p2 / person
+            :name (n / name
+                  :op1 "Willian"
+                  :op2 "Garne"))
+      :ARG1 (s / sport
+            :mod (a / amr-unknown)
+            :ARG1-of (ii / include-91
+                  :ARG2 (s2 / sport
+                        :quant 1
+                        :ARG1-of (p3 / practice-01
+                              :ARG0 (s3 / school
+                                    :name (n2 / name
+                                          :op1 "Lagos"
+                                          :op2 "Preparatory"
+                                          :op3 "School")))))))

@@ -1,0 +1,13 @@
+# ::snt What is the field of the Jon Speelman and occupation of the Karen Grigorian?
+(f / field
+      :domain (a / amr-unknown)
+      :topic (a2 / and
+            :op1 (e / event
+                  :name (n / name
+                        :op1 "Jon"
+                        :op2 "Speelman"))
+            :op2 (o / occupy-01
+                  :ARG1 (l / local-region
+                        :name (n2 / name
+                              :op1 "Karen"
+                              :op2 "Grigorian")))))

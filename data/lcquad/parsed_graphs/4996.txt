@@ -1,0 +1,14 @@
+# ::snt Name the show formed by J. Michael Stroczynski and had network as TNT ?
+(n / name-01
+      :ARG1 (s / show
+            :ARG1-of (f / form-01
+                  :ARG0 (p / person
+                        :name (n2 / name
+                              :op1 "J."
+                              :op2 "Michael"
+                              :op3 "Stroczynski")))
+            :ARG0-of (h / have-03
+                  :ARG1 (n3 / network
+                        :name (n4 / name
+                              :op1 "TNT"))))
+      :polarity (a / amr-unknown))

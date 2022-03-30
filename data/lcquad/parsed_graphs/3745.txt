@@ -1,0 +1,10 @@
+# ::snt Does GeneWeb have the GPL license?
+(h / have-03
+      :ARG0 (c / company
+            :name (n / name
+                  :op1 "GeneWeb"))
+      :ARG1 (l / license
+            :mod (t / thing
+                  :name (n2 / name
+                        :op1 "GPL")))
+      :polarity (a / amr-unknown))

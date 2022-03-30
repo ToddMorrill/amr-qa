@@ -1,0 +1,9 @@
+# ::snt From where does the river start, which flows into the Conowingo dam?
+(s / start-01
+      :ARG1 (r / river
+            :ARG1-of (f / flow-01
+                  :direction (ii / into
+                        :op1 (d / dam
+                              :name (n / name
+                                    :op1 "Conowingo")))))
+      :ARG2 (a / amr-unknown))

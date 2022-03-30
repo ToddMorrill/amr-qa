@@ -1,0 +1,8 @@
+# ::snt What was the first Queen album?
+(a / album
+      :ord (o / ordinal-entity
+            :value 1)
+      :poss (o2 / organization
+            :name (n / name
+                  :op1 "Queen"))
+      :domain (a2 / amr-unknown))

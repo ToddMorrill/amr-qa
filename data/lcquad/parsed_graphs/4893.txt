@@ -1,0 +1,14 @@
+# ::snt What faith do hang chuon naron and Kron Ngoy follow?
+(f / follow-02
+      :ARG0 (a / and
+            :op1 (p / person
+                  :name (n / name
+                        :op1 "hang"
+                        :op2 "chuon"
+                        :op3 "naron"))
+            :op2 (p2 / person
+                  :name (n2 / name
+                        :op1 "Kron"
+                        :op2 "Ngoy")))
+      :ARG1 (f2 / faith
+            :mod (a2 / amr-unknown)))

@@ -1,0 +1,14 @@
+# ::snt What is the base currency of the Benelux which can be used in Republic of Montenegro?
+(c / currency
+      :ARG2-of (b / base-02
+            :ARG1 (c2 / country
+                  :name (n / name
+                        :op1 "Benelux")))
+      :domain (a / amr-unknown)
+      :ARG1-of (u / use-01
+            :ARG2 (c3 / country
+                  :name (n2 / name
+                        :op1 "Republic"
+                        :op2 "of"
+                        :op3 "Montenegro"))
+            :ARG1-of (p / possible-01)))

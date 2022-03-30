@@ -1,0 +1,12 @@
+# ::snt Twin cities 400 is operated by what city, which is the birthplace of Leona Baumgarter?
+(o / operate-01
+      :ARG0 (c / city
+            :mod (a / amr-unknown)
+            :location-of (b / bear-02
+                  :ARG1 (p / person
+                        :name (n / name
+                              :op1 "Leona"
+                              :op2 "Baumgarter"))))
+      :ARG1 (c2 / city
+            :mod 400
+            :ARG1-of (t / twin-01)))

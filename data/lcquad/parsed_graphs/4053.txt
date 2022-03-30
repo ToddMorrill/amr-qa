@@ -1,0 +1,10 @@
+# ::snt Where is the tombstone of the successor of Edward Wolcott?
+(b / be-located-at-91
+      :ARG1 (t / tombstone
+            :poss (p / person
+                  :ARG0-of (s / succeed-02
+                        :ARG1 (p2 / person
+                              :name (n / name
+                                    :op1 "Edward"
+                                    :op2 "Wolcott")))))
+      :ARG2 (a / amr-unknown))

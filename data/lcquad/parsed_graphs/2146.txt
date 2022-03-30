@@ -1,0 +1,12 @@
+# ::snt Name everyone working for a company owned by Roman Abramovich.
+(n / name-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (e / everyone
+            :ARG0-of (w / work-01
+                  :ARG2 (c / company
+                        :ARG1-of (o / own-01
+                              :ARG0 (p / person
+                                    :name (n2 / name
+                                          :op1 "Roman"
+                                          :op2 "Abramsovich")))))))

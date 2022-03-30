@@ -1,0 +1,13 @@
+# ::snt Name some local authorities of schools which have a mixed gender education system?
+(n / name-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (a / authority
+            :ARG1-of (l / local-02)
+            :quant (s / some)
+            :mod (s2 / school
+                  :ARG0-of (h / have-03
+                        :ARG1 (s3 / system
+                              :mod (e / educate-01)
+                              :mod (g / gender
+                                    :ARG1-of (m / mix-01)))))))

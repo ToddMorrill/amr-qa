@@ -1,0 +1,11 @@
+# ::snt List some teammates of Ndonga Mianga?
+(l / list-01
+      :ARG1 (p / person
+            :ARG0-of (h / have-rel-role-91
+                  :ARG1 (p2 / person
+                        :name (n / name
+                              :op1 "Ndonga"
+                              :op2 "Mianga"))
+                  :ARG2 (t / teammate))
+            :quant (s / some))
+      :polarity (a / amr-unknown))

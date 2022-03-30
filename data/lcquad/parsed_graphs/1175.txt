@@ -1,0 +1,7 @@
+# ::snt How many things belong to a division of plant kingdom?
+(b / belong-01
+      :ARG0 (t / thing
+            :quant (a / amr-unknown))
+      :ARG1 (d / division
+            :part-of (k / kingdom
+                  :mod (p / plant))))

@@ -1,0 +1,13 @@
+# ::snt Where is the head quarters of the parent company of Mall of America located?
+(b / be-located-at-91
+      :ARG1 (h / headquarters
+            :poss (c / company
+                  :ARG0-of (h2 / have-rel-role-91
+                        :name (n / name
+                              :op1 "Mall"
+                              :op2 "of"
+                              :op3 "America"))
+                  :ARG1-of h2
+                  :ARG2 (p / parent)))
+      :mod (h3 / head)
+      :ARG2 (a / amr-unknown))

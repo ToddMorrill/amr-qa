@@ -1,0 +1,10 @@
+# ::snt In which countries can i find some feminist writers?
+(p / possible-01
+      :ARG1 (f / find-01
+            :ARG0 (ii / i)
+            :ARG1 (p2 / person
+                  :ARG0-of (w / write-01)
+                  :mod (f2 / feminism)
+                  :quant (s / some))
+            :location (c / country
+                  :mod (a / amr-unknown))))

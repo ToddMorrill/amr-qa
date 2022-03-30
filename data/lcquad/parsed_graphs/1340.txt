@@ -1,0 +1,15 @@
+# ::snt Give me a count of everything owned by the network whose sister name is The CW?
+(g / give-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (c / count-01
+            :ARG1 (e / everything
+                  :ARG1-of (o / own-01
+                        :ARG0 (n / network
+                              :ARG0-of (h / have-rel-role-91
+                                    :ARG1 (b / broadcast-program
+                                          :name (n2 / name
+                                                :op1 "The"
+                                                :op2 "CW"))
+                                    :ARG2 (s / sister))))))
+      :ARG2 (ii / i))

@@ -1,0 +1,9 @@
+# ::snt Which football teams is Shahid Khan proprietor to?
+(p / proprietor
+      :domain (p2 / person
+            :name (n / name
+                  :op1 "Shahid"
+                  :op2 "Khan"))
+      :beneficiary (a / amr-unknown
+            :mod (t / team
+                  :mod (f / football))))

@@ -1,0 +1,13 @@
+# ::snt Who won a Norbert Wiener Award for Social and Professional Responsibility?
+(w / win-01
+      :ARG0 (a / amr-unknown)
+      :ARG1 (a2 / award
+            :name (n / name
+                  :op1 "Norbert"
+                  :op2 "Wiener"
+                  :op3 "Award"
+                  :op4 "for"
+                  :op5 "Social"
+                  :op6 "and"
+                  :op7 "Professional"
+                  :op8 "Responsibility")))

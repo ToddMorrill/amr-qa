@@ -1,0 +1,6 @@
+# ::snt What municipalities are adjacent to Chne-Bougeries?
+(b / border-01
+      :ARG1 (a / amr-unknown)
+      :ARG2 (c / city
+            :name (n / name
+                  :op1 "Chne-Bougeries")))

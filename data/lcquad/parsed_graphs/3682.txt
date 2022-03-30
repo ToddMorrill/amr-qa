@@ -1,0 +1,12 @@
+# ::snt Whose former teams are Indianapolis Colts and Carolina Panthers?
+(a / and
+      :op1 (t / team
+            :name (n / name
+                  :op1 "Indianapolis"
+                  :op2 "Colts"))
+      :op2 (t2 / team
+            :name (n2 / name
+                  :op1 "Carolina"
+                  :op2 "Panther"))
+      :time (f / former)
+      :poss (a2 / amr-unknown))

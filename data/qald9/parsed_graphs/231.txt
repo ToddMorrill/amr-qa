@@ -1,10 +1,12 @@
-# ::snt Who developed the video game World of Warcraft?
-(d / develop-02
-      :ARG0 (a / amr-unknown)
-      :ARG1 (g / game
-            :name (n / name
-                  :op1 "World"
-                  :op2 "of"
-                  :op3 "War"
-                  :op4 "Woorea")
-            :mod (v / video)))
+# ::snt Give me all launch pads operated by NASA.
+(g / give-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (p / pad
+            :purpose (l / launch-01)
+            :ARG1-of (o / operate-01
+                  :ARG0 (r / research-institute
+                        :name (n / name
+                              :op1 "NASA")))
+            :mod (a / all))
+      :ARG2 (ii / i))

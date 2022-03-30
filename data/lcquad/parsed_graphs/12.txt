@@ -1,0 +1,20 @@
+# ::snt What is the common affiliation of the Monroe Carell Jr. Children's Hospital at Vanderbilt and alma mater of the Duncan U. Fletcher?
+(a / affiliate-01
+      :ARG1 (h / hospital
+            :name (n / name
+                  :op1 "Monroe"
+                  :op2 "Carell"
+                  :op3 "Jr."
+                  :op4 "Children's"
+                  :op5 "Hospital")
+            :location (u / university
+                  :name (n2 / name
+                        :op1 "Vanderbilt"))
+            :mod (a2 / alma-mater
+                  :poss (p / person
+                        :name (n3 / name
+                              :op1 "Duncan"
+                              :op2 "U."
+                              :op3 "Fletcher"))))
+      :ARG2 (a3 / amr-unknown)
+      :mod (c / common))

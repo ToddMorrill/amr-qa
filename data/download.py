@@ -30,8 +30,15 @@ def main(args):
     # files to be downloaded
     qald_train = 'https://raw.githubusercontent.com/ag-sc/QALD/master/9/data/qald-9-train-multilingual.json'
     qald_test = 'https://raw.githubusercontent.com/ag-sc/QALD/master/9/data/qald-9-test-multilingual.json'
+    lcquad_train = 'https://raw.githubusercontent.com/AskNowQA/LC-QuAD/data/train-data.json'
+    lcquad_test = 'https://raw.githubusercontent.com/AskNowQA/LC-QuAD/data/test-data.json'
+
+
     download_save(url=qald_train, save_dir=args.save_dir)
     download_save(url=qald_test, save_dir=args.save_dir)
+    download_save(url=lcquad_train, save_dir=args.save_dir)
+    download_save(url=lcquad_test, save_dir=args.save_dir)
+
 
 
 if __name__ == '__main__':

@@ -1,9 +1,5 @@
-# ::snt In which ancient empire could you pay with cocoa beans?
-(p / possible-01
-      :ARG1 (p2 / pay-01
-            :ARG0 (y / you)
-            :ARG1 (b / bean
-                  :source (c / cocoa))
-            :location (e / empire
-                  :mod (a / ancient)
-                  :domain (a2 / amr-unknown))))
+# ::snt Which species does an elephant belong?
+(b / belong-01
+      :ARG0 (e / elephant)
+      :ARG1 (s / species
+            :mod (a / amr-unknown)))

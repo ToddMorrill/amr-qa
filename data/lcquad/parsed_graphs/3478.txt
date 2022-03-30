@@ -1,0 +1,8 @@
+# ::snt Which kind of buildings are found in England?
+(f / find-01
+      :ARG1 (b / building
+            :mod (k / kind
+                  :mod (a / amr-unknown)))
+      :location (c / country
+            :name (n / name
+                  :op1 "England")))

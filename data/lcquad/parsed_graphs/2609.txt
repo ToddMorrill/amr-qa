@@ -1,0 +1,14 @@
+# ::snt Name the organization which developed iPhone OS and the XNU?
+(n / name-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (o / organization
+            :ARG0-of (d / develop-02
+                  :ARG1 (a / and
+                        :op1 (p / product
+                              :name (n2 / name
+                                    :op1 "iPhone"
+                                    :op2 "OS"))
+                        :op2 (p2 / product
+                              :name (n3 / name
+                                    :op1 "XNU"))))))

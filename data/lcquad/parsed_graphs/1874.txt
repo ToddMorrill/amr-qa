@@ -1,0 +1,15 @@
+# ::snt List the former team of the american football players born in Pennsylvania ?
+(l / list-01
+      :ARG1 (t / team
+            :time (f / former)
+            :poss (p / person
+                  :ARG0-of (p2 / play-01
+                        :ARG1 (f2 / football))
+                  :mod (c / country
+                        :name (n / name
+                              :op1 "America"))
+                  :ARG1-of (b / bear-02
+                        :location (s / state
+                              :name (n2 / name
+                                    :op1 "Pennsylvania")))))
+      :polarity (a / amr-unknown))

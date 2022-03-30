@@ -1,0 +1,13 @@
+# ::snt Is the Frank R Lillie House has the Chicago architecture?
+(h / have-03
+      :ARG0 (b / building
+            :name (n / name
+                  :op1 "Frank"
+                  :op2 "R"
+                  :op3 "Lillie"
+                  :op4 "House"))
+      :ARG1 (a / architecture
+            :mod (c / city
+                  :name (n2 / name
+                        :op1 "Chicago")))
+      :polarity (a2 / amr-unknown))

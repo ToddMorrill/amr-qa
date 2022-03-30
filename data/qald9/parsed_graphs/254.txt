@@ -1,10 +1,12 @@
-# ::snt How many people live in the capital of Australia?
-(l / live-01
-      :ARG0 (p / person
-            :quant (a / amr-unknown))
-      :location (c / city
-            :ARG0-of (h / have-org-role-91
-                  :ARG1 (c2 / country
-                        :name (n / name
-                              :op1 "Australia"))
-                  :ARG2 (c3 / capital))))
+# ::snt Who was the wife of U.S. president Lincoln?
+(h / have-rel-role-91
+      :ARG0 (a / amr-unknown)
+      :ARG1 (p / person
+            :name (n / name
+                  :op1 "Lincoln")
+            :ARG0-of (h2 / have-org-role-91
+                  :ARG1 (c / country
+                        :name (n2 / name
+                              :op1 "U.S."))
+                  :ARG2 (p2 / president)))
+      :ARG2 (w / wife))

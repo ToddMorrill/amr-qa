@@ -1,0 +1,16 @@
+# ::snt Whihc alma mater of angela Trusty is also the training center of David Scherman ?
+(c / center
+      :purpose (t / train-01
+            :ARG0 (p / person
+                  :name (n / name
+                        :op1 "David"
+                        :op2 "Scherman")))
+      :domain (u / university
+            :name (n2 / name
+                  :op1 "Whihc")
+            :poss (p2 / person
+                  :name (n3 / name
+                        :op1 "Angela"
+                        :op2 "Trusty"))
+            :mod (a / alma-mater))
+      :mod (a2 / also))

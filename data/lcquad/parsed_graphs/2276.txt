@@ -1,0 +1,13 @@
+# ::snt Where did Doug Walgren and Lee Si Chen study?
+(s / study-01
+      :ARG0 (a / and
+            :op1 (p / person
+                  :name (n / name
+                        :op1 "Doug"
+                        :op2 "Walgren"))
+            :op2 (p2 / person
+                  :name (n2 / name
+                        :op1 "Lee"
+                        :op2 "Si"
+                        :op3 "Chen")))
+      :location (a2 / amr-unknown))

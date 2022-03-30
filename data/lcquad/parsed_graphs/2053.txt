@@ -1,0 +1,10 @@
+# ::snt List the outflows of the lake which has Benu river as one of it ?
+(l / list-01
+      :ARG1 (o / outflow
+            :source (l2 / lake
+                  :ARG2-of (ii / include-91
+                        :ARG1 (r / river
+                              :name (n / name
+                                    :op1 "Benu"
+                                    :op2 "River")))))
+      :polarity (a / amr-unknown))

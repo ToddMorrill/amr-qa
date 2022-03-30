@@ -1,0 +1,11 @@
+# ::snt Who are the chancellors of universities which is affiliated with Plymouth University?
+(p / person
+      :ARG0-of (h / have-org-role-91
+            :ARG1 (u / university
+                  :ARG1-of (a / affiliate-01
+                        :ARG2 (u2 / university
+                              :name (n / name
+                                    :op1 "Plymouth"
+                                    :op2 "University"))))
+            :ARG2 (c / chancellor))
+      :domain (a2 / amr-unknown))

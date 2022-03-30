@@ -1,0 +1,10 @@
+# ::snt List the tomb of the royalties whose burial place is Little Easton ?
+(l / list-01
+      :ARG1 (t / tomb
+            :poss (r / royalty
+                  :ARG1-of (b / bury-01
+                        :location (c / city
+                              :name (n / name
+                                    :op1 "Little"
+                                    :op2 "Easton")))))
+      :polarity (a / amr-unknown))

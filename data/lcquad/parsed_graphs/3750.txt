@@ -1,0 +1,8 @@
+# ::snt What are the death place of the models whose hair color was Red?
+(p / place
+      :location-of (d / die-01
+            :ARG1 (m / model
+                  :part (h / hair
+                        :ARG1-of (c / color-01
+                              :ARG2 (r / red)))))
+      :domain (a / amr-unknown))

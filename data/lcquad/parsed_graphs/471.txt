@@ -1,0 +1,12 @@
+# ::snt To how many places does the airlines fly, whose head office is located at the Gatwick Airport?
+(f / fly-01
+      :ARG4 (a / airline
+            :ARG0-of (h / have-03
+                  :ARG1 (o / office
+                        :mod (h2 / head)
+                        :location (a2 / airport
+                              :name (n / name
+                                    :op1 "Gatwick"
+                                    :op2 "Airport")))))
+      :destination (p / place
+            :quant (a3 / amr-unknown)))

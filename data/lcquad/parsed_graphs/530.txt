@@ -1,0 +1,13 @@
+# ::snt Which college of Luke List (golfer) is the alma mater of K. Terry Dornbush
+(a / alma-mater
+      :poss (p / person
+            :name (n / name
+                  :op1 "K."
+                  :op2 "Terry"
+                  :op3 "Dornbush"))
+      :domain (c / college
+            :poss (p2 / person
+                  :name (n2 / name
+                        :op1 "Luke"
+                        :op2 "List")
+                  :ARG0-of (g / golf-01))))

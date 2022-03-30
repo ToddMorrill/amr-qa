@@ -1,0 +1,9 @@
+# ::snt How many ingedients are required to make the Ragout Fin?
+(r / require-01
+      :ARG0 (m / make-01
+            :ARG1 (t / thing
+                  :name (n / name
+                        :op1 "Ragout"
+                        :op2 "Fin")))
+      :ARG1 (ii / income
+            :quant (a / amr-unknown)))

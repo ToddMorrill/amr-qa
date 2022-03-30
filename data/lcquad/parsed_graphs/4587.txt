@@ -1,0 +1,8 @@
+# ::snt Name the river mouth of Moordener Kill ?
+(n / name-01
+      :ARG1 (m / mouth
+            :part-of (r / river
+                  :name (n2 / name
+                        :op1 "Moordener"
+                        :op2 "Kill")))
+      :polarity (a / amr-unknown))

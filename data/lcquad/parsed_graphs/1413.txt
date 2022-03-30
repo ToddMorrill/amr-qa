@@ -1,0 +1,13 @@
+# ::snt In how many different places does Canal and River Trust own its assets?
+(o / own-01
+      :ARG0 (c / company
+            :name (n / name
+                  :op1 "Canal"
+                  :op2 "and"
+                  :op3 "River"
+                  :op4 "Trust"))
+      :ARG1 (a / asset
+            :poss c)
+      :location (p / place
+            :ARG1-of (d / differ-02)
+            :quant (a2 / amr-unknown)))

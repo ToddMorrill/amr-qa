@@ -1,0 +1,9 @@
+# ::snt How many other ingredient are there in the foods whihh have one of the ingredient as Potato ?
+(ii / ingredient
+      :mod (o / other)
+      :quant (a / amr-unknown)
+      :location (f / food
+            :ARG0-of (h / have-03
+                  :ARG1 (ii2 / ingredient
+                        :quant 1
+                        :example (p / potato)))))

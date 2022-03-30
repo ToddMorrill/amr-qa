@@ -1,0 +1,13 @@
+# ::snt List all those whose relatives' nationality is United States.
+(l / list-01
+      :ARG1 (p / person
+            :mod (a / all)
+            :mod (t / that)
+            :ARG1-of (h / have-rel-role-91
+                  :ARG0 (p2 / person
+                        :mod (n / nationality
+                              :poss (c / country
+                                    :name (n2 / name
+                                          :op1 "United"
+                                          :op2 "States"))))
+                  :ARG2 (r / relative))))

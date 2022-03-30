@@ -1,7 +1,7 @@
-# ::snt How often did Jane Fonda marry?
-(m / marry-01
+# ::snt Where is the origin of Carolina reaper?
+(o / originate-01
       :ARG1 (p / person
             :name (n / name
-                  :op1 "Jane"
-                  :op2 "Fonda"))
-      :frequency (a / amr-unknown))
+                  :op1 "Carolina"
+                  :op2 "Reaper"))
+      :ARG2 (a / amr-unknown))

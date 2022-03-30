@@ -1,0 +1,8 @@
+# ::snt How many shows are made by Larry David?
+(m / make-01
+      :ARG0 (p / person
+            :name (n / name
+                  :op1 "Larry"
+                  :op2 "David"))
+      :ARG1 (s / show
+            :quant (a / amr-unknown)))

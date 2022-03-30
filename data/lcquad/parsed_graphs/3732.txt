@@ -1,0 +1,16 @@
+# ::snt What is the highschool of the american football player who joined the Robert Morris Colonials program?
+(h / high-school
+      :domain (a / amr-unknown)
+      :poss (p / person
+            :mod (c / country
+                  :name (n / name
+                        :op1 "America"))
+            :ARG0-of (p2 / play-01
+                  :ARG1 (f / football))
+            :ARG0-of (j / join-04
+                  :ARG1 (p3 / program
+                        :mod (t / team
+                              :name (n2 / name
+                                    :op1 "Robert"
+                                    :op2 "Morris"
+                                    :op3 "Colonial"))))))

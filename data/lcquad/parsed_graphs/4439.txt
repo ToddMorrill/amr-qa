@@ -1,0 +1,8 @@
+# ::snt In which races have Tillingdale's horses participated?
+(p / participate-01
+      :ARG0 (h / horse
+            :poss (p2 / person
+                  :name (n / name
+                        :op1 "Tillingdale")))
+      :ARG1 (r / race-02
+            :ARG3 (a / amr-unknown)))

@@ -1,0 +1,9 @@
+# ::snt What genre of games are made by Blizzard Entertainment studios?
+(m / make-01
+      :ARG0 (s / studio
+            :name (n / name
+                  :op1 "Blizzard"
+                  :op2 "Entertainment"))
+      :ARG1 (g / game
+            :mod (g2 / genre
+                  :mod (a / amr-unknown))))

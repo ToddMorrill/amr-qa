@@ -1,0 +1,7 @@
+# ::snt What sports are played in schools in the capital region?
+(p / play-01
+      :ARG1 (s / sport
+            :mod (a / amr-unknown))
+      :location (s2 / school
+            :location (r / region
+                  :mod (c / capital))))

@@ -1,0 +1,19 @@
+# ::snt Name the river whose mouth country is Mozambique and source region is North-Western Province, Zambia?
+(n / name-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (r / river
+            :part (m / mouth
+                  :mod (c / country
+                        :name (n2 / name
+                              :op1 "Mozambique")))
+            :part (r2 / region
+                  :ARG0-of (s / source-02
+                        :ARG1 r)
+                  :location (p / province
+                        :name (n3 / name
+                              :op1 "North-Western"
+                              :op2 "Province")
+                        :location (c2 / country
+                              :name (n4 / name
+                                    :op1 "Zambia"))))))

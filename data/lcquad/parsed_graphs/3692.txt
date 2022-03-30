@@ -1,0 +1,15 @@
+# ::snt Among the countries using Aureus as currency which had Nicomedia as an important place ?
+(ii / include-91
+      :ARG1 (c / country
+            :ARG0-of (u / use-01
+                  :ARG1 (c2 / country
+                        :name (n / name
+                              :op1 "Aureus"))
+                  :ARG2 (c3 / currency))
+            :ARG0-of (h / have-03
+                  :ARG1 (p / place
+                        :name (n2 / name
+                              :op1 "Nicomedia")
+                        :ARG1-of (ii2 / important-01))))
+      :ARG2 (c4 / country
+            :polarity (a / amr-unknown)))

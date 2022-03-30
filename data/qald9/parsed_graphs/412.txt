@@ -1,0 +1,14 @@
+# ::snt Give me all actors starring in Last Action Hero.
+(g / give-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (p / person
+            :ARG0-of (a / act-01)
+            :ARG0-of (s / star-01
+                  :ARG1 (w / work-of-art
+                        :name (n / name
+                              :op1 "Last"
+                              :op2 "Action"
+                              :op3 "Hero")))
+            :mod (a2 / all))
+      :ARG2 (ii / i))

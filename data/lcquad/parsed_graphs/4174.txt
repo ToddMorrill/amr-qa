@@ -1,0 +1,8 @@
+# ::snt How many leagues have used the O.co Coliseum?
+(u / use-01
+      :ARG0 (l / league
+            :quant (a / amr-unknown))
+      :ARG1 (s / sports-facility
+            :name (n / name
+                  :op1 "O.co."
+                  :op2 "Coliseum")))

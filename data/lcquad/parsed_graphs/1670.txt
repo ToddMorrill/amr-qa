@@ -1,0 +1,16 @@
+# ::snt What is the location city of the Denver Broncos which is also  place of birth of the William C. Cramer ?
+(c / city
+      :location-of (t / team
+            :name (n / name
+                  :op1 "Denver"
+                  :op2 "Broncos")
+            :ARG1-of (m / mean-01
+                  :ARG2 (p / place
+                        :location-of (b / bear-02
+                              :ARG1 (p2 / person
+                                    :name (n2 / name
+                                          :op1 "William"
+                                          :op2 "C."
+                                          :op3 "Cramer")))
+                        :mod (a / also))))
+      :domain (a2 / amr-unknown))

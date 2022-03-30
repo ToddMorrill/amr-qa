@@ -1,0 +1,15 @@
+# ::snt What is the associated band of the musical artist who is the producer of The Trumpet Kings Meet Joe Turner ?
+(b / band
+      :ARG1-of (a / associate-01)
+      :domain (a2 / amr-unknown)
+      :poss (a3 / artist
+            :mod (m / music)
+            :ARG0-of (p / produce-01
+                  :ARG1 m
+                  :name (n / name
+                        :op1 "The"
+                        :op2 "Trumpet"
+                        :op3 "Kings"
+                        :op4 "Meet"
+                        :op5 "Joe"
+                        :op6 "Turner"))))

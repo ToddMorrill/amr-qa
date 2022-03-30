@@ -1,12 +1,9 @@
-# ::snt Give me all launch pads operated by NASA.
-(g / give-01
-      :mode imperative
-      :ARG0 (y / you)
-      :ARG1 (p / pad
-            :purpose (l / launch-01)
-            :ARG1-of (o / operate-01
-                  :ARG0 (r / research-institute
-                        :name (n / name
-                              :op1 "NASA")))
-            :mod (a / all))
-      :ARG2 (ii / i))
+# ::snt how much is the total population of  european union?
+(t / total-01
+      :ARG1 (p / person
+            :ARG2-of (p2 / populate-01
+                  :ARG1 (u / union-02
+                        :ARG1 (c / continent
+                              :name (n / name
+                                    :op1 "Europe")))))
+      :ARG2 (a / amr-unknown))

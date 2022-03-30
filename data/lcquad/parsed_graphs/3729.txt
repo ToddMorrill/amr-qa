@@ -1,0 +1,8 @@
+# ::snt What is the mascot of the unit whose garrison is Canberra ?
+(m / mascot
+      :domain (a / amr-unknown)
+      :poss (u / unit
+            :ARG0-of (g / garrison-01
+                  :ARG1 (c / city
+                        :name (n / name
+                              :op1 "Canberra")))))

@@ -1,0 +1,10 @@
+# ::snt Companies headquartered in Geneva own which TV Shows?
+(o / own-01
+      :ARG0 (c / company
+            :ARG1-of (h / headquarters
+                  :location (c2 / city
+                        :name (n / name
+                              :op1 "Geneva"))))
+      :ARG1 (s / show-04
+            :ARG3 (t / television)
+            :mod (a / amr-unknown)))

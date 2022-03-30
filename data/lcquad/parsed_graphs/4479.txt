@@ -1,0 +1,6 @@
+# ::snt What is the meaning of Heydar ?
+(m / mean-01
+      :ARG1 (b / book
+            :name (n / name
+                  :op1 "Heydar"))
+      :ARG2 (a / amr-unknown))

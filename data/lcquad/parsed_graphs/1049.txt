@@ -1,0 +1,13 @@
+# ::snt In how many places can I find tombs of people who fought in the Norwalk Trainband?
+(f / find-01
+      :ARG0 (ii / i)
+      :ARG1 (t / tomb
+            :poss (p / person
+                  :ARG0-of (f2 / fight-01
+                        :ARG2 (e / event
+                              :name (n / name
+                                    :op1 "Norwalk"
+                                    :op2 "Trainband")))))
+      :location (p2 / place
+            :quant (a / amr-unknown))
+      :ARG1-of (p3 / possible-01))

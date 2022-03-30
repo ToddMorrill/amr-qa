@@ -1,0 +1,17 @@
+# ::snt Who were the pole drivers in GP when Damon hill was a first driver?
+(p / person
+      :ARG0-of (d / drive-01
+            :ARG1 (p2 / pole)
+            :time (p3 / person
+                  :name (n / name
+                        :op1 "Damon"
+                        :op2 "Hill")
+                  :ARG0-of (d2 / drive-01
+                        :ord (o / ordinal-entity
+                              :value 1)))
+            :subevent-of (e / event
+                  :name (n2 / name
+                        :op1 "Grand"
+                        :op2 "Old"
+                        :op3 "Formula")))
+      :domain (a / amr-unknown))

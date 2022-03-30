@@ -1,12 +1,8 @@
-# ::snt Who is the Formula 1 race driver with the most races?
-(p / person
-      :ARG0-of (d / drive-01
-            :ARG1 (r / race-02))
-      :mod (e / event
-            :name (n / name
-                  :op1 "Formula"
-                  :op2 1))
-      :domain (a / amr-unknown)
-      :ARG0-of (r2 / race-02
-            :ARG1-of (h / have-quant-91
-                  :ARG3 (m / most))))
+# ::snt Who is the tallest basketball player?
+(h / have-degree-91
+      :ARG1 (a / amr-unknown)
+      :ARG2 (t / tall)
+      :ARG3 (m / most)
+      :ARG5 (p / person
+            :ARG0-of (p2 / play-01
+                  :ARG1 (b / basketball))))

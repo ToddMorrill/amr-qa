@@ -1,0 +1,10 @@
+# ::snt In which country is the Chapelle Saint-Louis de Carthage located ?
+(l / locate-01
+      :ARG1 (f / facility
+            :name (n / name
+                  :op1 "Chapelle"
+                  :op2 "Saint-Louis"
+                  :op3 "de"
+                  :op4 "Carthage"))
+      :location (c / country
+            :mod (a / amr-unknown)))

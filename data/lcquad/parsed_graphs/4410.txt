@@ -1,0 +1,15 @@
+# ::snt Which politicians died in cities built by the Roman emperor Charles 5?
+(d / die-01
+      :ARG1 (p / politician
+            :mod (a / amr-unknown))
+      :location (c / city
+            :ARG1-of (b / build-01
+                  :ARG0 (p2 / person
+                        :name (n / name
+                              :op1 "Charles"
+                              :op2 5)
+                        :ARG0-of (h / have-org-role-91
+                              :ARG1 (c2 / country
+                                    :name (n2 / name
+                                          :op1 "Rome"))
+                              :ARG2 (e / emperor))))))

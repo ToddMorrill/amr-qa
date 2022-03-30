@@ -1,11 +1,7 @@
-# ::snt Show me all books in Asimov's Foundation series.
-(s / show-01
-      :mode imperative
-      :ARG0 (y / you)
-      :ARG1 (b / book
-            :mod (a / all)
-            :part-of (s2 / series
-                  :name (n / name
-                        :op1 "Asimov's"
-                        :op2 "Foundation")))
-      :ARG2 (ii / i))
+# ::snt How much did Pulp Fiction cost?
+(c / cost-01
+      :ARG1 (w / work-of-art
+            :name (n / name
+                  :op1 "Pulp"
+                  :op2 "Fiction"))
+      :ARG2 (a / amr-unknown))

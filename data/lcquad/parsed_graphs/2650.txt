@@ -1,0 +1,7 @@
+# ::snt Which minister was responsible for Kriminalpolizie?
+(r / responsible-03
+      :ARG0 (a / amr-unknown
+            :ARG0-of (h / have-org-role-91
+                  :ARG2 (m / minister)))
+      :ARG1 (p / police
+            :ARG0-of (c / criminal-03)))

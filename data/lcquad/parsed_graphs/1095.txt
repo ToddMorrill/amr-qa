@@ -1,0 +1,13 @@
+# ::snt What are the television shows which are in NTSC and 5.1 surround sound?
+(s / show-04
+      :ARG1 (a / amr-unknown)
+      :medium (t / television)
+      :medium (a2 / and
+            :op1 (t2 / thing
+                  :name (n / name
+                        :op1 "NTSC"))
+            :op2 (t3 / thing
+                  :name (n2 / name
+                        :op1 "5.1"
+                        :op2 " surround"
+                        :op3 "sound"))))

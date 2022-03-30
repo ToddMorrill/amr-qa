@@ -1,0 +1,12 @@
+# ::snt Was the Army Air Corps honored for the battle of Iraq?
+(h / honor-01
+      :ARG1 (m / military
+            :name (n / name
+                  :op1 "Army"
+                  :op2 "Air"
+                  :op3 "Corps"))
+      :ARG2 (b / battle-01
+            :ARG1 (c / country
+                  :name (n2 / name
+                        :op1 "Iraq")))
+      :polarity (a / amr-unknown))

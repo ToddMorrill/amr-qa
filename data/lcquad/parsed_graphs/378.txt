@@ -1,0 +1,10 @@
+# ::snt What are the books written by the the person who made the Novelas ejemplares?
+(b / book
+      :ARG1-of (w / write-01
+            :ARG0 (p / person
+                  :ARG0-of (m / make-01
+                        :ARG1 (e / exemplify-01
+                              :ARG0 (b2 / book
+                                    :name (n / name
+                                          :op1 "Nero"))))))
+      :domain (a / amr-unknown))

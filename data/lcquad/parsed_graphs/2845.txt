@@ -1,0 +1,15 @@
+# ::snt What are some relatives of the spouse of Uncle henry from Oz?
+(p / person
+      :ARG0-of (h / have-rel-role-91
+            :ARG1 (p2 / person
+                  :name (n / name
+                        :op1 "Uncle"
+                        :op2 "Henry")
+                  :source (c / country
+                        :name (n2 / name
+                              :op1 "Oz"))
+                  :ARG0-of (h2 / have-rel-role-91
+                        :ARG2 (s / spouse)))
+            :ARG2 (r / relative))
+      :quant (s2 / some)
+      :domain (a / amr-unknown))

@@ -1,0 +1,8 @@
+# ::snt Whose doctoral student is etienne bieler\xc9tienne_Bi\xe9ler
+(p / person
+      :name (n / name
+            :op1 "Andrea"
+            :op2 "Bieler")
+      :ARG0-of (s / study-01
+            :mod (d / doctoral))
+      :poss (h / he))

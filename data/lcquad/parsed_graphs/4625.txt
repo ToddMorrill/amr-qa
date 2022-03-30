@@ -1,0 +1,9 @@
+# ::snt Who are the tenants of the stadium where the UFC 140 is located?
+(p / person
+      :ARG0-of (r / rent-01
+            :ARG1 (s / stadium
+                  :location-of (e / event
+                        :name (n / name
+                              :op1 "UFC"
+                              :op2 140))))
+      :domain (a / amr-unknown))

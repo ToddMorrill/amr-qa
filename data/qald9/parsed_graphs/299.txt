@@ -1,8 +1,11 @@
-# ::snt How high is the Yokohama Marine Tower?
-(h / high
-      :quant (a / amr-unknown)
-      :domain (b / building
-            :name (n / name
-                  :op1 "Yokohama"
-                  :op2 "Marine"
-                  :op3 "Tower")))
+# ::snt Who are the writers of the Wall album of Pink Floyd?
+(p / person
+      :ARG0-of (w / write-01
+            :ARG1 (a / album
+                  :name (n / name
+                        :op1 "Wall")
+                  :poss (p2 / person
+                        :name (n2 / name
+                              :op1 "Pink"
+                              :op2 "Floyd"))))
+      :domain (a2 / amr-unknown))

@@ -1,12 +1,7 @@
-# ::snt Was U.S. president Jackson involved in a war?
-(ii / involve-01
-      :ARG1 (p / person
-            :name (n / name
-                  :op1 "Jackson")
-            :ARG0-of (h / have-org-role-91
-                  :ARG1 (c / country
-                        :name (n2 / name
-                              :op1 "U.S."))
-                  :ARG2 (p2 / president)))
-      :ARG2 (w / war-01)
-      :polarity (a / amr-unknown))
+# ::snt How many pages does War and Peace have?
+(h / have-03
+      :ARG0 (a / and
+            :op1 (w / war)
+            :op2 (p / peace))
+      :ARG1 (p2 / page
+            :quant (a2 / amr-unknown)))

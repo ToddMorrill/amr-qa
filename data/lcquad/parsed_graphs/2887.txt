@@ -1,0 +1,11 @@
+# ::snt How many companies have launched their rockets from the Vandenerg Air base?
+(l / launch-01
+      :ARG0 (c / company
+            :quant (a / amr-unknown))
+      :ARG1 (r / rocket
+            :poss c)
+      :source (a2 / airport
+            :name (n / name
+                  :op1 "Vandenerg"
+                  :op2 "Air"
+                  :op3 "Base")))

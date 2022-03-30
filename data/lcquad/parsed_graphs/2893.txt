@@ -1,0 +1,13 @@
+# ::snt Was Duanne Allman famous for playing the Gibson SG?
+(f / fame-01
+      :ARG1 (p / person
+            :name (n / name
+                  :op1 "Duanne"
+                  :op2 "Allman"))
+      :ARG2 (p2 / play-01
+            :ARG0 p
+            :ARG1 (a / aircraft-type
+                  :name (n2 / name
+                        :op1 "Gibson"
+                        :op2 "SG")))
+      :polarity (a2 / amr-unknown))

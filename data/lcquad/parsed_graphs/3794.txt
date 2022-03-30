@@ -1,0 +1,10 @@
+# ::snt Where do employees of Deroit Red Wings live?
+(l / live-01
+      :ARG0 (p / person
+            :ARG1-of (e / employ-01
+                  :ARG0 (o / organization
+                        :name (n / name
+                              :op1 "Deroit"
+                              :op2 "Red"
+                              :op3 "Wings"))))
+      :location (a / amr-unknown))

@@ -1,0 +1,17 @@
+# ::snt What is the name of the television show whose company is Paramount Television and theme music composer is Gary Portnoy?
+(a / and
+      :op1 (n / name-01
+            :ARG1 (s / show
+                  :mod (t / television)
+                  :poss (c / company
+                        :name (n2 / name
+                              :op1 "Paramount"
+                              :op2 "Television")))
+            :ARG2 (a2 / amr-unknown))
+      :op2 (p / person
+            :name (n3 / name
+                  :op1 "Gary"
+                  :op2 "Portnoy")
+            :ARG0-of (c2 / compose-02
+                  :ARG1 (m / music
+                        :mod (t2 / theme)))))

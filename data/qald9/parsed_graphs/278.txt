@@ -1,7 +1,9 @@
-# ::snt how much is the population  Iraq?
-(p / person
-      :ARG2-of (p2 / populate-01
-            :ARG1 (c / country
+# ::snt how big is the total area of North Rhine- Westphalia?
+(b / big
+      :degree (a / amr-unknown)
+      :domain (a2 / area
+            :ARG2-of (t / total-01)
+            :part-of (c / country
                   :name (n / name
-                        :op1 "Iraq")))
-      :quant (a / amr-unknown))
+                        :op1 "North"
+                        :op2 "Rhine-Westphalia"))))

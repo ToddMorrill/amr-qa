@@ -1,0 +1,12 @@
+# ::snt Name the battle fought by the military persons who also fought in Algeria ?
+(n / name-01
+      :ARG1 (b / battle-01
+            :ARG1-of (f / fight-01
+                  :ARG0 (p / person
+                        :mod (m / military)
+                        :ARG0-of (f2 / fight-01
+                              :location (c / country
+                                    :name (n2 / name
+                                          :op1 "Algeria"))
+                              :mod (a / also)))))
+      :polarity (a2 / amr-unknown))

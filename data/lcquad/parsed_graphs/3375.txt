@@ -1,0 +1,13 @@
+# ::snt What is the former partner of the figure skaters whose current partner is Alexa Scimeca?
+(p / partner-01
+      :ARG0 (a / amr-unknown)
+      :ARG1 (p2 / person
+            :ARG0-of (s / skate-01
+                  :mod (f / figure))
+            :ARG1-of (p3 / partner-01
+                  :ARG0 (p4 / person
+                        :name (n / name
+                              :op1 "Alexa"
+                              :op2 "Scimeca"))
+                  :time (c / current)))
+      :time (f2 / former))

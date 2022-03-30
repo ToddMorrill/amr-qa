@@ -1,5 +1,6 @@
-# ::snt Who is the author of the interpretation of dreams?
-(a / author-01
-      :ARG0 (a2 / amr-unknown)
-      :ARG1 (ii / interpret-01
-            :ARG1 (d / dream-01)))
+# ::snt Where is Sungkyunkwan University?
+(u / university
+      :name (n / name
+            :op1 "Sungkyunkwan"
+            :op2 "University")
+      :location (a / amr-unknown))

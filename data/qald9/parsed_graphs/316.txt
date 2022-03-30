@@ -1,9 +1,7 @@
-# ::snt Which television shows were created by Walt Disney?
-(c / create-01
-      :ARG0 (p / person
+# ::snt How many ethnic groups live in Slovenia?
+(l / live-01
+      :ARG0 (e / ethnic-group
+            :quant (a / amr-unknown))
+      :location (c / country
             :name (n / name
-                  :op1 "Walt"
-                  :op2 "Disney"))
-      :ARG1 (s / show-04
-            :ARG3 (t / television)
-            :mod (a / amr-unknown)))
+                  :op1 "Slovenia")))

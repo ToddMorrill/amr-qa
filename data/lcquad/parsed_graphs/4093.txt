@@ -1,0 +1,14 @@
+# ::snt What is the location of Dad's Root Beer on Google maps?
+(b / be-located-at-91
+      :ARG1 (p / product
+            :name (n / name
+                  :op1 "Root"
+                  :op2 "Beer")
+            :poss (p2 / person
+                  :ARG0-of (h / have-rel-role-91
+                        :ARG2 (d / dad))))
+      :ARG2 (a / amr-unknown)
+      :medium (m / map
+            :mod (c / company
+                  :name (n2 / name
+                        :op1 "Google"))))

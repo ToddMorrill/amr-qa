@@ -1,0 +1,11 @@
+# ::snt Who all have appointed governess born in Magnolia Plantation gardens?
+(a / appoint-01
+      :ARG0 (a2 / amr-unknown
+            :mod (a3 / all))
+      :ARG1 (p / person
+            :ARG0-of (g / govern-01)
+            :ARG1-of (b / bear-02
+                  :location (g2 / garden
+                        :name (n / name
+                              :op1 "Magnolia"
+                              :op2 "Plantation")))))

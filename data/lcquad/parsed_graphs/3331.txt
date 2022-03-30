@@ -1,0 +1,8 @@
+# ::snt Name the wine regions of Bogdanua ?
+(n / name-01
+      :ARG1 (r / region
+            :mod (w / wine)
+            :location (c / city
+                  :name (n2 / name
+                        :op1 "Bogdanua")))
+      :polarity (a / amr-unknown))

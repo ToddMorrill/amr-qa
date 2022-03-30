@@ -1,0 +1,13 @@
+# ::snt How many other important things have been written by the creator of Stuart Alan Jones?
+(t / thing
+      :ARG1-of (ii / important-01)
+      :mod (o / other)
+      :quant (a / amr-unknown)
+      :ARG1-of (w / write-01
+            :ARG0 (p / person
+                  :ARG0-of (c / create-01
+                        :ARG1 (p2 / person
+                              :name (n / name
+                                    :op1 "Stuart"
+                                    :op2 "Alan"
+                                    :op3 "Jones"))))))

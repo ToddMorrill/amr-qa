@@ -1,0 +1,9 @@
+# ::snt Name the part of Liverpool city region >
+(n / name-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (p / part
+            :part-of (r / region
+                  :part-of (c / city
+                        :name (n2 / name
+                              :op1 "Liverpool")))))

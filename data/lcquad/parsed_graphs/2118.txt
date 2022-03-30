@@ -1,0 +1,8 @@
+# ::snt What is the official residence of Sarah Kazemy ?
+(r / reside-01
+      :ARG0 (p / person
+            :name (n / name
+                  :op1 "Sarah"
+                  :op2 "Kazemy"))
+      :ARG1 (a / amr-unknown)
+      :mod (o / official))

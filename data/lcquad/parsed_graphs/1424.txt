@@ -1,0 +1,9 @@
+# ::snt Does A foreign policy of freedom belong to the genre Politics?
+(b / belong-01
+      :ARG0 (p / policy-01
+            :ARG2 (f / foreign)
+            :ARG1-of (f2 / free-04))
+      :ARG1 (g / genre
+            :name (n / name
+                  :op1 "Politics"))
+      :polarity (a / amr-unknown))

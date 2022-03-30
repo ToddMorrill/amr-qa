@@ -1,0 +1,15 @@
+# ::snt Who was the silver medalist of Gymnastics at the 2008 Summer Olympics  Women's artistic individual all-around ?
+(m / multi-sentence
+      :snt1 (m2 / medalist
+            :mod (s / silver)
+            :topic (g / gymnastics)
+            :time (g2 / game
+                  :name (n / name
+                        :op1 "2008"
+                        :op2 "Summer"
+                        :op3 "Olympics"))
+            :domain (a / amr-unknown))
+      :snt2 (ii / individual
+            :mod (a2 / artistic)
+            :mod (w / woman)
+            :mod (a3 / all-around)))

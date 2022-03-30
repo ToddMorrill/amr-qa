@@ -1,0 +1,9 @@
+# ::snt Which company owns the airlines whose hub is in Dubai?
+(o / own-01
+      :ARG0 (a / amr-unknown)
+      :ARG1 (a2 / airline
+            :ARG0-of (h / have-03
+                  :ARG1 (h2 / hub
+                        :location (c / city
+                              :name (n / name
+                                    :op1 "Dubai"))))))

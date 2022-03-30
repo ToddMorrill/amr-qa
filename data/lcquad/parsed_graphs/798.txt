@@ -1,0 +1,8 @@
+# ::snt For which team does Ramiro Pea play ?
+(p / play-01
+      :ARG0 (p2 / person
+            :name (n / name
+                  :op1 "Ramiro"
+                  :op2 "Pea"))
+      :ARG1 (a / amr-unknown
+            :mod (t / team)))

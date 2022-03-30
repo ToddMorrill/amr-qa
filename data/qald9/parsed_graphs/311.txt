@@ -1,7 +1,12 @@
-# ::snt How many ethnic groups live in Slovenia?
-(l / live-01
-      :ARG0 (e / ethnic-group
-            :quant (a / amr-unknown))
-      :location (c / country
+# ::snt Who is the Formula 1 race driver with the most races?
+(p / person
+      :ARG0-of (d / drive-01
+            :ARG1 (r / race-02))
+      :mod (e / event
             :name (n / name
-                  :op1 "Slovenia")))
+                  :op1 "Formula"
+                  :op2 1))
+      :domain (a / amr-unknown)
+      :ARG0-of (r2 / race-02
+            :ARG1-of (h / have-quant-91
+                  :ARG3 (m / most))))

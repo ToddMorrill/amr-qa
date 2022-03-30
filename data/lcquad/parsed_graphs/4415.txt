@@ -1,0 +1,9 @@
+# ::snt How many bacterias have taxonomy as Bacillales and domain as Bacteria? 
+(a / and
+      :op1 (t / taxonomy
+            :prep-as (b / Bacillales)
+            :domain (b2 / bacteria
+                  :quant (a2 / amr-unknown)))
+      :op2 (d / domain
+            :prep-as (b3 / bacterium
+                  :domain b2)))

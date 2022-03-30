@@ -1,0 +1,8 @@
+# ::snt Which religion is prevalent in the schools of the Ashanti region?
+(p / prevail-02
+      :ARG1 (r / religion
+            :mod (a / amr-unknown))
+      :location (s / school
+            :location (c / country-region
+                  :name (n / name
+                        :op1 "Ashanti"))))

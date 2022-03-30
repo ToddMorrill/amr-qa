@@ -1,8 +1,8 @@
-# ::snt Did Arnold Schwarzenegger attend a university?
-(a / attend-01
-      :ARG0 (p / person
+# ::snt Which electronics companies were founded in Beijing?
+(f / found-01
+      :ARG1 (c / company
+            :mod (e / electronics)
+            :mod (a / amr-unknown))
+      :location (c2 / city
             :name (n / name
-                  :op1 "Arnold"
-                  :op2 "Schwarzenegger"))
-      :ARG1 (u / university)
-      :polarity (a2 / amr-unknown))
+                  :op1 "Beijing")))

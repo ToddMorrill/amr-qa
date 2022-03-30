@@ -1,0 +1,16 @@
+# ::snt Give me all tv shows which are based in boston and massachusetts?
+(g / give-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (s / show
+            :mod (t / television)
+            :ARG1-of (b / base-01
+                  :location (a / and
+                        :op1 (c / city
+                              :name (n / name
+                                    :op1 "Boston"))
+                        :op2 (s2 / state
+                              :name (n2 / name
+                                    :op1 "Massachusetts"))))
+            :mod (a2 / all))
+      :ARG2 (ii / i))

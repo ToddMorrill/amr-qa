@@ -1,0 +1,8 @@
+# ::snt What is the river whose mouth is in deadsea?
+(r / river
+      :polarity (a / amr-unknown)
+      :part (m / mouth
+            :location (s / sea
+                  :name (n / name
+                        :op1 "Deadsea")))
+      :domain (a2 / amr-unknown))

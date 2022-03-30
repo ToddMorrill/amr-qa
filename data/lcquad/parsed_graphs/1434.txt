@@ -1,0 +1,12 @@
+# ::snt Where were Micheal Santos and Wendy Jaquet born?
+(b / bear-02
+      :ARG1 (a / and
+            :op1 (p / person
+                  :name (n / name
+                        :op1 "Micheal"
+                        :op2 "Santos"))
+            :op2 (p2 / person
+                  :name (n2 / name
+                        :op1 "Wendy"
+                        :op2 "Jaquet")))
+      :location (a2 / amr-unknown))

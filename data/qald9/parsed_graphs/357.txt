@@ -1,8 +1,9 @@
-# ::snt How many children did Benjamin Franklin have?
-(h / have-05
-      :ARG0 (p / person
-            :name (n / name
-                  :op1 "Benjamin"
-                  :op2 "Franklin"))
-      :ARG1 (c / child
-            :quant (a / amr-unknown)))
+# ::snt What is the bridge with the longest span?
+(b / bridge
+      :domain (a / amr-unknown)
+      :ARG0-of (h / have-03
+            :ARG1 (s / span
+                  :ARG1-of (h2 / have-degree-91
+                        :ARG2 (l / long-03
+                              :ARG1 s)
+                        :ARG3 (m / most)))))

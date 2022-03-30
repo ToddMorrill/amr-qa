@@ -1,0 +1,11 @@
+# ::snt Is the Columbia University chaired by William Campbell?
+(c / chair-01
+      :ARG0 (p / person
+            :name (n / name
+                  :op1 "William"
+                  :op2 "Campbell"))
+      :ARG1 (u / university
+            :name (n2 / name
+                  :op1 "Columbia"
+                  :op2 "University"))
+      :polarity (a / amr-unknown))

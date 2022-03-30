@@ -1,0 +1,10 @@
+# ::snt Count the  origin of the beverages which have been originated in england /
+(c / count-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (o / originate-01
+            :ARG1 (b / beverage
+                  :ARG1-of (o2 / originate-01
+                        :ARG2 (c2 / country
+                              :name (n / name
+                                    :op1 "England"))))))

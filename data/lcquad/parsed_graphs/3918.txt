@@ -1,0 +1,13 @@
+# ::snt Is Julia Gillard the prime minister of Kate Lundy?
+(h / have-org-role-91
+      :ARG0 (p / person
+            :name (n / name
+                  :op1 "Julia"
+                  :op2 "Gillard"))
+      :ARG1 (p2 / person
+            :name (n2 / name
+                  :op1 "Kate"
+                  :op2 "Lundy"))
+      :ARG2 (m / minister
+            :mod (p3 / prime))
+      :polarity (a / amr-unknown))

@@ -1,0 +1,15 @@
+# ::snt What artist of Charing Cross Bridge influenced Dorothea Sharp in her career?
+(ii / influence-01
+      :ARG0 (a / amr-unknown
+            :mod (a2 / artist
+                  :poss (f / facility
+                        :name (n / name
+                              :op1 "Charing"
+                              :op2 "Cross"
+                              :op3 "Bridge"))))
+      :ARG1 (p / person
+            :name (n2 / name
+                  :op1 "Dorothea"
+                  :op2 "Sharp"))
+      :ARG2 (c / career
+            :poss p))

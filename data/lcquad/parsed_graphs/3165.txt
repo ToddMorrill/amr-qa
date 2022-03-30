@@ -1,0 +1,16 @@
+# ::snt Which writer of Tales of Suspense is also the writer of karakuri Dji Ultimo ?
+(p / person
+      :ARG0-of (w / write-01
+            :ARG1 (p2 / publication
+                  :name (n / name
+                        :op1 "Tales"
+                        :op2 "of"
+                        :op3 "Suspense")))
+      :domain (a / amr-unknown)
+      :ARG0-of (w2 / write-01
+            :ARG1 (p3 / publication
+                  :name (n2 / name
+                        :op1 "Karakuri"
+                        :op2 "Dji"
+                        :op3 "Ultimo")))
+      :mod (a2 / also))

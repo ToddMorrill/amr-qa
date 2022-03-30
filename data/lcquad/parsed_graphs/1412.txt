@@ -1,0 +1,10 @@
+# ::snt How many artists' works are in Muse d'Orsay?
+(b / be-located-at-91
+      :ARG1 (t / thing
+            :ARG1-of (w / work-12
+                  :ARG0 (a / artist
+                        :quant (a2 / amr-unknown))))
+      :ARG2 (m / museum
+            :name (n / name
+                  :op1 "Muse"
+                  :op2 "d'Orsay")))

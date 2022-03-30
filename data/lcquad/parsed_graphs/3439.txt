@@ -1,0 +1,11 @@
+# ::snt Where did the aristocrats die whose mother was Maria Ludwika Krasiska?
+(d / die-01
+      :ARG1 (a / aristocrat
+            :ARG1-of (h / have-rel-role-91
+                  :ARG0 (p / person
+                        :name (n / name
+                              :op1 "Maria"
+                              :op2 "Ludwika"
+                              :op3 "Krasiska"))
+                  :ARG2 (m / mother)))
+      :location (a2 / amr-unknown))

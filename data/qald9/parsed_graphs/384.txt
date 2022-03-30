@@ -1,13 +1,10 @@
-# ::snt Which movies starring Mickey Rourke were directed by Guy Ritchie?
-(d / direct-01
-      :ARG0 (p / person
-            :name (n / name
-                  :op1 "Guy"
-                  :op2 "Ritchie"))
-      :ARG1 (m / movie
-            :mod (a / amr-unknown)
-            :ARG2-of (s / star-01
-                  :ARG1 (p2 / person
-                        :name (n2 / name
-                              :op1 "Mickey"
-                              :op2 "Rourke")))))
+# ::snt Who was the first to climb Mount Everest?
+(p / person
+      :ord (o / ordinal-entity
+            :value 1)
+      :ARG0-of (c / climb-01
+            :ARG1 (m / mountain
+                  :name (n / name
+                        :op1 "Mount"
+                        :op2 "Everest")))
+      :domain (a / amr-unknown))

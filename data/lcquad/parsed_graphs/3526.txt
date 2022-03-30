@@ -1,0 +1,13 @@
+# ::snt name the home stadium of FC Spartak Moscow season 2011-12
+(n / name-01
+      :ARG1 (s / stadium
+            :mod (h / home)
+            :poss (t / team
+                  :name (n2 / name
+                        :op1 "FC"
+                        :op2 "Spartak"
+                        :op3 "Moscow"))
+            :time (d / date-entity
+                  :year 2011
+                  :year2 2012
+                  :season (s2 / season))))

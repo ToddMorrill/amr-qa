@@ -1,0 +1,11 @@
+# ::snt What are some countries where companies headquartered in the Klang Valley operate?
+(c / country
+      :mod (s / some)
+      :location-of (o / operate-01
+            :ARG0 (c2 / company
+                  :ARG1-of (h / headquarters
+                        :location (v / valley
+                              :name (n / name
+                                    :op1 "Kang"
+                                    :op2 "Valley")))))
+      :mod (a / amr-unknown))

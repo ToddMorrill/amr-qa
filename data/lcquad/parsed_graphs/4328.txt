@@ -1,0 +1,11 @@
+# ::snt How many architects are there who have made something used by Oakland athletics?
+(a / architect
+      :quant (a2 / amr-unknown)
+      :location (t / there)
+      :ARG0-of (m / make-01
+            :ARG1 (s / something
+                  :ARG1-of (u / use-01
+                        :ARG0 (a3 / athletics
+                              :mod (c / city
+                                    :name (n / name
+                                          :op1 "Oakland")))))))

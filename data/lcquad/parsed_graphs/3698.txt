@@ -1,0 +1,18 @@
+# ::snt Which notable commanders of the Army Group Oberrhein (Germany) is the  leader of the Kriminalpolizei?
+(p / person
+      :ARG0-of (h / have-org-role-91
+            :ARG1 (m / military
+                  :name (n / name
+                        :op1 "Army"
+                        :op2 "Group"
+                        :op3 "Oberrhein")
+                  :location (c / country
+                        :name (n2 / name
+                              :op1 "Germany")))
+            :ARG2 (c2 / commander
+                  :ARG1-of (n3 / notable-04)))
+      :ARG0-of (l / lead-02
+            :ARG1 (c3 / criminal-organization
+                  :name (n4 / name
+                        :op1 "Kriminalpolizei")))
+      :domain (a / amr-unknown))

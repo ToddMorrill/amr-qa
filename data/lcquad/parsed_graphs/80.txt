@@ -1,0 +1,15 @@
+# ::snt Which composer of Girl from the North Country is the subsequent work of the Moondog Matinee?
+(w / work-01
+      :ARG0 (a / amr-unknown
+            :mod (c / company
+                  :name (n / name
+                        :op1 "Moondog"
+                        :op2 "Matinee")))
+      :ARG1 (m / music
+            :name (n2 / name
+                  :op1 "Girl"
+                  :op2 "from"
+                  :op3 "the"
+                  :op4 "North"
+                  :op5 "Country"))
+      :time (s / subsequent))

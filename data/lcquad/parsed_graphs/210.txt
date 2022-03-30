@@ -1,0 +1,12 @@
+# ::snt What are the notable works of the person who produced Queer as Folk?
+(t / thing
+      :ARG1-of (w / work-01
+            :ARG0 (p / person
+                  :ARG0-of (p2 / produce-01
+                        :ARG1 (b / broadcast-program
+                              :name (n / name
+                                    :op1 "Queer"
+                                    :op2 "as"
+                                    :op3 "Folk")))))
+      :ARG1-of (n2 / notable-04)
+      :domain (a / amr-unknown))

@@ -1,0 +1,14 @@
+# ::snt Name the river passing through Reading Berkshire and has mouth place at Essex ?
+(n / name-01
+      :ARG1 (r / river
+            :ARG1-of (p / pass-03
+                  :path (c / county
+                        :name (n2 / name
+                              :op1 "Reading"
+                              :op2 "Berkshire")))
+            :ARG0-of (h / have-03
+                  :ARG1 (m / mouth
+                        :location (c2 / county
+                              :name (n3 / name
+                                    :op1 "Essex")))))
+      :polarity (a / amr-unknown))

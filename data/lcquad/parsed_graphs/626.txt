@@ -1,0 +1,12 @@
+# ::snt How many broadcast area of the television stations exists whose broadcast area is Rodrigues ?
+(e / exist-01
+      :ARG1 (a / area
+            :ARG1-of (b / broadcast-01
+                  :ARG0 (s / station
+                        :mod (t / television)))
+            :quant (a2 / amr-unknown)
+            :location-of (a3 / area
+                  :ARG1-of (b2 / broadcast-01
+                        :ARG0 (p / person
+                              :name (n / name
+                                    :op1 "Rodrigues"))))))

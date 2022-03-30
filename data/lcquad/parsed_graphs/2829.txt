@@ -1,0 +1,13 @@
+# ::snt Who is the singer of the album which has a song Me and My arrow ?
+(p / person
+      :ARG0-of (s / sing-01
+            :ARG1 (s2 / song
+                  :name (n / name
+                        :op1 "Me"
+                        :op2 "and"
+                        :op3 "My"
+                        :op4 "Arrow")))
+      :domain (a / amr-unknown)
+      :poss (a2 / album
+            :ARG0-of (h / have-03
+                  :ARG1 s2)))

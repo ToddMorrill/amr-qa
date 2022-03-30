@@ -1,0 +1,17 @@
+# ::snt What is the common place where USS Camp DE-251 was built, and is one of the destinations of Emerald Air?
+(a / and
+      :op1 (p / place
+            :mod (c / common)
+            :domain (a2 / amr-unknown)
+            :location-of (b / build-01
+                  :ARG1 (f / facility
+                        :name (n / name
+                              :op1 "Camp"
+                              :op2 "De-251"))))
+      :op2 (ii / include-91
+            :ARG1 (a3 / amr-unknown)
+            :ARG2 (d / destination
+                  :poss (c2 / company
+                        :name (n2 / name
+                              :op1 "Emerald"
+                              :op2 "Air")))))

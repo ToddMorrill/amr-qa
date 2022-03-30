@@ -1,11 +1,9 @@
-# ::snt In which city does the Chile Route 68 end?
-(e / end-01
-      :ARG1 (r / road
+# ::snt Did Socrates influence Aristotle?
+(ii / influence-01
+      :ARG0 (p / person
             :name (n / name
-                  :op1 "Route"
-                  :op2 68)
-            :mod (c / country
-                  :name (n2 / name
-                        :op1 "Chile")))
-      :location (c2 / city
-            :mod (a / amr-unknown)))
+                  :op1 "Socrates"))
+      :ARG1 (p2 / person
+            :name (n2 / name
+                  :op1 "Aristotle"))
+      :polarity (a / amr-unknown))

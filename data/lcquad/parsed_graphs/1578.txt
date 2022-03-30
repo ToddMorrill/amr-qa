@@ -1,0 +1,8 @@
+# ::snt How many games have been composed by Hirokazu Tanaka?
+(c / compose-01
+      :ARG0 (p / person
+            :name (n / name
+                  :op1 "Hirokazu"
+                  :op2 "Tanaka"))
+      :ARG1 (g / game
+            :quant (a / amr-unknown)))

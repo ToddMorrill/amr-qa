@@ -1,11 +1,6 @@
-# ::snt Who composed the music for Harold and Maude?
-(c / compose-02
-      :ARG0 (a / amr-unknown)
-      :ARG1 (m / music)
-      :ARG3 (a2 / and
-            :op1 (p / person
-                  :name (n / name
-                        :op1 "Harold"))
-            :op2 (p2 / person
-                  :name (n2 / name
-                        :op1 "Maude"))))
+# ::snt When was the Titanic completed?
+(c / complete-01
+      :ARG1 (s / ship
+            :name (n / name
+                  :op1 "Titanic"))
+      :time (a / amr-unknown))

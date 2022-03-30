@@ -1,9 +1,7 @@
-# ::snt Show me Hemingway's autobiography.
-(s / show-01
-      :mode imperative
-      :ARG0 (y / you)
-      :ARG1 (a / autobiography
-            :poss (p / person
-                  :name (n / name
-                        :op1 "Hemingway")))
-      :ARG2 (ii / i))
+# ::snt What is the currency of the Czech Republic?
+(c / currency
+      :domain (a / amr-unknown)
+      :poss (c2 / country
+            :name (n / name
+                  :op1 "Czech"
+                  :op2 "Republic")))

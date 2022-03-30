@@ -1,0 +1,15 @@
+# ::snt Was the FIS Alpine World Ski Championship of 1950 held in Colorado?
+(h / hold-04
+      :ARG1 (e / event
+            :name (n / name
+                  :op1 "FIS"
+                  :op2 "Alpine"
+                  :op3 "World"
+                  :op4 "Ski"
+                  :op5 "Championship")
+            :time (d / date-entity
+                  :year 1950))
+      :polarity (a / amr-unknown)
+      :location (s / state
+            :name (n2 / name
+                  :op1 "Colorado")))

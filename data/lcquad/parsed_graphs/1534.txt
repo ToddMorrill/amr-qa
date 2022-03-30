@@ -1,0 +1,11 @@
+# ::snt What team were the people drafted to, which are in the National Hockey League?
+(d / draft-02
+      :ARG1 (p / person)
+      :ARG3 (t / team
+            :mod (a / amr-unknown)
+            :ARG0-of (h / have-org-role-91
+                  :ARG1 (l / league
+                        :name (n / name
+                              :op1 "National"
+                              :op2 "Hockey"
+                              :op3 "League")))))

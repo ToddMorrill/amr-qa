@@ -1,0 +1,13 @@
+# ::snt Does Lionel Messi play in the Argentina National Football Team?
+(p / play-01
+      :ARG0 (p2 / person
+            :name (n / name
+                  :op1 "Lionel"
+                  :op2 "Messi"))
+      :ARG1 (t / team
+            :name (n2 / name
+                  :op1 "Argentina"
+                  :op2 "National"
+                  :op3 "Football"
+                  :op4 "Team"))
+      :polarity (a / amr-unknown))

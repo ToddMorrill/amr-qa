@@ -1,7 +1,8 @@
-# ::snt How tall is Amazon Eve?
-(t / tall
-      :quant (a / amr-unknown)
-      :domain (p / person
-            :name (n / name
-                  :op1 "Amazon"
-                  :op2 "Eve")))
+# ::snt Where in France is sparkling wine produced?
+(p / produce-01
+      :ARG1 (w / wine
+            :ARG1-of (s / sparkle-01))
+      :location (a / amr-unknown
+            :location (c / country
+                  :name (n / name
+                        :op1 "France"))))

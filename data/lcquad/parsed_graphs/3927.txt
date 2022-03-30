@@ -1,0 +1,12 @@
+# ::snt What is the county seat of the county which has an Evergreen High School?
+(h / have-org-role-91
+      :ARG0 (a / amr-unknown)
+      :ARG1 (c / county
+            :ARG0-of (h2 / have-03
+                  :ARG1 (h3 / high-school
+                        :name (n / name
+                              :op1 "Evergreen"
+                              :op2 "High"
+                              :op3 "School"))))
+      :ARG2 (s / seat)
+      :location (c2 / county))

@@ -1,9 +1,7 @@
-# ::snt Did Socrates influence Aristotle?
-(ii / influence-01
-      :ARG0 (p / person
+# ::snt When did Operation Overlord commence?
+(c / commence-01
+      :ARG1 (o / operation
             :name (n / name
-                  :op1 "Socrates"))
-      :ARG1 (p2 / person
-            :name (n2 / name
-                  :op1 "Aristotle"))
-      :polarity (a / amr-unknown))
+                  :op1 "Operation"
+                  :op2 "Overlord"))
+      :time (a / amr-unknown))

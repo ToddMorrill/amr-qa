@@ -1,0 +1,15 @@
+# ::snt Name the profession of Oamr D Conger for which Jack Ryan was also nominated ?
+(n / name-01
+      :ARG1 (p / profession
+            :poss (p2 / person
+                  :name (n2 / name
+                        :op1 "Oamr"
+                        :op2 "D"
+                        :op3 "Conger"))
+            :ARG2-of (n3 / nominate-01
+                  :ARG1 (p3 / person
+                        :name (n4 / name
+                              :op1 "Jack"
+                              :op2 "Ryan"))
+                  :mod (a / also)))
+      :polarity (a2 / amr-unknown))

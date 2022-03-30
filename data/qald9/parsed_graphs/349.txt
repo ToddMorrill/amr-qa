@@ -1,8 +1,9 @@
-# ::snt What country is Mount Everest in?
-(b / be-located-at-91
-      :ARG1 (m / mountain
-            :name (n / name
-                  :op1 "Mount"
-                  :op2 "Everest"))
-      :ARG2 (c / country
-            :mod (a / amr-unknown)))
+# ::snt Which city has the oldest running metro?
+(h / have-03
+      :ARG0 (c / city
+            :mod (a / amr-unknown))
+      :ARG1 (m / metro
+            :ARG1-of (r / run-01)
+            :ARG1-of (h2 / have-degree-91
+                  :ARG2 (o / old)
+                  :ARG3 (m2 / most))))

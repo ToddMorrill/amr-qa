@@ -1,0 +1,15 @@
+# ::snt What is the information appliance whose successor is PlayStation 4 and maker is Foxconn?
+(a / and
+      :op1 (s / succeed-03
+            :ARG0 (p / product
+                  :name (n / name
+                        :op1 "PlayStation"
+                        :op2 4))
+            :ARG1 (a2 / appliance
+                  :mod (ii / information)
+                  :domain (a3 / amr-unknown)))
+      :op2 (c / company
+            :name (n2 / name
+                  :op1 "Foxconn")
+            :ARG0-of (m / make-01
+                  :ARG1 a2)))

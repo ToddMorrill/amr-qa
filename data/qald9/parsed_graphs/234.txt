@@ -1,8 +1,6 @@
-# ::snt Is Frank Herbert still alive?
-(l / live-01
-      :ARG0 (p / person
+# ::snt What is the population of Cairo?
+(p / populate-01
+      :ARG1 (c / city
             :name (n / name
-                  :op1 "Frank"
-                  :op2 "Herbert"))
-      :polarity (a / amr-unknown)
-      :mod (s / still))
+                  :op1 "Cairo"))
+      :ARG2 (a / amr-unknown))

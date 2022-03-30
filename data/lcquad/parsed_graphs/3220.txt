@@ -1,0 +1,9 @@
+# ::snt Was Henry Knox a major general?
+(h / have-org-role-91
+      :ARG0 (p / person
+            :name (n / name
+                  :op1 "Henry"
+                  :op2 "Knox"))
+      :ARG2 (g / general
+            :ARG1-of (m / major-02))
+      :polarity (a / amr-unknown))

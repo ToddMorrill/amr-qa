@@ -1,11 +1,6 @@
-# ::snt How many inhabitants does the largest city in Canada have?
+# ::snt Which city has the most inhabitants?
 (ii / inhabit-01
-      :ARG0 (p / person
-            :quant (a / amr-unknown))
-      :ARG1 (c / city
-            :ARG1-of (h / have-degree-91
-                  :ARG2 (l / large)
-                  :ARG3 (m / most)
-                  :ARG5 (c2 / country
-                        :name (n / name
-                              :op1 "Canada")))))
+      :ARG0 (p / person)
+      :ARG1 (a / amr-unknown
+            :mod (c / city))
+      :quant (m / most))

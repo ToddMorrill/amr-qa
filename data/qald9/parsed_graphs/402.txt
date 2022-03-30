@@ -1,14 +1,9 @@
-# ::snt Which of Tim Burton's films had the highest budget?
-(h / have-03
-      :ARG0 (a / amr-unknown
-            :ARG1-of (ii / include-91
-                  :ARG2 (f / film
-                        :poss (p / person
-                              :name (n / name
-                                    :op1 "Tim"
-                                    :op2 "Burton")))))
-      :ARG1 (b / budget
-            :ARG1-of (h2 / have-degree-91
-                  :ARG2 (h3 / high-02
-                        :ARG1 b)
-                  :ARG3 (m / most))))
+# ::snt Give me the currency of China.
+(g / give-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (c / currency
+            :poss (c2 / country
+                  :name (n / name
+                        :op1 "China")))
+      :ARG2 (ii / i))

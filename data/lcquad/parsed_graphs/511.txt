@@ -1,0 +1,14 @@
+# ::snt Give me an estimate of the number of manufacturers whose products are managed by MTR?
+(g / give-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (e / estimate-01
+            :ARG1 (n / number
+                  :quant-of (c / company
+                        :ARG0-of (m / manufacture-01
+                              :ARG1 (p / product
+                                    :ARG1-of (m2 / manage-01
+                                          :ARG0 (c2 / company
+                                                :name (n2 / name
+                                                      :op1 "MTR"))))))))
+      :ARG2 (ii / i))

@@ -1,0 +1,9 @@
+# ::snt Who all did their high school in Denbigh high School?
+(d / do-02
+      :ARG0 (a / amr-unknown
+            :mod (a2 / all))
+      :ARG1 (h / high-school
+            :poss a)
+      :location (h2 / high-school
+            :name (n / name
+                  :op1 "Denbigh")))

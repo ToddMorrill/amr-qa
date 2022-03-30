@@ -1,0 +1,13 @@
+# ::snt List the awards won by the cinematographer of Mickey's Mellerdrammer?
+(l / list-01
+      :ARG1 (a / award-01
+            :ARG1-of (w / win-01
+                  :ARG0 (p / person
+                        :ARG0-of (h / have-org-role-91
+                              :ARG1 (f / film
+                                    :name (n / name
+                                          :op1 "Mellerdrammer")
+                                    :poss (a2 / animal
+                                          :name (n2 / name
+                                                :op1 "Mickey")))
+                              :ARG2 (c / cinematographer))))))

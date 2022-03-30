@@ -1,0 +1,20 @@
+# ::snt Which shareholder of Dagenham wind turbines is also the parent company of the Ford Falcon Cobra?
+(c / company
+      :ARG0-of (h / have-rel-role-91
+            :ARG1 (a / aircraft-type
+                  :name (n / name
+                        :op1 "Falcon"
+                        :op2 "Cobra")
+                  :mod (c2 / company
+                        :name (n2 / name
+                              :op1 "Ford")))
+            :ARG2 (p / parent))
+      :mod (a2 / also)
+      :domain (a3 / amr-unknown
+            :ARG0-of (h2 / hold-01
+                  :ARG1 (s / share
+                        :mod (t / turbine
+                              :mod (w / wind)
+                              :location (c3 / city
+                                    :name (n3 / name
+                                          :op1 "Dagenham")))))))

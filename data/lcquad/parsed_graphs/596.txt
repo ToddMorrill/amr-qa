@@ -1,0 +1,16 @@
+# ::snt Is National Archaeological Museum (Florence) the museum of Chimera of Arezzo?
+(m / museum
+      :polarity (a / amr-unknown)
+      :poss (m2 / museum
+            :name (n / name
+                  :op1 "Chimera"
+                  :op2 "of"
+                  :op3 "Arezzo"))
+      :domain (m3 / museum
+            :name (n2 / name
+                  :op1 "National"
+                  :op2 "Archaeological"
+                  :op3 "Museum")
+            :location (c / city
+                  :name (n3 / name
+                        :op1 "Florence"))))

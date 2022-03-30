@@ -1,0 +1,13 @@
+# ::snt List the total number of regions of the building whose are located in\Grand Forks Air Force Base?
+(l / list-01
+      :ARG1 (n / number
+            :quant-of (r / region
+                  :part-of (b / building
+                        :location (f / facility
+                              :name (n2 / name
+                                    :op1 "Grand"
+                                    :op2 "Forks"
+                                    :op3 "Air"
+                                    :op4 "Force"
+                                    :op5 "Base"))))
+            :ARG2-of (t / total-01)))

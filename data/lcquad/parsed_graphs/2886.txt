@@ -1,0 +1,11 @@
+# ::snt What is the protected area whose nearest city is Kenya?
+(a / area
+      :ARG1-of (p / protect-01)
+      :domain (a2 / amr-unknown)
+      :location (c / city
+            :name (n / name
+                  :op1 "Kenya")
+            :ARG1-of (n2 / near-02
+                  :ARG2-of (h / have-degree-91
+                        :ARG1 c
+                        :ARG3 (m / most)))))

@@ -1,0 +1,10 @@
+# ::snt Is Microsoft office written in C++
+(w / write-01
+      :ARG1 (o / office
+            :poss (c / company
+                  :name (n / name
+                        :op1 "Microsoft")))
+      :medium (l / language
+            :name (n2 / name
+                  :op1 "C++"))
+      :polarity (a / amr-unknown))

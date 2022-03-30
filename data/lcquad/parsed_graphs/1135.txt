@@ -1,0 +1,14 @@
+# ::snt Which wine region of Bogdanua is the Croatian Inline hockey team part of ?
+(h / have-part-91
+      :ARG1 (t / team
+            :name (n / name
+                  :op1 "Croatia"
+                  :op2 "Inline"
+                  :op3 "Hockey"
+                  :op4 "Team"))
+      :ARG2 (r / region
+            :mod (w / wine)
+            :location (c / city
+                  :name (n2 / name
+                        :op1 "Bogdanua"))
+            :mod (a / amr-unknown)))

@@ -1,0 +1,9 @@
+# ::snt Who are the associated musical artist of Carolyn Dennis?
+(a / artist
+      :mod (m / music)
+      :ARG1-of (a2 / associate-01
+            :ARG2 (p / person
+                  :name (n / name
+                        :op1 "Carolyn"
+                        :op2 "Dennis")))
+      :domain (a3 / amr-unknown))

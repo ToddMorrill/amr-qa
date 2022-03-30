@@ -1,7 +1,6 @@
-# ::snt How high is the lighthouse in Colombo?
-(h / high
-      :degree (a / amr-unknown)
-      :domain (l / lighthouse
-            :location (c / city
-                  :name (n / name
-                        :op1 "Colombo"))))
+# ::snt What is in a chocolate chip cookie?
+(b / be-located-at-91
+      :ARG1 (a / amr-unknown)
+      :ARG2 (c / cookie
+            :consist-of (c2 / chip
+                  :mod (c3 / chocolate))))

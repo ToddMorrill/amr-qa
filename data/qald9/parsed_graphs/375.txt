@@ -1,7 +1,11 @@
-# ::snt What is the capital of Canada?
-(h / have-org-role-91
-      :ARG0 (a / amr-unknown)
-      :ARG1 (c / country
+# ::snt Did Elvis Presley have children?
+(h / have-05
+      :ARG0 (p / person
             :name (n / name
-                  :op1 "Canada"))
-      :ARG2 (c2 / capital))
+                  :op1 "Elvis"
+                  :op2 "Presley"))
+      :ARG1 (p2 / person
+            :ARG0-of (h2 / have-rel-role-91
+                  :ARG1 p
+                  :ARG2 (c / child)))
+      :polarity (a / amr-unknown))

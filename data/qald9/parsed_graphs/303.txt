@@ -1,11 +1,10 @@
-# ::snt Did Che Guevara have children?
-(h / have-05
-      :ARG0 (p / person
+# ::snt What form of government is found in South Africa?
+(f / find-01
+      :ARG1 (f2 / form
+            :mod (g / government-organization
+                  :ARG0-of (g2 / govern-01))
+            :mod (a / amr-unknown))
+      :location (c / country
             :name (n / name
-                  :op1 "Che"
-                  :op2 "Guevara"))
-      :ARG1 (p2 / person
-            :ARG0-of (h2 / have-rel-role-91
-                  :ARG1 p
-                  :ARG2 (c / child)))
-      :polarity (a / amr-unknown))
+                  :op1 "South"
+                  :op2 "Africa")))

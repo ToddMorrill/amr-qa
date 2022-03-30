@@ -1,0 +1,10 @@
+# ::snt What is the layout of the cars similar to that of the Subaru Outback?
+(l / layout
+      :poss (c / car)
+      :domain (a / amr-unknown)
+      :ARG1-of (r / resemble-01
+            :ARG2 (l2 / layout
+                  :poss (c2 / car
+                        :name (n / name
+                              :op1 "Subaru"
+                              :op2 "Outback")))))

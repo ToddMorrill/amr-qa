@@ -1,0 +1,12 @@
+# ::snt Which of the continents that Digitalb worked in, was christine rolfes born in?
+(b / bear-02
+      :ARG1 (p / person
+            :name (n / name
+                  :op1 "Christian"
+                  :op2 "Rolandes"))
+      :location (c / continent
+            :ARG2-of (w / work-01
+                  :ARG0 p
+                  :name (n2 / name
+                        :op1 "Digitalb")))
+      :mod (a / amr-unknown))

@@ -1,0 +1,16 @@
+# ::snt Give me the total number of architect of the buildings whose one of the  architect was Louis D. Astorino?
+(g / give-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (n / number
+            :quant-of (p / person
+                  :ARG0-of (a / architect-01)
+                  :part-of (b / building
+                        :ARG1-of (a2 / architect-01
+                              :ARG0 (p2 / person
+                                    :name (n2 / name
+                                          :op1 "Louis"
+                                          :op2 "D."
+                                          :op3 "Astorino")))))
+            :ARG2-of (t / total-01))
+      :ARG2 (ii / i))

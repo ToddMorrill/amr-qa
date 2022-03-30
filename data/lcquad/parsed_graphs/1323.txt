@@ -1,0 +1,19 @@
+# ::snt Of all the teams that Andrew Economos played for, which one did Jerrel Jackson play his first game for?
+(p / play-01
+      :ARG0 (p2 / person
+            :name (n / name
+                  :op1 "Jermrel"
+                  :op2 "Jackson"))
+      :ARG1 (g / game
+            :poss p2
+            :ord (o / ordinal-entity
+                  :value 1))
+      :ARG2 (a / amr-unknown
+            :ARG1-of (ii / include-91
+                  :ARG2 (t / team
+                        :mod (a2 / all)
+                        :ARG2-of (p3 / play-01
+                              :ARG0 (p4 / person
+                                    :name (n2 / name
+                                          :op1 "Andrew"
+                                          :op2 "Economos")))))))

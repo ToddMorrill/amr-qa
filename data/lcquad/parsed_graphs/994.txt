@@ -1,0 +1,8 @@
+# ::snt name the mountain range of Le Gibloux ?
+(n / name-01
+      :ARG1 (r / range
+            :mod (m / mountain)
+            :name (n2 / name
+                  :op1 "Le"
+                  :op2 "Gibloux"))
+      :polarity (a / amr-unknown))

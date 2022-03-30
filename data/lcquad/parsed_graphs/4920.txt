@@ -1,0 +1,18 @@
+# ::snt Which county seat of the King County, Washington and PLACE OF DEATH of the Phil Lumpkin ?
+(a / and
+      :op1 (c / city
+            :name (n / name
+                  :op1 "Washington")
+            :ARG0-of (h / have-org-role-91
+                  :ARG1 (c2 / county
+                        :name (n2 / name
+                              :op1 "King"
+                              :op2 "County"))
+                  :ARG2 (s / seat)))
+      :op2 (p / place
+            :location-of (d / die-01
+                  :ARG1 (p2 / person
+                        :name (n3 / name
+                              :op1 "Phil"
+                              :op2 "Lumpkin"))))
+      :domain (a2 / amr-unknown))

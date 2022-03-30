@@ -1,10 +1,7 @@
-# ::snt What form of government is found in South Africa?
-(f / find-01
-      :ARG1 (f2 / form
-            :mod (g / government-organization
-                  :ARG0-of (g2 / govern-01))
-            :mod (a / amr-unknown))
-      :location (c / country
-            :name (n / name
-                  :op1 "South"
-                  :op2 "Africa")))
+# ::snt How high is the lighthouse in Colombo?
+(h / high
+      :degree (a / amr-unknown)
+      :domain (l / lighthouse
+            :location (c / city
+                  :name (n / name
+                        :op1 "Colombo"))))

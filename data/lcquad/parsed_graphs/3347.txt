@@ -1,0 +1,16 @@
+# ::snt Who are the managers of clubs participating in the 2014-2015 Football League Championship?
+(p / person
+      :ARG0-of (m / manage-01
+            :ARG1 (c / club
+                  :ARG0-of (p2 / participate-01
+                        :ARG1 (g / game
+                              :name (n / name
+                                    :op1 "Football"
+                                    :op2 "League"
+                                    :op3 "Championship")
+                              :time (d / date-interval
+                                    :op1 (d2 / date-entity
+                                          :year 2014)
+                                    :op2 (d3 / date-entity
+                                          :year 2015))))))
+      :domain (a / amr-unknown))

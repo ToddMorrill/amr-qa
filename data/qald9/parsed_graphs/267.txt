@@ -1,10 +1,7 @@
-# ::snt Who was John F. Kennedy's vice president?
-(p / president
-      :mod (v / vice)
-      :ARG2-of (h / have-org-role-91
-            :ARG0 (p2 / person
-                  :name (n / name
-                        :op1 "John"
-                        :op2 "F."
-                        :op3 "Kennedy")))
-      :domain (a / amr-unknown))
+# ::snt Is James Bond married?
+(m / marry-01
+      :ARG1 (p / person
+            :name (n / name
+                  :op1 "James"
+                  :op2 "Bond"))
+      :polarity (a / amr-unknown))

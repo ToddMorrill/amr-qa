@@ -1,0 +1,9 @@
+# ::snt Count the drinks originated in England.
+(c / count-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (d / drink
+            :ARG1-of (o / originate-01
+                  :ARG2 (c2 / country
+                        :name (n / name
+                              :op1 "England")))))

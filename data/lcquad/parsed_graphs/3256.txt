@@ -1,0 +1,13 @@
+# ::snt Gamini Seneviratne and Katyayana are two followers of which religion?
+(f / follow-02
+      :ARG0 (a / and
+            :quant 2
+            :op1 (p / person
+                  :name (n / name
+                        :op1 "Gamini"
+                        :op2 "Seneviratne"))
+            :op2 (p2 / person
+                  :name (n2 / name
+                        :op1 "Katyayana")))
+      :ARG1 (r / religion
+            :mod (a2 / amr-unknown)))

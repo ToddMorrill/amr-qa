@@ -1,0 +1,7 @@
+# ::snt To which region does the Miluk language belong?
+(b / belong-01
+      :ARG0 (l / language
+            :name (n / name
+                  :op1 "Miluk"))
+      :ARG1 (r / region
+            :domain (a / amr-unknown)))

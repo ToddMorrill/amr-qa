@@ -1,0 +1,15 @@
+# ::snt Which series has an episode called The lost special and also a character named Sherlock Holmes ?
+(h / have-03
+      :ARG0 (a / amr-unknown
+            :mod (s / series))
+      :ARG1 (a2 / and
+            :op1 (e / episode
+                  :name (n / name
+                        :op1 "The"
+                        :op2 "Lost"
+                        :op3 "Special"))
+            :op2 (c / character
+                  :name (n2 / name
+                        :op1 "Sherlock"
+                        :op2 "Holmes")
+                  :mod (a3 / also))))

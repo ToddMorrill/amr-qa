@@ -1,0 +1,11 @@
+# ::snt Give me a count of everything made by the company which offers electronical manufacturing too.
+(g / give-01
+      :ARG1 (c / count-01
+            :ARG1 (e / everything
+                  :ARG1-of (m / make-01
+                        :ARG0 (c2 / company
+                              :ARG0-of (o / offer-01
+                                    :ARG1 (m2 / manufacture-01
+                                          :mod (e2 / electron))
+                                    :mod (t / too))))))
+      :ARG2 (ii / i))

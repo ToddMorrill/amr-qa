@@ -1,0 +1,22 @@
+# ::snt Which office holder's resting place is Alta Mesa Memorial park and has adrian A. Basora as successor ?
+(a / and
+      :op1 (p / place
+            :ARG1-of (r / rest-01
+                  :ARG0 (p2 / person
+                        :ARG0-of (h / hold-01
+                              :ARG1 (o / office))))
+            :domain (p3 / park
+                  :name (n / name
+                        :op1 "Alta"
+                        :op2 "Mesa"
+                        :op3 "Memorial"
+                        :op4 "Park")))
+      :op2 (h2 / have-03
+            :ARG0 p3
+            :ARG1 (p4 / person
+                  :name (n2 / name
+                        :op1 "Adrian"
+                        :op2 "A."
+                        :op3 "Basora")
+                  :ARG0-of (s / succeed-02
+                        :ARG1 p2))))

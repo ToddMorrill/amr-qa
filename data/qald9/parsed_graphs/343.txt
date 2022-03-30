@@ -1,6 +1,5 @@
-# ::snt Where was Bach born?
-(b / bear-02
-      :ARG1 (p / person
-            :name (n / name
-                  :op1 "Bach"))
-      :location (a / amr-unknown))
+# ::snt Is proinsulin a protein?
+(p / protein
+      :name (n / name
+            :op1 "proinsulin")
+      :polarity (a / amr-unknown))

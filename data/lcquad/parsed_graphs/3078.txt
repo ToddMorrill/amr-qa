@@ -1,0 +1,8 @@
+# ::snt How many things are aired on BBC HD?
+(a / air-01
+      :ARG1 (t / thing
+            :quant (a2 / amr-unknown))
+      :medium (b / broadcast-program
+            :name (n / name
+                  :op1 "BBC"
+                  :op2 "HD")))

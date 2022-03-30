@@ -1,0 +1,11 @@
+# ::snt Which Fox  show is presented by Ryan Seacrest?
+(p / present-01
+      :ARG0 (p2 / person
+            :name (n / name
+                  :op1 "Ryan"
+                  :op2 "Seacrest"))
+      :ARG1 (s / show
+            :mod (a / amr-unknown)
+            :mod (b / broadcast-program
+                  :name (n2 / name
+                        :op1 "Fox"))))

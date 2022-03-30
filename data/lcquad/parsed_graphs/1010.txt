@@ -1,0 +1,13 @@
+# ::snt Which basketball team's president studied in the Brockport Golden Eagles?
+(s / study-01
+      :ARG0 (p / person
+            :ARG0-of (h / have-org-role-91
+                  :ARG1 (t / team
+                        :mod (b / basketball)
+                        :mod (a / amr-unknown))
+                  :ARG2 (p2 / president)))
+      :location (t2 / team
+            :name (n / name
+                  :op1 "Brockport"
+                  :op2 "Golden"
+                  :op3 "Eagles")))

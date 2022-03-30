@@ -1,11 +1,11 @@
-# ::snt Was Natalie Portman born in the United States?
-(b / bear-02
-      :ARG1 (p / person
-            :name (n / name
-                  :op1 "Natalie"
-                  :op2 "Portman"))
-      :location (c / country
-            :name (n2 / name
-                  :op1 "United"
-                  :op2 "States"))
-      :polarity (a / amr-unknown))
+# ::snt Give me the birth place of Frank Sinatra.
+(g / give-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (p / place
+            :location-of (b / bear-02
+                  :ARG1 (p2 / person
+                        :name (n / name
+                              :op1 "Frank"
+                              :op2 "Sinatra"))))
+      :ARG2 (ii / i))

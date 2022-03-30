@@ -1,0 +1,10 @@
+# ::snt What are the movies whose distributor's headquarters is New York?
+(m / movie
+      :domain (a / amr-unknown)
+      :ARG2-of (h / headquarters
+            :poss (c / company
+                  :ARG0-of (d / distribute-01))
+            :location (c2 / city
+                  :name (n / name
+                        :op1 "New"
+                        :op2 "York"))))

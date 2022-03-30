@@ -1,0 +1,13 @@
+# ::snt What is the prize received by the one who wrote the screen play of The Postman  ?
+(p / prize
+      :ARG1-of (r / receive-01
+            :ARG0 (o / one
+                  :ARG0-of (w / write-01
+                        :ARG1 (t / thing
+                              :ARG1-of (p2 / play-11
+                                    :ARG3 (n / newspaper
+                                          :name (n2 / name
+                                                :op1 "The"
+                                                :op2 "Postman")))
+                              :ARG1-of (s / screen-03)))))
+      :domain (a / amr-unknown))

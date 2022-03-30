@@ -1,0 +1,10 @@
+# ::snt Where did the people beatified by Pope Pius X die?
+(d / die-01
+      :ARG1 (p / person
+            :ARG1-of (b / beatify-01
+                  :ARG0 (p2 / person
+                        :name (n / name
+                              :op1 "Pope"
+                              :op2 "Pius"
+                              :op3 "X"))))
+      :location (a / amr-unknown))

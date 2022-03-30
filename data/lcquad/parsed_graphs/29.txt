@@ -1,0 +1,23 @@
+# ::snt Who is the common manager of Aston Villa 2000-02 season and aldo the manager of Middlesbrough F.C. season 2009-10
+(a / and
+      :op1 (p / person
+            :ARG0-of (m / manage-01
+                  :ARG1 (t / team
+                        :name (n / name
+                              :op1 "Aston"
+                              :op2 "Villa")
+                        :time (d / date-entity
+                              :year 2000
+                              :season (s / season))))
+            :mod (c / common))
+      :op2 (p2 / person
+            :name (n2 / name
+                  :op1 "Aldo")
+            :ARG0-of (m2 / manage-01
+                  :ARG1 (t2 / team
+                        :name (n3 / name
+                              :op1 "Middlesbrough"
+                              :op2 "F.C.")
+                        :time (d2 / date-entity
+                              :year 2009
+                              :season (s2 / season))))))

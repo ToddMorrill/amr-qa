@@ -1,0 +1,12 @@
+# ::snt Which companies have launched a rocket from Cape Canaveral Air Force station?
+(l / launch-01
+      :ARG0 (a / amr-unknown
+            :mod (c / company))
+      :ARG1 (r / rocket)
+      :source (f / facility
+            :name (n / name
+                  :op1 "Cape"
+                  :op2 "Cavana"
+                  :op3 "Air"
+                  :op4 "Force"
+                  :op5 "Station")))

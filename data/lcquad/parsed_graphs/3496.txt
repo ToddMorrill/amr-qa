@@ -1,0 +1,15 @@
+# ::snt Name a company with key person as Dennis Muilenburg and Raymond Conner ?
+(n / name-01
+      :ARG1 (c / company
+            :prep-with (p / person
+                  :ARG1-of (k / key-02)
+                  :example (a / and
+                        :op1 (p2 / person
+                              :name (n2 / name
+                                    :op1 "Dennis"
+                                    :op2 "Muilenburg"))
+                        :op2 (p3 / person
+                              :name (n3 / name
+                                    :op1 "Raymond"
+                                    :op2 "Conner")))))
+      :polarity (a2 / amr-unknown))

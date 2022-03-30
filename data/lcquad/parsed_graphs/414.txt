@@ -1,0 +1,11 @@
+# ::snt Who is the person who are on the board of Freedom of the City?
+(p / person
+      :domain (a / amr-unknown)
+      :ARG0-of (h / have-org-role-91
+            :ARG1 (o / organization
+                  :name (n / name
+                        :op1 "Freedom"
+                        :op2 "of"
+                        :op3 "the"
+                        :op4 "City"))
+            :ARG2 (b / board)))

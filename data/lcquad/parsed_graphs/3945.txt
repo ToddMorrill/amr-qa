@@ -1,0 +1,12 @@
+# ::snt How many different organizations own the railway lines which are a part of Norfolk Southern Railway?
+(o / own-01
+      :ARG0 (o2 / organization
+            :ARG1-of (d / differ-02)
+            :quant (a / amr-unknown))
+      :ARG1 (l / line
+            :mod (r / railway)
+            :part-of (c / company
+                  :name (n / name
+                        :op1 "Norfolk"
+                        :op2 "Southern"
+                        :op3 "Railway"))))

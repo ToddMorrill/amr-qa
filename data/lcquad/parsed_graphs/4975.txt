@@ -1,0 +1,11 @@
+# ::snt  Who astronaut from NASA was on the mission of Apollo 11?
+(m / mission-01
+      :ARG0 (a / astronaut
+            :mod (a2 / amr-unknown)
+            :source (r / research-institute
+                  :name (n / name
+                        :op1 "NASA")))
+      :ARG1 (p / program
+            :name (n2 / name
+                  :op1 "Apollo"
+                  :op2 11)))

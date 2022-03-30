@@ -1,0 +1,13 @@
+# ::snt where did the office holder died  who is successor to Elmer Burkett ?
+(m / multi-sentence
+      :snt1 (d / die-01
+            :ARG1 (p / person
+                  :ARG0-of (h / hold-01
+                        :ARG1 (o / office)))
+            :location (a / amr-unknown))
+      :snt2 (s / succeed-02
+            :ARG0 (a2 / amr-unknown)
+            :ARG1 (p2 / person
+                  :name (n / name
+                        :op1 "Elmer"
+                        :op2 "Burkett"))))

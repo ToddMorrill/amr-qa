@@ -1,0 +1,9 @@
+# ::snt List the movies produced by Michael Deeley ?
+(l / list-01
+      :ARG1 (m / movie
+            :ARG1-of (p / produce-01
+                  :ARG0 (p2 / person
+                        :name (n / name
+                              :op1 "Michael"
+                              :op2 "Deeley"))))
+      :polarity (a / amr-unknown))

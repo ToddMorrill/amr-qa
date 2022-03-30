@@ -1,0 +1,13 @@
+# ::snt Which licensee of the WRVU is also the alma mater of the Todd J. Campbell ?
+(a / alma-mater
+      :poss (p / person
+            :name (n / name
+                  :op1 "Todd"
+                  :op2 "J."
+                  :op3 "Campbell"))
+      :domain (a2 / amr-unknown
+            :ARG0-of (l / license-01
+                  :ARG2 (u / university
+                        :name (n2 / name
+                              :op1 "WRVU"))))
+      :mod (a3 / also))

@@ -1,0 +1,16 @@
+# ::snt Of the places where Kurt Vonnegut Memorial Library exists, where did Louis LeCocq die?
+(d / die-01
+      :ARG1 (p / person
+            :name (n / name
+                  :op1 "Louis"
+                  :op2 "LeCocq"))
+      :location (a / amr-unknown
+            :ARG1-of (ii / include-91
+                  :ARG2 (p2 / place
+                        :location-of (e / exist-01
+                              :ARG1 (f / facility
+                                    :name (n2 / name
+                                          :op1 "Kurt"
+                                          :op2 "Vonnegut"
+                                          :op3 "Memorial"
+                                          :op4 "Library")))))))

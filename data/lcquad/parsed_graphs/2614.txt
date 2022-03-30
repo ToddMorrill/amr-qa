@@ -1,0 +1,10 @@
+# ::snt Which stadium is owned by the team whose manager is Dimitris Terezopoulos?
+(o / own-01
+      :ARG0 (t / team
+            :poss-of (p / person
+                  :name (n / name
+                        :op1 "Dimitris"
+                        :op2 "Terezopoulos")
+                  :ARG0-of (m / manage-01)))
+      :ARG1 (s / stadium
+            :mod (a / amr-unknown)))

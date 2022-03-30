@@ -1,0 +1,10 @@
+# ::snt What are some cartoons distributed by a subsidiary of Time Warner?
+(d / distribute-01
+      :ARG0 (s / subsidiary
+            :poss (c / company
+                  :name (n / name
+                        :op1 "Time"
+                        :op2 "Warner")))
+      :ARG1 (c2 / cartoon
+            :mod (a / amr-unknown)
+            :quant (s2 / some)))

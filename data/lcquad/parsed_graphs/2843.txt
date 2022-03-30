@@ -1,0 +1,9 @@
+# ::snt Name the debut team of Butch Metzger ?
+(n / name-01
+      :ARG1 (t / team
+            :ARG1-of (d / debut-01
+                  :ARG0 (p / person
+                        :name (n2 / name
+                              :op1 "Butch"
+                              :op2 "Metzger"))))
+      :polarity (a / amr-unknown))

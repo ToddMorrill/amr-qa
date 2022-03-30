@@ -1,0 +1,10 @@
+# ::snt What are some other products of the banks which makes Postbanken?
+(p / product
+      :domain (a / amr-unknown)
+      :mod (o / other)
+      :quant (s / some)
+      :poss (b / bank)
+      :ARG0-of (m / make-01
+            :ARG1 (c / company
+                  :name (n / name
+                        :op1 "Postbanken"))))

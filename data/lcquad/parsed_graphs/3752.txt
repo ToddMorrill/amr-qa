@@ -1,0 +1,7 @@
+# ::snt What are the beverages whose origin is England?
+(b / beverage
+      :ARG1-of (o / originate-01
+            :ARG2 (c / country
+                  :name (n / name
+                        :op1 "England")))
+      :domain (a / amr-unknown))

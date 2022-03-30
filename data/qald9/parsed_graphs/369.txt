@@ -1,10 +1,10 @@
-# ::snt Does Abraham Lincoln's death place have a website?
-(h / have-03
-      :ARG0 (p / place
-            :location-of (d / die-01
-                  :ARG1 (p2 / person
-                        :name (n / name
-                              :op1 "Abraham"
-                              :op2 "Lincoln"))))
-      :ARG1 (w / website)
-      :polarity (a / amr-unknown))
+# ::snt In which military conflicts did Lawrence of Arabia participate?
+(p / participate-01
+      :ARG0 (p2 / person
+            :name (n / name
+                  :op1 "Lawrence"
+                  :op2 "of"
+                  :op3 "Arabia"))
+      :ARG1 (c / conflict-01
+            :mod (m / military)
+            :mod (a / amr-unknown)))

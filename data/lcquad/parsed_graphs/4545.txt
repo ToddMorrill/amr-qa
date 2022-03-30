@@ -1,0 +1,15 @@
+# ::snt What nation is the motherland of Ricardo Alfonso Cerna  where Apostolic Vicariate of El Petn is located?
+(n / nation
+      :domain (a / amr-unknown)
+      :poss (p / person
+            :name (n2 / name
+                  :op1 "Ricardo"
+                  :op2 "Alfonso"
+                  :op3 "Cerna"))
+      :location (l / location
+            :name (n3 / name
+                  :op1 "Apostolic"
+                  :op2 "Vicariate"
+                  :op3 "of"
+                  :op4 "El"
+                  :op5 "Petn")))

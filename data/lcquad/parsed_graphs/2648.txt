@@ -1,0 +1,9 @@
+# ::snt How many managers have managed Middlesbrough FC?
+(m / manage-01
+      :ARG0 (p / person
+            :ARG0-of (m2 / manage-01)
+            :quant (a / amr-unknown))
+      :ARG1 (t / team
+            :name (n / name
+                  :op1 "Middlesbrough"
+                  :op2 "FC")))

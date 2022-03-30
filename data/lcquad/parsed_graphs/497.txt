@@ -1,0 +1,12 @@
+# ::snt What are some relatives of the people who fought in Operation Barbarossa?
+(p / person
+      :ARG0-of (h / have-rel-role-91
+            :ARG1 (p2 / person
+                  :ARG0-of (f / fight-01
+                        :ARG2 (e / event
+                              :name (n / name
+                                    :op1 "Operation"
+                                    :op2 "Barbarossa"))))
+            :ARG2 (r / relative))
+      :quant (s / some)
+      :domain (a / amr-unknown))

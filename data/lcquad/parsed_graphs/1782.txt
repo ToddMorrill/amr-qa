@@ -1,0 +1,21 @@
+# ::snt Which home stadium of 2011-12 FC Spartak Moscow season is also the location of birth of the Svetlana Gounkina ?
+(b / be-located-at-91
+      :ARG1 (b2 / bear-02
+            :ARG1 (p / person
+                  :name (n / name
+                        :op1 "Svetlana"
+                        :op2 "Gounkina")))
+      :ARG2 (s / stadium
+            :mod (h / home)
+            :time (s2 / season
+                  :mod (t / team
+                        :name (n2 / name
+                              :op1 "FC"
+                              :op2 "Spartak"
+                              :op3 "Moscow"))
+                  :time (d / date-interval
+                        :op1 (d2 / date-entity
+                              :year 2011)
+                        :op2 (d3 / date-entity
+                              :year 2012))))
+      :mod (a / also))

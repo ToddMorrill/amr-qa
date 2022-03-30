@@ -1,0 +1,14 @@
+# ::snt Which draft team of bob Macmillan is also the prospect team of Mikhail Pashnin ?
+(t / team
+      :ARG1-of (p / prospect-02
+            :ARG0 (p2 / person
+                  :name (n / name
+                        :op1 "Mikhail"
+                        :op2 "Pashnin")))
+      :mod (a / also)
+      :domain (t2 / team
+            :ARG1-of (d / draft-02)
+            :poss (p3 / person
+                  :name (n2 / name
+                        :op1 "Bob"
+                        :op2 "MacMillan"))))

@@ -1,0 +1,8 @@
+# ::snt Over which rivers, does a cable stayed bridge exists?
+(e / exist-01
+      :polarity (a / amr-unknown)
+      :ARG1 (b / bridge
+            :ARG1-of (s / stay-01
+                  :ARG3 (c / cable)))
+      :location (o / over
+            :op1 (r / river)))

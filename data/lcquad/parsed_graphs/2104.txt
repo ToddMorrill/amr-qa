@@ -1,0 +1,9 @@
+# ::snt What is the mascot of the military unit of David Prowse?
+(m / mascot
+      :domain (a / amr-unknown)
+      :poss (u / unit
+            :mod (m2 / military)
+            :poss (p / person
+                  :name (n / name
+                        :op1 "David"
+                        :op2 "Prowse"))))

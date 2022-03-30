@@ -1,0 +1,17 @@
+# ::snt Name the TV show whose opening theme is Gary Portnoy and the subsequent work is Frasier?
+(n / name-01
+      :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (s / show-04
+            :ARG3 (t / television)
+            :ARG0-of (o / open-02
+                  :ARG2 (t2 / theme
+                        :mod (p / person
+                              :name (n2 / name
+                                    :op1 "Gary"
+                                    :op2 "Portnoy"))))
+            :ARG0-of (w / work-01
+                  :ARG1 (p2 / person
+                        :name (n3 / name
+                              :op1 "Frasier"))
+                  :time (s2 / subsequent))))

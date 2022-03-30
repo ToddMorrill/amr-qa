@@ -1,0 +1,9 @@
+# ::snt What games are played at institutions affiliated with the international association of universities?
+(p / play-01
+      :ARG1 (g / game
+            :mod (a / amr-unknown))
+      :location (ii / institution
+            :ARG1-of (a2 / affiliate-01
+                  :ARG2 (a3 / association
+                        :mod (u / university)
+                        :mod (ii2 / international)))))

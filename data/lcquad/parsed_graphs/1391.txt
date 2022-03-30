@@ -1,0 +1,7 @@
+# ::snt How many companies were founded in Dallas?
+(f / found-01
+      :ARG1 (c / company
+            :quant (a / amr-unknown))
+      :location (c2 / city
+            :name (n / name
+                  :op1 "Dallas")))

@@ -1,0 +1,15 @@
+# ::snt List the total number of board members who share board with Creative commons ?
+(l / list-01
+      :ARG1 (n / number
+            :quant-of (p / person
+                  :ARG0-of (h / have-org-role-91
+                        :ARG1 (b / board)
+                        :ARG2 (m / member))
+                  :ARG0-of (s / share-01
+                        :ARG1 b
+                        :ARG2 (p2 / publication
+                              :name (n2 / name
+                                    :op1 "Creative"
+                                    :op2 "Commons"))))
+            :ARG2-of (t / total-01))
+      :polarity (a / amr-unknown))

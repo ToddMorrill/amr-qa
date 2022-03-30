@@ -1,7 +1,8 @@
-# ::snt How many Aldi stores are there?
-(s / store
-      :location (t / there)
-      :mod (c / company
+# ::snt Which university did Angela Merkel attend?
+(a / attend-01
+      :ARG0 (p / person
             :name (n / name
-                  :op1 "Aldi"))
-      :quant (a / amr-unknown))
+                  :op1 "Angela"
+                  :op2 "Merkel"))
+      :ARG1 (u / university
+            :mod (a2 / amr-unknown)))

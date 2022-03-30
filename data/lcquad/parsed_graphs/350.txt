@@ -1,0 +1,9 @@
+# ::snt How many other field are there of the scientists whose one of the field is Mathematics ?
+(f / field
+      :mod (o / other)
+      :quant (a / amr-unknown)
+      :location-of (s / scientist
+            :ARG0-of (h / have-03
+                  :ARG1 (f2 / field
+                        :quant 1
+                        :domain (m / mathematics)))))

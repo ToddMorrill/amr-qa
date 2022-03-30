@@ -1,0 +1,10 @@
+# ::snt What country had the title of 2001 Speedway Ekstraliga ?
+(t / title-01
+      :ARG1 (c / country
+            :mod (a / amr-unknown))
+      :ARG2 (e / event
+            :name (n / name
+                  :op1 "Speedway"
+                  :op2 "Estraliga")
+            :time (d / date-entity
+                  :year 2001)))

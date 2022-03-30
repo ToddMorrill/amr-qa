@@ -1,0 +1,7 @@
+# ::snt Which  person has opponent Ike Clanton?
+(p / person
+      :name (n / name
+            :op1 "Ike"
+            :op2 "Clanton")
+      :ARG0-of (o / oppose-01)
+      :domain (a / amr-unknown))

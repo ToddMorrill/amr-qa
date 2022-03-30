@@ -1,0 +1,9 @@
+# ::snt How many theme musics have been composed by Julian Gingell?
+(c / compose-02
+      :ARG0 (p / person
+            :name (n / name
+                  :op1 "Julian"
+                  :op2 "Gingell"))
+      :ARG1 (m / music
+            :mod (t / theme)
+            :quant (a / amr-unknown)))

@@ -1,0 +1,13 @@
+# ::snt Name all the venues of the convention which has also been hosted in San Diego Convention ?
+(n / name-01
+      :ARG1 (v / venue
+            :mod (a / all)
+            :poss (c / convention
+                  :ARG1-of (h / host-01
+                        :location (c2 / convention
+                              :name (n2 / name
+                                    :op1 "San"
+                                    :op2 "Diego"
+                                    :op3 "Convention"))
+                        :mod (a2 / also))))
+      :polarity (a3 / amr-unknown))

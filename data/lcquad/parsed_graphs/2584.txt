@@ -1,0 +1,11 @@
+# ::snt What is the state of the administrative region where Oscoda, Michigan is located?
+(s / state
+      :domain (a / amr-unknown)
+      :poss (r / region
+            :mod (a2 / administrate-01)
+            :location-of (c / city
+                  :name (n / name
+                        :op1 "Oscoda")
+                  :part-of (s2 / state
+                        :name (n2 / name
+                              :op1 "Michigan")))))

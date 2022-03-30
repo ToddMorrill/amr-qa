@@ -1,0 +1,18 @@
+# ::snt What are the nearest city to the historic places whose one of the nearest city is Wisconsin?
+(h / have-degree-91
+      :ARG1 (c / city
+            :domain (a / amr-unknown))
+      :ARG2 (n / near-02
+            :ARG1 c
+            :ARG2 (p / place
+                  :mod (h2 / history)))
+      :ARG3 (m / most)
+      :ARG5 (c2 / city
+            :ARG1-of (ii / include-91
+                  :ARG2 (c3 / city
+                        :name (n2 / name
+                              :op1 "Wisconsin")
+                        :ARG1-of (h3 / have-degree-91
+                              :ARG2 (n3 / near-02
+                                    :ARG1 c3)
+                              :ARG3 (m2 / most))))))

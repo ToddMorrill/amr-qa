@@ -1,0 +1,14 @@
+# ::snt List the popular works of the author of Luther: The Calling ?
+(l / list-01
+      :ARG1 (t / thing
+            :ARG1-of (w / work-12
+                  :ARG0 (p / person
+                        :name (n / name
+                              :op1 "Luther")
+                        :ARG0-of (a / author-01
+                              :ARG1 (b / book
+                                    :name (n2 / name
+                                          :op1 "The"
+                                          :op2 "Calling")))))
+            :ARG1-of (p2 / popular-02))
+      :polarity (a2 / amr-unknown))

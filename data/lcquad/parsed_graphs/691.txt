@@ -1,0 +1,8 @@
+# ::snt List the ceremonial county of East Tilbury ?
+(l / list-01
+      :ARG1 (c / county
+            :name (n / name
+                  :op1 "East"
+                  :op2 "Tilbury")
+            :mod (c2 / ceremonial))
+      :polarity (a / amr-unknown))

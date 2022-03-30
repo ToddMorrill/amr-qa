@@ -1,0 +1,8 @@
+# ::snt Which nation is the origin of Dornier Aerodyne ?
+(o / originate-01
+      :ARG1 (a / aircraft-type
+            :name (n / name
+                  :op1 "Dornier"
+                  :op2 "Aerodyne"))
+      :ARG2 (n2 / nation
+            :mod (a2 / amr-unknown)))

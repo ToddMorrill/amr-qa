@@ -1,0 +1,8 @@
+# ::snt In which teams did anyone who played as a defencemen, play previously?
+(p / play-01
+      :ARG0 (a / anyone
+            :ARG0-of (p2 / play-01
+                  :manner (d / defend-01)))
+      :location (a2 / amr-unknown
+            :mod (t / team))
+      :time (p3 / previous))

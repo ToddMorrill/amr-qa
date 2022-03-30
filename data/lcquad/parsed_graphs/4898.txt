@@ -1,0 +1,14 @@
+# ::snt Who was the parent of person whose child is William C P breckinridge?
+(p / person
+      :ARG0-of (h / have-rel-role-91
+            :ARG1 (p2 / person
+                  :ARG0-of (h2 / have-rel-role-91
+                        :ARG1 (p3 / person
+                              :name (n / name
+                                    :op1 "William"
+                                    :op2 "C."
+                                    :op3 "P."
+                                    :op4 "Breckinridge"))
+                        :ARG2 (c / child)))
+            :ARG2 (p4 / parent))
+      :domain (a / amr-unknown))

@@ -1,0 +1,8 @@
+# ::snt What is the source location of Thornton Creek ?
+(l / location
+      :ARG2-of (s / source-01
+            :ARG1 (c / creek
+                  :name (n / name
+                        :op1 "Thornton"
+                        :op2 "Creek")))
+      :location (a / amr-unknown))

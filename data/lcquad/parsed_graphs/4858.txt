@@ -1,0 +1,13 @@
+# ::snt What is the largest city of the country where P. Sathyanarayanan was born?
+(h / have-degree-91
+      :ARG1 (c / city
+            :location (c2 / country)
+            :location-of (b / bear-02
+                  :ARG1 (p / person
+                        :name (n / name
+                              :op1 "P."
+                              :op2 "Sathyanarayanan"))))
+      :ARG2 (l / large)
+      :ARG3 (m / most)
+      :ARG5 c2
+      :domain (a / amr-unknown))

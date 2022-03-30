@@ -1,0 +1,10 @@
+# ::snt CN Atletic-Barceloneta has a stadium in Barcelona?
+(h / have-03
+      :ARG0 (s / sports-facility
+            :name (n / name
+                  :op1 "CN"
+                  :op2 "Atletic-Barceloneta"))
+      :ARG1 (s2 / stadium
+            :location (c / city
+                  :name (n2 / name
+                        :op1 "Barcelona"))))

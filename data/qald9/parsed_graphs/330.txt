@@ -1,10 +1,11 @@
-# ::snt Who wrote the book The Pillars of the Earth?
-(w / write-01
+# ::snt Who composed the music for Harold and Maude?
+(c / compose-02
       :ARG0 (a / amr-unknown)
-      :ARG1 (b / book
-            :name (n / name
-                  :op1 "The"
-                  :op2 "Pillars"
-                  :op3 "of"
-                  :op4 "the"
-                  :op5 "Earth")))
+      :ARG1 (m / music)
+      :ARG3 (a2 / and
+            :op1 (p / person
+                  :name (n / name
+                        :op1 "Harold"))
+            :op2 (p2 / person
+                  :name (n2 / name
+                        :op1 "Maude"))))

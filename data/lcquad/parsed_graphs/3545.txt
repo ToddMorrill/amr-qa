@@ -1,0 +1,8 @@
+# ::snt What beverage was launched by Ferrero SpA?
+(l / launch-01
+      :ARG0 (c / company
+            :name (n / name
+                  :op1 "Ferrero"
+                  :op2 "SpA"))
+      :ARG1 (b / beverage
+            :mod (a / amr-unknown)))

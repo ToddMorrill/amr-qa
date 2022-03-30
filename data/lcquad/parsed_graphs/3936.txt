@@ -1,0 +1,7 @@
+# ::snt How many companies have developed cross platformed softwares?
+(d / develop-02
+      :ARG0 (c / company
+            :quant (a / amr-unknown))
+      :ARG1 (s / softwares
+            :ARG0-of (c2 / cross-02
+                  :ARG1 (p / platform))))

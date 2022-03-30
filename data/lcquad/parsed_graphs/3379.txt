@@ -1,0 +1,13 @@
+# ::snt In which cities are there american football teams where Matt Snorton played?
+(t / team
+      :mod (f / football)
+      :mod (c / country
+            :name (n / name
+                  :op1 "America"))
+      :location (c2 / city
+            :mod (a / amr-unknown))
+      :location-of (p / play-01
+            :ARG0 (p2 / person
+                  :name (n2 / name
+                        :op1 "Matt"
+                        :op2 "Snorton"))))

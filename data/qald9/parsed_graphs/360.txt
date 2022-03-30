@@ -1,7 +1,13 @@
-# ::snt Who created Family Guy?
-(c / create-01
-      :ARG0 (a / amr-unknown)
-      :ARG1 (b / broadcast-program
+# ::snt Does the Ford Motor Company have a manufacturing plant in Malaysia?
+(h / have-03
+      :ARG0 (c / company
             :name (n / name
-                  :op1 "Family"
-                  :op2 "Guy")))
+                  :op1 "Ford"
+                  :op2 "Motor"
+                  :op3 "Company"))
+      :ARG1 (p / plant
+            :ARG0-of (m / manufacture-01)
+            :location (c2 / country
+                  :name (n2 / name
+                        :op1 "Malaysia")))
+      :polarity (a / amr-unknown))

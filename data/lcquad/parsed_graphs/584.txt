@@ -1,0 +1,14 @@
+# ::snt What team did J P Paris was former team of Bert McCaffrey play for?
+(p / play-01
+      :ARG0 (p2 / person
+            :name (n / name
+                  :op1 "J"
+                  :op2 "P"
+                  :op3 "Paris"))
+      :ARG3 (t / team
+            :mod (a / amr-unknown))
+      :time (f / former)
+      :beneficiary (p3 / person
+            :name (n2 / name
+                  :op1 "Bert"
+                  :op2 "McCaffrey")))

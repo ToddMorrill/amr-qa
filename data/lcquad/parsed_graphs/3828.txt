@@ -1,0 +1,7 @@
+# ::snt Which were the philosophers whose primary interest was Natural philosophy?
+(a / amr-unknown
+      :domain (p / philosopher
+            :ARG0-of (ii / interest-01
+                  :ARG2 (p2 / philosophy
+                        :ARG1-of (n / natural-03))
+                  :mod (p3 / primary))))

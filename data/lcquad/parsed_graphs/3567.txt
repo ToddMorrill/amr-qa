@@ -1,0 +1,12 @@
+# ::snt Sampson Cudjoe plays for the Ghana national team?
+(p / play-01
+      :ARG0 (p2 / person
+            :name (n / name
+                  :op1 "Sampson"
+                  :op2 "Cudjoe"))
+      :ARG1 (t / team
+            :mod (n2 / nation)
+            :mod (c / country
+                  :name (n3 / name
+                        :op1 "Ghana")))
+      :polarity (a / amr-unknown))
