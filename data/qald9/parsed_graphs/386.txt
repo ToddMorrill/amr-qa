@@ -1,7 +1,0 @@
-# ::snt What is the currency of the Czech Republic?
-(c / currency
-      :domain (a / amr-unknown)
-      :poss (c2 / country
-            :name (n / name
-                  :op1 "Czech"
-                  :op2 "Republic")))

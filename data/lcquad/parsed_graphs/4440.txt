@@ -1,7 +1,0 @@
-# ::snt Which country's national motto is "Truth prevails"?
-(m / motto
-      :mod (n / nation)
-      :poss (c / country
-            :mod (a / amr-unknown))
-      :domain (p / prevail-01
-            :ARG0 (t / truth)))

@@ -1,9 +1,0 @@
-# ::snt How many publisher have been founded by american citizens?
-(f / found-01
-      :ARG0 (c / citizen
-            :mod (c2 / country
-                  :name (n / name
-                        :op1 "America")))
-      :ARG1 (c3 / company
-            :ARG0-of (p / publish-01)
-            :quant (a / amr-unknown)))

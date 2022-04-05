@@ -1,4 +1,0 @@
-# ::snt What is the region of Lumberjack  ?
-(r / region
-      :mod (l / lumberjack)
-      :domain (a / amr-unknown))

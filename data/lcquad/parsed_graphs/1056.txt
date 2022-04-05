@@ -1,8 +1,0 @@
-# ::snt In how many languages did Marika Gombitova sing?
-(s / sing-01
-      :ARG0 (p / person
-            :name (n / name
-                  :op1 "Marika"
-                  :op2 "Gombitova"))
-      :ARG3 (l / language
-            :quant (a / amr-unknown)))

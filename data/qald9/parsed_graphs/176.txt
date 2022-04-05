@@ -1,8 +1,0 @@
-# ::snt What are the specialities of the UNC Health Care?
-(s / specialty
-      :domain (a / amr-unknown)
-      :poss (c / care-03
-            :ARG0 (u / university
-                  :name (n / name
-                        :op1 "UNC"))
-            :ARG1 (h / health)))

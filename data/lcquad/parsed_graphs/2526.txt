@@ -1,8 +1,0 @@
-# ::snt What is the homeport of INS Viraat (R22) ?
-(b / be-located-at-91
-      :ARG1 (h / headquarters
-            :poss (m / military
-                  :name (n / name
-                        :op1 "INS"
-                        :op2 "Viraat")))
-      :ARG2 (a / amr-unknown))

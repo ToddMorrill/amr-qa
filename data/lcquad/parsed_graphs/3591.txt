@@ -1,9 +1,0 @@
-# ::snt Whose album is Haiti, I am sorry?
-(a / and
-      :op1 (a2 / album
-            :poss (a3 / amr-unknown)
-            :domain (c / country
-                  :name (n / name
-                        :op1 "Haiti")))
-      :op2 (s / sorry-01
-            :ARG1 (ii / i)))

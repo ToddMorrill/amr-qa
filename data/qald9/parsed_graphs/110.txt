@@ -1,9 +1,0 @@
-# ::snt Which country has the most official languages?
-(h / have-03
-      :ARG0 (c / country
-            :mod (a / amr-unknown))
-      :ARG1 (l / language
-            :mod (o / official
-                  :ARG2-of (h2 / have-degree-91
-                        :ARG1 l
-                        :ARG3 (m / most)))))

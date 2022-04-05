@@ -1,7 +1,0 @@
-# ::snt In which country is the Limerick Lake?
-(l / lake
-      :name (n / name
-            :op1 "Limerick"
-            :op2 "Lake")
-      :location (c / country
-            :mod (a / amr-unknown)))

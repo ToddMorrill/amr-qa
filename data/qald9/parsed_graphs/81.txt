@@ -1,8 +1,0 @@
-# ::snt To which countries does the Himalayan mountain system extend?
-(e / extend-02
-      :ARG1 (s / system
-            :mod (m / mountain
-                  :name (n / name
-                        :op1 "Himalayas")))
-      :ARG4 (c / country
-            :mod (a / amr-unknown)))

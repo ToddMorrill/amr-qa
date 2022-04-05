@@ -1,7 +1,0 @@
-# ::snt How large is the area of UK?
-(l / large
-      :degree (a / amr-unknown)
-      :domain (a2 / area
-            :part-of (c / country
-                  :name (n / name
-                        :op1 "UK"))))

@@ -1,9 +1,0 @@
-# ::snt Which music albums contain the song Last Christmas?
-(c / contain-01
-      :ARG0 (a / album
-            :mod (m / music)
-            :mod (a2 / amr-unknown))
-      :ARG1 (s / song
-            :name (n / name
-                  :op1 "Last"
-                  :op2 "Christmas")))

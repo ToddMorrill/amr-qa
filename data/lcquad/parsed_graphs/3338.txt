@@ -1,7 +1,0 @@
-# ::snt Which species' members are there in the animal kingdom?
-(s / species
-      :mod (a / amr-unknown)
-      :ARG0-of (h / have-org-role-91
-            :ARG1 (k / kingdom
-                  :mod (a2 / animal))
-            :ARG2 (m / member)))

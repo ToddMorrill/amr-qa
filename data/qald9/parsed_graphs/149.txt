@@ -1,6 +1,0 @@
-# ::snt What is the longest river?
-(h / have-degree-91
-      :ARG1 (r / river
-            :domain (a / amr-unknown))
-      :ARG2 (l / long)
-      :ARG3 (m / most))

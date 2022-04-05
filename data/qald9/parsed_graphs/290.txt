@@ -1,9 +1,0 @@
-# ::snt List all games by GMT.
-(l / list-01
-      :mode imperative
-      :ARG0 (y / you)
-      :ARG1 (g / game
-            :mod (a / all))
-      :time (b / by
-            :op1 (d / date-entity
-                  :time "GMT")))

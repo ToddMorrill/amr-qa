@@ -1,8 +1,0 @@
-# ::snt How high is the Yokohama Marine Tower?
-(h / high
-      :quant (a / amr-unknown)
-      :domain (b / building
-            :name (n / name
-                  :op1 "Yokohama"
-                  :op2 "Marine"
-                  :op3 "Tower")))

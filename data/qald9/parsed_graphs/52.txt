@@ -1,8 +1,0 @@
-# ::snt What is the most frequent cause of death?
-(c / cause-01
-      :ARG0 (a / amr-unknown)
-      :ARG1 (d / die-01)
-      :ARG1-of (h / have-degree-91
-            :ARG2 (f / frequent-02
-                  :ARG1 c)
-            :ARG3 (m / most)))

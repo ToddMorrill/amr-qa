@@ -1,7 +1,0 @@
-# ::snt What is the birth name of Adele?
-(n / name
-      :ARG1-of (b / bear-02
-            :ARG1 (p / person
-                  :name (n2 / name
-                        :op1 "Adele")))
-      :domain (a / amr-unknown))

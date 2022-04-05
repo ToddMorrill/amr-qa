@@ -1,9 +1,0 @@
-# ::snt Where is the arena of WPC Dynamo Moscow situated?
-(s / situate-01
-      :ARG1 (a / arena
-            :poss (o / organization
-                  :name (n / name
-                        :op1 "WPC"
-                        :op2 "Dynamo"
-                        :op3 "Moscow")))
-      :ARG2 (a2 / amr-unknown))

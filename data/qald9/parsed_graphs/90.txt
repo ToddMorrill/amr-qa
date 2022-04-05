@@ -1,7 +1,0 @@
-# ::snt How many missions does the Soyuz programme have?
-(h / have-03
-      :ARG0 (p / program
-            :name (n / name
-                  :op1 "Soyuz"))
-      :ARG1 (m / mission-01
-            :quant (a / amr-unknown)))

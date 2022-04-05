@@ -1,5 +1,0 @@
-# ::snt Is horse racing a sport?
-(s / sport
-      :polarity (a / amr-unknown)
-      :domain (r / race-02
-            :ARG3 (h / horse)))

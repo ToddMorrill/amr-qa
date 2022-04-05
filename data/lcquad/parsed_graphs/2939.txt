@@ -1,8 +1,0 @@
-# ::snt Who is the film director of Alice's Wonderland ?
-(p / person
-      :ARG0-of (d / direct-01
-            :ARG1 (f / film
-                  :name (n / name
-                        :op1 "Alice's"
-                        :op2 "Wonderland")))
-      :domain (a / amr-unknown))

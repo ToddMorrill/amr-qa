@@ -1,9 +1,0 @@
-# ::snt List the movies directed by Stanley Kubrick?
-(l / list-01
-      :ARG1 (m / movie
-            :ARG1-of (d / direct-01
-                  :ARG0 (p / person
-                        :name (n / name
-                              :op1 "Stanley"
-                              :op2 "Kubrick"))))
-      :polarity (a / amr-unknown))

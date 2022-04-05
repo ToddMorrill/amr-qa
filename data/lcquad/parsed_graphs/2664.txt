@@ -1,8 +1,0 @@
-# ::snt Which country were the associates of Hilda Duhalde from?
-(a / associate-01
-      :ARG1 (p / person
-            :name (n / name
-                  :op1 "Hilda"
-                  :op2 "Duhalde"))
-      :ARG2 (c / country
-            :mod (a2 / amr-unknown)))

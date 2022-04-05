@@ -1,9 +1,0 @@
-# ::snt Who owns Ivanpah Solar Power Facility?
-(o / own-01
-      :ARG0 (a / amr-unknown)
-      :ARG1 (f / facility
-            :name (n / name
-                  :op1 "Ivanpah"
-                  :op2 "Solar"
-                  :op3 "Power"
-                  :op4 "Facility")))

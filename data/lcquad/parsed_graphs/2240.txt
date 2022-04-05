@@ -1,9 +1,0 @@
-# ::snt What is the television show whose theme music is by Primus?
-(s / show-04
-      :ARG1 (a / amr-unknown)
-      :medium (t / television)
-      :poss (m / music
-            :mod (t2 / theme)
-            :source (c / company
-                  :name (n / name
-                        :op1 "Primus"))))

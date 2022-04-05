@@ -1,8 +1,0 @@
-# ::snt Who are some people whose relation is hqed in Gold Base?
-(p / person
-      :polarity (a / amr-unknown)
-      :mod (s / some)
-      :ARG1-of (r / relate-01
-            :ARG2 (t / thing
-                  :location (b / base
-                        :mod (g / gold)))))

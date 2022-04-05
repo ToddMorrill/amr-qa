@@ -1,9 +1,0 @@
-# ::snt How many services does the company who made Onedrive provide?
-(p / provide-01
-      :ARG0 (c / company
-            :ARG0-of (m / make-01
-                  :ARG1 (p2 / product
-                        :name (n / name
-                              :op1 "Onedrive"))))
-      :ARG1 (s / service
-            :quant (a / amr-unknown)))

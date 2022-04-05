@@ -1,9 +1,0 @@
-# ::snt How many airlines are members of the Star Alliance?
-(h / have-org-role-91
-      :ARG0 (a / airline
-            :quant (a2 / amr-unknown))
-      :ARG1 (o / organization
-            :name (n / name
-                  :op1 "Star"
-                  :op2 "Alliance"))
-      :ARG2 (m / member))

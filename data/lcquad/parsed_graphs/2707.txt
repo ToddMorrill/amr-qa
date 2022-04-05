@@ -1,8 +1,0 @@
-# ::snt Where is the team of Abdel Boucker located ?
-(l / locate-01
-      :ARG1 (t / team
-            :poss (p / person
-                  :name (n / name
-                        :op1 "Abdel"
-                        :op2 "Boucker")))
-      :location (a / amr-unknown))

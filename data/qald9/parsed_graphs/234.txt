@@ -1,6 +1,0 @@
-# ::snt What is the population of Cairo?
-(p / populate-01
-      :ARG1 (c / city
-            :name (n / name
-                  :op1 "Cairo"))
-      :ARG2 (a / amr-unknown))

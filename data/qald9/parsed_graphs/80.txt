@@ -1,7 +1,0 @@
-# ::snt Which beer originated in Ireland?
-(o / originate-01
-      :ARG1 (b / beer
-            :mod (a / amr-unknown))
-      :ARG2 (c / country
-            :name (n / name
-                  :op1 "Ireland")))

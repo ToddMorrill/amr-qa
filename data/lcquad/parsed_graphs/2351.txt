@@ -1,9 +1,0 @@
-# ::snt Name the series of Doctor Who: Evacuation Earth ?
-(n / name-01
-      :ARG1 (s / series
-            :name (n2 / name
-                  :op1 "Doctor"
-                  :op2 "Who"
-                  :op3 "Evacuation"
-                  :op4 "Earth"))
-      :ARG2 (a / amr-unknown))

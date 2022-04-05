@@ -1,7 +1,0 @@
-# ::snt When were the Hells Angels founded?
-(f / found-01
-      :ARG1 (o / organization
-            :name (n / name
-                  :op1 "Hells"
-                  :op2 "Angels"))
-      :time (a / amr-unknown))

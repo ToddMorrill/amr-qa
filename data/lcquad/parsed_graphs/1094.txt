@@ -1,8 +1,0 @@
-# ::snt What are some districts in the Tendring borough?
-(d / district
-      :mod (s / some)
-      :location (c / city-district
-            :name (n / name
-                  :op1 "Tendring"
-                  :op2 "Borough"))
-      :domain (a / amr-unknown))

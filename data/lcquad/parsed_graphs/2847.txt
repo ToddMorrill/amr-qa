@@ -1,7 +1,0 @@
-# ::snt Foxconn makes how many things?
-(m / make-01
-      :ARG0 (c / company
-            :name (n / name
-                  :op1 "Foxconn"))
-      :ARG1 (t / thing
-            :quant (a / amr-unknown)))

@@ -1,8 +1,0 @@
-# ::snt What is the official name of Arkansas wine ?
-(n / name-01
-      :ARG1 (w / wine
-            :source (s / state
-                  :name (n2 / name
-                        :op1 "Arkansas")))
-      :ARG2 (a / amr-unknown)
-      :mod (o / official))

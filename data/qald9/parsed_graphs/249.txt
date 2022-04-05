@@ -1,9 +1,0 @@
-# ::snt List all the musicals with music by Elton John.
-(l / list-01
-      :ARG1 (m / musical
-            :mod (a / all)
-            :accompanier (m2 / music
-                  :source (p / person
-                        :name (n / name
-                              :op1 "Elton"
-                              :op2 "John")))))

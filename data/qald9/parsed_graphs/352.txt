@@ -1,9 +1,0 @@
-# ::snt Who is the host of the BBC Wildlife Specials?
-(p / person
-      :ARG0-of (h / host-01
-            :ARG1 (b / broadcast-program
-                  :name (n / name
-                        :op1 "BBC"
-                        :op2 "Wildlife"
-                        :op3 "Specials")))
-      :domain (a / amr-unknown))

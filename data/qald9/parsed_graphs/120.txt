@@ -1,7 +1,0 @@
-# ::snt What is the highest mountain?
-(m / mountain
-      :domain (a / amr-unknown)
-      :ARG1-of (h / have-degree-91
-            :ARG2 (h2 / high-02
-                  :ARG1 m)
-            :ARG3 (m2 / most)))

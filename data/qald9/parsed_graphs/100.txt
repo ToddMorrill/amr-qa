@@ -1,9 +1,0 @@
-# ::snt Which writers studied in Istanbul?
-(s / study-01
-      :ARG0 (a / amr-unknown
-            :ARG1-of (ii / include-91
-                  :ARG2 (p / person
-                        :ARG0-of (w / write-01))))
-      :location (c / city
-            :name (n / name
-                  :op1 "Istanbul")))

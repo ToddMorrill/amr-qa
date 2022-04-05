@@ -1,7 +1,0 @@
-# ::snt Which musician wrote the most books?
-(w / write-01
-      :ARG0 (a / amr-unknown
-            :mod (m / musician))
-      :ARG1 (b / book
-            :ARG1-of (h / have-quant-91
-                  :ARG3 (m2 / most))))

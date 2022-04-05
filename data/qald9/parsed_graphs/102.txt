@@ -1,5 +1,0 @@
-# ::snt Which countries adopted the Euro?
-(a / adopt-01
-      :ARG0 (c / country
-            :mod (a2 / amr-unknown))
-      :ARG1 (e / euro))

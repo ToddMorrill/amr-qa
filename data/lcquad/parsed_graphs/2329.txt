@@ -1,9 +1,0 @@
-# ::snt Who is the employer of Michael M. Sears ?
-(c / company
-      :ARG0-of (e / employ-01
-            :ARG1 (p / person
-                  :name (n / name
-                        :op1 "Michael"
-                        :op2 "M."
-                        :op3 "Sears")))
-      :domain (a / amr-unknown))

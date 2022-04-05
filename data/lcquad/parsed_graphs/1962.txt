@@ -1,9 +1,0 @@
-# ::snt List the battles fought by Roh Tae-woo ?
-(l / list-01
-      :ARG1 (b / battle-01
-            :ARG1-of (f / fight-01
-                  :ARG0 (p / person
-                        :name (n / name
-                              :op1 "Roh"
-                              :op2 "Tae-woo"))))
-      :polarity (a / amr-unknown))

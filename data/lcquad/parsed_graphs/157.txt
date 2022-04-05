@@ -1,9 +1,0 @@
-# ::snt Count the number of sports played by schools which play hockey ?
-(c / count-01
-      :polarity (a / amr-unknown)
-      :ARG1 (n / number
-            :quant-of (s / sport
-                  :ARG1-of (p / play-01
-                        :ARG0 (s2 / school
-                              :ARG0-of (p2 / play-01
-                                    :ARG1 (h / hockey)))))))

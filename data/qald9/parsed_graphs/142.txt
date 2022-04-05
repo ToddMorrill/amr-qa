@@ -1,8 +1,0 @@
-# ::snt Which telecommunications organizations are located in Belgium?
-(l / locate-01
-      :ARG1 (o / organization
-            :mod (t / telecommunication)
-            :mod (a / amr-unknown))
-      :location (c / country
-            :name (n / name
-                  :op1 "Belgium")))

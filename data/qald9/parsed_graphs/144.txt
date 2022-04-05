@@ -1,8 +1,0 @@
-# ::snt How many children does Eddie Murphy have?
-(h / have-05
-      :ARG0 (p / person
-            :name (n / name
-                  :op1 "Eddie"
-                  :op2 "Murphy"))
-      :ARG1 (c / child
-            :quant (a / amr-unknown)))

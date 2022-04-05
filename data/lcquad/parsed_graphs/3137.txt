@@ -1,9 +1,0 @@
-# ::snt Which citys mayor is anne hidalgo?
-(h / have-org-role-91
-      :ARG0 (p / person
-            :name (n / name
-                  :op1 "Anne"
-                  :op2 "Hidalgo"))
-      :ARG1 (c / city
-            :mod (a / amr-unknown))
-      :ARG2 (m / mayor))

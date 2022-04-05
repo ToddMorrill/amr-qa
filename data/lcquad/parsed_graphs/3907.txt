@@ -1,8 +1,0 @@
-# ::snt The official residence of Sukhumbhand paribatra ?
-(r / reside-01
-      :ARG0 (p / person
-            :name (n / name
-                  :op1 "Sukumbhand"
-                  :op2 "Paribatra"))
-      :ARG1 (a / amr-unknown)
-      :mod (o / official))

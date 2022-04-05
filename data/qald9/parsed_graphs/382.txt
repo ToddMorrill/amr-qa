@@ -1,9 +1,0 @@
-# ::snt What form of government does Russia have?
-(h / have-03
-      :ARG0 (c / country
-            :name (n / name
-                  :op1 "Russia"))
-      :ARG1 (f / form
-            :mod (g / government-organization
-                  :ARG0-of (g2 / govern-01))
-            :mod (a / amr-unknown)))

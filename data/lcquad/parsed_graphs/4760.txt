@@ -1,9 +1,0 @@
-# ::snt What is the alma mater of Julian Leow Beng Kim?
-(a / alma-mater
-      :domain (a2 / amr-unknown)
-      :poss (p / person
-            :name (n / name
-                  :op1 "Julian"
-                  :op2 "Leow"
-                  :op3 "Beng"
-                  :op4 "Kim")))

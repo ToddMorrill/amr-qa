@@ -1,8 +1,0 @@
-# ::snt What is the allegiance of Albert Kwesi Ocran ?
-(a / allegiance
-      :poss (p / person
-            :name (n / name
-                  :op1 "Albert"
-                  :op2 "Kwesi"
-                  :op3 "Ocran"))
-      :domain (a2 / amr-unknown))

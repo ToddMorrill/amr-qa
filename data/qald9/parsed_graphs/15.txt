@@ -1,7 +1,0 @@
-# ::snt Who is the owner of Universal Studios?
-(o / own-01
-      :ARG0 (a / amr-unknown)
-      :ARG1 (c / company
-            :name (n / name
-                  :op1 "Universal"
-                  :op2 "Studio")))

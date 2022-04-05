@@ -1,9 +1,0 @@
-# ::snt Which university provides license for WRVU ?
-(p / provide-01
-      :ARG0 (u / university
-            :mod (a / amr-unknown))
-      :ARG1 (l / license-01
-            :ARG0 (u2 / university)
-            :ARG2 (u3 / university
-                  :name (n / name
-                        :op1 "WRVU"))))

@@ -1,9 +1,0 @@
-# ::snt Which company owns the manufacturer of the Edsel Ranger?
-(o / own-01
-      :ARG0 (a / amr-unknown)
-      :ARG1 (c / company
-            :ARG0-of (m / manufacture-01
-                  :ARG1 (c2 / car-make
-                        :name (n / name
-                              :op1 "Edsel"
-                              :op2 "Ranger")))))

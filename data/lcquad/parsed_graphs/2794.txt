@@ -1,7 +1,0 @@
-# ::snt In which races does Coneygree compete?
-(c / compete-01
-      :ARG0 (c2 / city
-            :name (n / name
-                  :op1 "Coneygree"))
-      :ARG3 (r / race
-            :mod (a / amr-unknown)))

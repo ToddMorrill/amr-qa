@@ -1,9 +1,0 @@
-# ::snt To which company is Michael Dell a father company? 
-(c / company
-      :ARG0-of (h / have-rel-role-91
-            :ARG1 (p / person
-                  :name (n / name
-                        :op1 "Michael"
-                        :op2 "Dell"))
-            :ARG2 (f / father))
-      :beneficiary (a / amr-unknown))

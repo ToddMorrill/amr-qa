@@ -1,8 +1,0 @@
-# ::snt Which are the races in which Martin Molony participated?
-(r / race-02
-      :ARG1-of (p / participate-01
-            :ARG0 (p2 / person
-                  :name (n / name
-                        :op1 "Martin"
-                        :op2 "Molony")))
-      :mod (a / amr-unknown))

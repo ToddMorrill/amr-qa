@@ -1,8 +1,0 @@
-# ::snt Did Arnold Schwarzenegger attend a university?
-(a / attend-01
-      :ARG0 (p / person
-            :name (n / name
-                  :op1 "Arnold"
-                  :op2 "Schwarzenegger"))
-      :ARG1 (u / university)
-      :polarity (a2 / amr-unknown))

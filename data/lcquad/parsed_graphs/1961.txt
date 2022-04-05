@@ -1,9 +1,0 @@
-# ::snt How many people currently play for the NYC FC?
-(p / play-01
-      :ARG0 (p2 / person
-            :quant (a / amr-unknown))
-      :ARG2 (t / team
-            :name (n / name
-                  :op1 "NYC"
-                  :op2 "FC"))
-      :time (c / current))

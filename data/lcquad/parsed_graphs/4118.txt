@@ -1,8 +1,0 @@
-# ::snt Where is the stadium of Philadelphia Rage ?
-(b / be-located-at-91
-      :ARG1 (s / stadium
-            :poss (t / team
-                  :name (n / name
-                        :op1 "Philadelphia"
-                        :op2 "Rage")))
-      :ARG2 (a / amr-unknown))

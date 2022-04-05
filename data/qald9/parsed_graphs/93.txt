@@ -1,7 +1,0 @@
-# ::snt What is the net income of Apple?
-(ii / income
-      :poss (c / company
-            :name (n / name
-                  :op1 "Apple"))
-      :ARG1-of (n2 / net-02)
-      :domain (a / amr-unknown))

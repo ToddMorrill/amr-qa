@@ -1,9 +1,0 @@
-# ::snt Which nation hosts the WTA Tour Championships?
-(h / host-01
-      :ARG0 (n / nation
-            :domain (a / amr-unknown))
-      :ARG1 (e / event
-            :name (n2 / name
-                  :op1 "WTA"
-                  :op2 "Tour"
-                  :op3 "Championships")))

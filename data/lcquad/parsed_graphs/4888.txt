@@ -1,9 +1,0 @@
-# ::snt How many people are famous for the Gibson Les Paul?
-(f / fame-01
-      :ARG1 (p / person
-            :quant (a / amr-unknown))
-      :ARG2 (m / music
-            :name (n / name
-                  :op1 "Gibson"
-                  :op2 "Les"
-                  :op3 "Paul")))

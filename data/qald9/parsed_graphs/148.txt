@@ -1,6 +1,0 @@
-# ::snt Which holidays are celebrated around the world?
-(c / celebrate-02
-      :ARG1 (h / holiday
-            :mod (a / amr-unknown))
-      :location (a2 / around
-            :op1 (w / world)))

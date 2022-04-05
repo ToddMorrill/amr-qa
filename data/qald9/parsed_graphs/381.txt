@@ -1,8 +1,0 @@
-# ::snt Who is the mayor of Tel Aviv?
-(m / mayor
-      :ARG2-of (h / have-org-role-91
-            :ARG1 (c / city
-                  :name (n / name
-                        :op1 "Tel"
-                        :op2 "Aviv")))
-      :domain (a / amr-unknown))

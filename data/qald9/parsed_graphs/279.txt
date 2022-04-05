@@ -1,6 +1,0 @@
-# ::snt Which city has the most inhabitants?
-(ii / inhabit-01
-      :ARG0 (p / person)
-      :ARG1 (a / amr-unknown
-            :mod (c / city))
-      :quant (m / most))

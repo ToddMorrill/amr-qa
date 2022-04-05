@@ -1,8 +1,0 @@
-# ::snt Which awards did Douglas Hofstadter win?
-(w / win-01
-      :ARG0 (p / person
-            :name (n / name
-                  :op1 "Douglas"
-                  :op2 "Hofstadter"))
-      :ARG1 (a / award-01
-            :ARG2 (a2 / amr-unknown)))

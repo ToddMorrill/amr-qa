@@ -1,9 +1,0 @@
-# ::snt Richard Gant did a guest appearance on which series?
-(a / appear-01
-      :ARG1 (p / person
-            :name (n / name
-                  :op1 "Richard"
-                  :op2 "Gant"))
-      :mod (g / guest)
-      :location (s / series
-            :mod (a2 / amr-unknown)))

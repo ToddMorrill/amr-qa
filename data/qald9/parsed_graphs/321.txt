@@ -1,9 +1,0 @@
-# ::snt Which television shows were created by Walt Disney?
-(c / create-01
-      :ARG0 (p / person
-            :name (n / name
-                  :op1 "Walt"
-                  :op2 "Disney"))
-      :ARG1 (s / show-04
-            :ARG3 (t / television)
-            :mod (a / amr-unknown)))

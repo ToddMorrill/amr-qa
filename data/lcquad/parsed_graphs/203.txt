@@ -1,7 +1,0 @@
-# ::snt What is the broadcast area of WBCQ (SW) ?
-(a / area
-      :ARG1-of (b / broadcast-01
-            :ARG0 (c / company
-                  :name (n / name
-                        :op1 "WBCQ")))
-      :domain (a2 / amr-unknown))

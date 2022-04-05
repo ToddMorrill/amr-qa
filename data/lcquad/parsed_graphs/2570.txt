@@ -1,8 +1,0 @@
-# ::snt Was Mark Twain a character of Mark Twain Tonight?
-(c / character
-      :polarity (a / amr-unknown)
-      :domain (p / person
-            :name (n / name
-                  :op1 "Mark"
-                  :op2 "Twain"
-                  :op3 "Tonight")))

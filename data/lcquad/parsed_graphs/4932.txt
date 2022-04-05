@@ -1,9 +1,0 @@
-# ::snt What is the location of Sam Sen Railway Station ?
-(b / be-located-at-91
-      :ARG1 (s / station
-            :name (n / name
-                  :op1 "Sam"
-                  :op2 "Sen"
-                  :op3 "Railway"
-                  :op4 "Station"))
-      :ARG2 (a / amr-unknown))

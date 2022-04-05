@@ -1,8 +1,0 @@
-# ::snt Which films did Stanley Kubrick direct?
-(d / direct-01
-      :ARG0 (p / person
-            :name (n / name
-                  :op1 "Stanley"
-                  :op2 "Kubrick"))
-      :ARG1 (f / film
-            :mod (a / amr-unknown)))

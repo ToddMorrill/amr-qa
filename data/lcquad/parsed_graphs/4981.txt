@@ -1,9 +1,0 @@
-# ::snt Through which states does the stream ending at Saunders county go?
-(g / go-01
-      :ARG1 (s / stream
-            :ARG1-of (e / end-01
-                  :location (c / county
-                        :name (n / name
-                              :op1 "Saunders"))))
-      :ARG4 (s2 / state
-            :mod (a / amr-unknown)))

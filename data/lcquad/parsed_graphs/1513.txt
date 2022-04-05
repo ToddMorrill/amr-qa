@@ -1,9 +1,0 @@
-# ::snt What is the title of the successor of Kaulahea I ?
-(t / title-01
-      :ARG1 (p / person
-            :ARG0-of (s / succeed-02
-                  :ARG1 (p2 / person
-                        :name (n / name
-                              :op1 "Kaulahea"
-                              :op2 "I"))))
-      :ARG2 (a / amr-unknown))

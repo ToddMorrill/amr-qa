@@ -1,7 +1,0 @@
-# ::snt Chestnut colored horses have won which races?
-(w / win-01
-      :ARG0 (h / horse
-            :ARG1-of (c / color-01
-                  :ARG2 (c2 / chestnut)))
-      :ARG1 (r / race-02
-            :mod (a / amr-unknown)))

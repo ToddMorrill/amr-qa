@@ -1,5 +1,0 @@
-# ::snt What is the genre of Battle Chess?
-(g / genre
-      :mod (c / chess
-            :mod (b / battle))
-      :domain (a / amr-unknown))

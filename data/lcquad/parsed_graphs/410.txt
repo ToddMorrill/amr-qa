@@ -1,7 +1,0 @@
-# ::snt What are the countries for which History of Trier principal to?
-(c / country
-      :mod (a / amr-unknown)
-      :topic-of (h / history
-            :mod (p / person
-                  :name (n / name
-                        :op1 "Trier"))))

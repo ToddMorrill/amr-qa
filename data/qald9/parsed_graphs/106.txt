@@ -1,8 +1,0 @@
-# ::snt How many films did Leonardo DiCaprio star in?
-(s / star-01
-      :ARG1 (p / person
-            :name (n / name
-                  :op1 "Leonardo"
-                  :op2 "DiCaprio"))
-      :ARG2 (f / film
-            :quant (a / amr-unknown)))

@@ -1,8 +1,0 @@
-# ::snt Under which archipelago does Canary Islands fall?
-(f / fall-04
-      :ARG1 (ii / island
-            :name (n / name
-                  :op1 "Canary"
-                  :op2 "Islands"))
-      :ARG2 (a / archipelago
-            :mod (a2 / amr-unknown)))

@@ -1,9 +1,0 @@
-# ::snt What is the genre of the Band whose home town is County Westmeath?
-(g / genre
-      :domain (a / amr-unknown)
-      :poss (b / band
-            :poss-of (t / town
-                  :name (n / name
-                        :op1 "County"
-                        :op2 "Westmeath")
-                  :mod (h / home))))

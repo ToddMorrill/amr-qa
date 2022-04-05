@@ -1,6 +1,0 @@
-# ::snt When was the death  of  Shakespeare?
-(d / die-01
-      :ARG1 (p / person
-            :name (n / name
-                  :op1 "Shakespeare"))
-      :time (a / amr-unknown))

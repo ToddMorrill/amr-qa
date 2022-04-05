@@ -1,9 +1,0 @@
-# ::snt In which city did John F. Kennedy die?
-(d / die-01
-      :ARG1 (p / person
-            :name (n / name
-                  :op1 "John"
-                  :op2 "F."
-                  :op3 "Kennedy"))
-      :location (c / city
-            :mod (a / amr-unknown)))

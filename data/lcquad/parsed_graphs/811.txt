@@ -1,9 +1,0 @@
-# ::snt Is the charat district a district in peru?
-(d / district
-      :polarity (a / amr-unknown)
-      :location (c / country
-            :name (n / name
-                  :op1 "Peru"))
-      :domain (d2 / district
-            :name (n2 / name
-                  :op1 "Chatar")))

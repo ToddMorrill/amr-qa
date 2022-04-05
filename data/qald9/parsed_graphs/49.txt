@@ -1,9 +1,0 @@
-# ::snt What is the official color of the University of Oxford?
-(c / color
-      :mod (o / official)
-      :poss (u / university
-            :name (n / name
-                  :op1 "University"
-                  :op2 "of"
-                  :op3 "Oxford"))
-      :domain (a / amr-unknown))

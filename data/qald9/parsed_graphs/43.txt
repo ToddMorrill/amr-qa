@@ -1,9 +1,0 @@
-# ::snt Which presidents were born in 1945?
-(b / bear-02
-      :ARG1 (a / amr-unknown
-            :ARG1-of (ii / include-91
-                  :ARG2 (p / person
-                        :ARG0-of (h / have-org-role-91
-                              :ARG2 (p2 / president)))))
-      :time (d / date-entity
-            :year 1945))

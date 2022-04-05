@@ -1,9 +1,0 @@
-# ::snt What are some non fiction subjects dealt with in fantasy novels?
-(s / subject
-      :ARG2-of (d / deal-01
-            :ARG0 (n / novel
-                  :mod (f / fantasy)))
-      :mod (f2 / fiction
-            :polarity -)
-      :mod (s2 / some)
-      :domain (a / amr-unknown))

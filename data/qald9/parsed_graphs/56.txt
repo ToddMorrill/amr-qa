@@ -1,8 +1,0 @@
-# ::snt How many movies did Park Chan-wook direct?
-(d / direct-01
-      :ARG0 (p / person
-            :name (n / name
-                  :op1 "Park"
-                  :op2 "Chan-wook"))
-      :ARG1 (m / movie
-            :quant (a / amr-unknown)))

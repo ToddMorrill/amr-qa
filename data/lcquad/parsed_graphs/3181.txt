@@ -1,8 +1,0 @@
-# ::snt What are the television shows whose distributer is HBO?
-(s / show-04
-      :ARG1 (a / amr-unknown)
-      :mod (t / television)
-      :ARG3-of (d / distribute-01
-            :ARG0 (c / company
-                  :name (n / name
-                        :op1 "HBO"))))

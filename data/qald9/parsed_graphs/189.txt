@@ -1,9 +1,0 @@
-# ::snt What is the largest city in america?
-(h / have-degree-91
-      :ARG1 (c / city
-            :domain (a / amr-unknown))
-      :ARG2 (l / large)
-      :ARG3 (m / most)
-      :ARG5 (c2 / country
-            :name (n / name
-                  :op1 "America")))

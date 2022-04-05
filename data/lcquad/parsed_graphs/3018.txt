@@ -1,6 +1,0 @@
-# ::snt Count the different types of Flatbread ?
-(c / count-01
-      :polarity (a / amr-unknown)
-      :ARG1 (t / type
-            :mod (f / flatbread)
-            :ARG1-of (d / differ-02)))

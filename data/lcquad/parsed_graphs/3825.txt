@@ -1,9 +1,0 @@
-# ::snt Where is the debut team of Shaquil Barrett located?
-(b / be-located-at-91
-      :ARG1 (t / team
-            :ARG1-of (d / debut-01
-                  :ARG0 (p / person
-                        :name (n / name
-                              :op1 "Shaquil"
-                              :op2 "Barrett"))))
-      :ARG2 (a / amr-unknown))

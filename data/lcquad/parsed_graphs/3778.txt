@@ -1,9 +1,0 @@
-# ::snt Fairfield, Connecticut is hometown to which persons?
-(h / hometown
-      :domain (c / city
-            :name (n / name
-                  :op1 "Fairfield")
-            :location (s / state
-                  :name (n2 / name
-                        :op1 "Connecticut")))
-      :beneficiary (a / amr-unknown))

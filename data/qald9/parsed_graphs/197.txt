@@ -1,6 +1,0 @@
-# ::snt Where is the birthplace of Goethe?
-(b / bear-02
-      :ARG1 (p / person
-            :name (n / name
-                  :op1 "Goethe"))
-      :location (a / amr-unknown))

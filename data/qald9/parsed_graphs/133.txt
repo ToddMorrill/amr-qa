@@ -1,7 +1,0 @@
-# ::snt Which actor was casted in the most movies?
-(c / cast-02
-      :ARG1 (a / amr-unknown
-            :ARG0-of (a2 / act-01))
-      :ARG2 (m / movie
-            :ARG1-of (h / have-quant-91
-                  :ARG3 (m2 / most))))

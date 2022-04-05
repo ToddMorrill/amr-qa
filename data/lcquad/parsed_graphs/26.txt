@@ -1,8 +1,0 @@
-# ::snt which politician is currently ruling over Rishkiesh?
-(r / rule-03
-      :ARG0 (a / amr-unknown
-            :mod (p / politician))
-      :ARG1 (p2 / province
-            :name (n / name
-                  :op1 "Rishkiesh"))
-      :time (c / current))

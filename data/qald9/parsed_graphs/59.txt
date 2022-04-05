@@ -1,9 +1,0 @@
-# ::snt Give me all islands that belong to Japan.
-(g / give-01
-      :ARG1 (ii / island
-            :mod (a / all)
-            :ARG0-of (b / belong-01
-                  :ARG1 (c / country
-                        :name (n / name
-                              :op1 "Japan"))))
-      :ARG2 (ii2 / i))

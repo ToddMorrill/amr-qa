@@ -1,9 +1,0 @@
-# ::snt What have some famous Christians died of?
-(d / die-01
-      :ARG1 (p / person
-            :mod (r / religious-group
-                  :name (n / name
-                        :op1 "Christian"))
-            :quant (s / some)
-            :ARG1-of (f / fame-01))
-      :ARG2 (a / amr-unknown))

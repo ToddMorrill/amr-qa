@@ -1,9 +1,0 @@
-# ::snt Where common region are soylent and bannock sold?
-(b / be-located-at-91
-      :ARG1 (s / sell-01
-            :ARG1 (a / and
-                  :op1 (s2 / soylent)
-                  :op2 (b2 / bannock)))
-      :ARG2 (r / region
-            :mod (c / common))
-      :polarity (a2 / amr-unknown))

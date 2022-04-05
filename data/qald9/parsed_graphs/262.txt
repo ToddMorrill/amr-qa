@@ -1,8 +1,0 @@
-# ::snt With how many countries Iran has borders?
-(c / country
-      :polarity (a / amr-unknown)
-      :quant (a2 / amr-unknown)
-      :location (b / border
-            :poss (c2 / country
-                  :name (n / name
-                        :op1 "Iran"))))

@@ -1,6 +1,0 @@
-# ::snt When was the Titanic completed?
-(c / complete-01
-      :ARG1 (s / ship
-            :name (n / name
-                  :op1 "Titanic"))
-      :time (a / amr-unknown))

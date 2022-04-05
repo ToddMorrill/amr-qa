@@ -1,8 +1,0 @@
-# ::snt Is Frank Herbert still alive?
-(l / live-01
-      :ARG0 (p / person
-            :name (n / name
-                  :op1 "Frank"
-                  :op2 "Herbert"))
-      :polarity (a / amr-unknown)
-      :mod (s / still))

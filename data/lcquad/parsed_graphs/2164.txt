@@ -1,9 +1,0 @@
-# ::snt Who is the animator of Tommy Tucker's Tooth ?
-(p / person
-      :ARG0-of (a / animate-01
-            :ARG1 (t / tooth
-                  :part-of (p2 / person
-                        :name (n / name
-                              :op1 "Tommy"
-                              :op2 "Tucker"))))
-      :domain (a2 / amr-unknown))

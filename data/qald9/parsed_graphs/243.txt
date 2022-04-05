@@ -1,8 +1,0 @@
-# ::snt In which year was Rachel Stevens born?
-(b / bear-02
-      :ARG1 (p / person
-            :name (n / name
-                  :op1 "Rachel"
-                  :op2 "Stevens"))
-      :time (y / year
-            :mod (a / amr-unknown)))

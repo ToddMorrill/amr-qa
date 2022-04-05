@@ -1,9 +1,0 @@
-# ::snt Rickenbacker is a musical instrument played by which artists?
-(ii / instrument
-      :mod (m / music)
-      :ARG1-of (p / play-11
-            :ARG0 (a / artist
-                  :mod (a2 / amr-unknown)))
-      :domain (t / thing
-            :name (n / name
-                  :op1 "Rickenbacker")))

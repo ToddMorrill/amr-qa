@@ -1,9 +1,0 @@
-# ::snt What sporting goods companies are located in Herzogenaurach?
-(b / be-located-at-91
-      :ARG1 (c / company
-            :mod (s / sport)
-            :mod (g / good)
-            :mod (a / amr-unknown))
-      :ARG2 (c2 / city
-            :name (n / name
-                  :op1 "Herzogenaurach")))

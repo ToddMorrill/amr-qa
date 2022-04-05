@@ -1,5 +1,0 @@
-# ::snt Where do bachelor of arts live?
-(l / live-01
-      :ARG0 (b / bachelor
-            :mod (a / art))
-      :location (a2 / amr-unknown))

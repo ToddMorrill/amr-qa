@@ -1,8 +1,0 @@
-# ::snt Name the alma mater of Michael hahn ?
-(n / name-01
-      :ARG1 (a / alma-mater
-            :poss (p / person
-                  :name (n2 / name
-                        :op1 "Michael"
-                        :op2 "Hhn")))
-      :polarity (a2 / amr-unknown))

@@ -1,9 +1,0 @@
-# ::snt How many people have headed organizations headquartered at Niederkirchnerstrae?
-(h / head-01
-      :ARG0 (p / person
-            :quant (a / amr-unknown))
-      :ARG1 (o / organization
-            :ARG1-of (h2 / headquarters
-                  :location (s / street
-                        :name (n / name
-                              :op1 "Niederkirchnerstrae")))))

@@ -1,7 +1,0 @@
-# ::snt In which time zone is Rome?
-(c / city
-      :name (n / name
-            :op1 "Rome")
-      :location (z / zone
-            :mod (t / time)
-            :mod (a / amr-unknown)))

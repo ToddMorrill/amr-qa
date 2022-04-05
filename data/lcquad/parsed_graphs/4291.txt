@@ -1,9 +1,0 @@
-# ::snt In which races did the horses of Mon Capitaine take part?
-(p / participate-01
-      :ARG0 (h / horse
-            :mod (p2 / province
-                  :name (n / name
-                        :op1 "Mon"
-                        :op2 "Capitaine")))
-      :ARG1 (r / race-02
-            :ARG3 (a / amr-unknown)))

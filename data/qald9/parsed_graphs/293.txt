@@ -1,6 +1,0 @@
-# ::snt What is in a chocolate chip cookie?
-(b / be-located-at-91
-      :ARG1 (a / amr-unknown)
-      :ARG2 (c / cookie
-            :consist-of (c2 / chip
-                  :mod (c3 / chocolate))))

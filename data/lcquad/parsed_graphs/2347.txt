@@ -1,8 +1,0 @@
-# ::snt Where did the conflict take place in which Henri Putz fought?
-(c / conflict-01
-      :location (a / amr-unknown)
-      :subevent-of (f / fight-01
-            :ARG0 (p / person
-                  :name (n / name
-                        :op1 "Henri"
-                        :op2 "Putz"))))

@@ -1,8 +1,0 @@
-# ::snt List the shows whose network is run by BBC.
-(l / list-01
-      :ARG1 (s / show
-            :poss-of (n / network
-                  :ARG1-of (r / run-01
-                        :ARG0 (p / publication
-                              :name (n2 / name
-                                    :op1 "BBC"))))))

@@ -1,8 +1,0 @@
-# ::snt How many famous people are from the Filipinos?
-(p / person
-      :ARG1-of (f / fame-01)
-      :source (p2 / person
-            :mod (c / country
-                  :name (n / name
-                        :op1 "Philippines")))
-      :quant (a / amr-unknown))

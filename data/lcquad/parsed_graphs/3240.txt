@@ -1,8 +1,0 @@
-# ::snt Humes High School is alma mater to which person?
-(a / alma-mater
-      :domain (h / high-school
-            :name (n / name
-                  :op1 "Humes"
-                  :op2 "High"
-                  :op3 "School"))
-      :beneficiary (a2 / amr-unknown))

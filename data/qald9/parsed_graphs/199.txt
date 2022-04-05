@@ -1,7 +1,0 @@
-# ::snt Which ingredients do I need for carrot cake?
-(n / need-01
-      :ARG0 (ii / i)
-      :ARG1 (ii2 / ingredient
-            :mod (a / amr-unknown)
-            :purpose (c / cake
-                  :mod (c2 / carrot))))

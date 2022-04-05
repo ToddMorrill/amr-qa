@@ -1,7 +1,0 @@
-# ::snt Who created the comic Captain America?
-(c / create-01
-      :ARG0 (a / amr-unknown)
-      :ARG1 (c2 / comic
-            :name (n / name
-                  :op1 "Captain"
-                  :op2 "America")))

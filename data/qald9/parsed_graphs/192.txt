@@ -1,8 +1,0 @@
-# ::snt Who is the king of the Netherlands?
-(p / person
-      :ARG0-of (h / have-org-role-91
-            :ARG1 (c / country
-                  :name (n / name
-                        :op1 "Netherlands"))
-            :ARG2 (k / king))
-      :domain (a / amr-unknown))

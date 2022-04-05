@@ -1,7 +1,0 @@
-# ::snt Bridges over which rivers are made of Wrought Iron?
-(b / bridge
-      :location (o / over
-            :op1 (r / river
-                  :ARG1-of (m / make-01
-                        :ARG2 (ii / iron
-                              :ARG1-of (w / weave-01))))))

@@ -1,9 +1,0 @@
-# ::snt Who created the world series of Poker?
-(c / create-01
-      :ARG0 (a / amr-unknown)
-      :ARG1 (b / broadcast-program
-            :name (n / name
-                  :op1 "World"
-                  :op2 "series"
-                  :op3 "of"
-                  :op4 "Poker")))

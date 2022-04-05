@@ -1,9 +1,0 @@
-# ::snt Who produced films starring Natalie Portman?
-(p / produce-01
-      :ARG0 (a / amr-unknown)
-      :ARG1 (f / film
-            :ARG2-of (s / star-01
-                  :ARG1 (p2 / person
-                        :name (n / name
-                              :op1 "Natalie"
-                              :op2 "Portman")))))

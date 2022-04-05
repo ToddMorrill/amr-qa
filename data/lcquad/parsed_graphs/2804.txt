@@ -1,8 +1,0 @@
-# ::snt How many places were ruled by Elizabeth II?
-(r / rule-03
-      :ARG0 (p / person
-            :name (n / name
-                  :op1 "Elizabeth"
-                  :op2 "II"))
-      :ARG1 (p2 / place
-            :quant (a / amr-unknown)))

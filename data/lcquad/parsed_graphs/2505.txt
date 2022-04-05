@@ -1,6 +1,0 @@
-# ::snt List the main ingredient of Pizza-ghetti ?
-(l / list-01
-      :polarity (a / amr-unknown)
-      :ARG1 (ii / ingredient
-            :mod (m / main)
-            :part-of (p / pizza-ghetti)))

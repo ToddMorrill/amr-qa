@@ -1,9 +1,0 @@
-# ::snt Which engine's successor's predecessor is BMW M10?
-(p / predecessor
-      :domain (c / car-make
-            :name (n / name
-                  :op1 "BMW"
-                  :op2 "M10"))
-      :poss (e / engine
-            :ARG0-of (s / succeed-02)
-            :mod (a / amr-unknown)))

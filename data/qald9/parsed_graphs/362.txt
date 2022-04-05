@@ -1,8 +1,0 @@
-# ::snt How many children did Benjamin Franklin have?
-(h / have-05
-      :ARG0 (p / person
-            :name (n / name
-                  :op1 "Benjamin"
-                  :op2 "Franklin"))
-      :ARG1 (c / child
-            :quant (a / amr-unknown)))

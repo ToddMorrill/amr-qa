@@ -1,7 +1,0 @@
-# ::snt How many mammals are in the Chordate phylum?
-(ii / include-91
-      :ARG1 (m / mammal
-            :quant (a / amr-unknown))
-      :ARG2 (p / phylum
-            :name (n / name
-                  :op1 "Chordate")))

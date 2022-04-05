@@ -1,7 +1,0 @@
-# ::snt Which range of mountains are there in canton of Fribourg?
-(m / mountain
-      :location (c / canton
-            :name (n / name
-                  :op1 "Fribourg"))
-      :mod (r / range
-            :mod (a / amr-unknown)))

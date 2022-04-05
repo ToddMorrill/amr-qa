@@ -1,8 +1,0 @@
-# ::snt Name the mascot of Austin College ?
-(n / name-01
-      :ARG1 (m / mascot
-            :poss (u / university
-                  :name (n2 / name
-                        :op1 "Austin"
-                        :op2 "College")))
-      :polarity (a / amr-unknown))

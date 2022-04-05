@@ -1,6 +1,0 @@
-# ::snt What are the mammals whose phylum is Chordate?
-(m / mammal
-      :domain (a / amr-unknown)
-      :mod (p / phylum
-            :name (n / name
-                  :op1 "Chordate")))

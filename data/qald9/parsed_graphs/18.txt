@@ -1,6 +1,0 @@
-# ::snt Which organizations were founded in 1950?
-(f / found-01
-      :ARG1 (a / amr-unknown
-            :mod (o / organization))
-      :time (d / date-entity
-            :year 1950))

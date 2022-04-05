@@ -1,9 +1,0 @@
-# ::snt Who built the Ford Y-block engine ?
-(b / build-01
-      :ARG0 (a / amr-unknown)
-      :ARG1 (e / engine
-            :mod (b2 / block
-                  :mod (y / yurt))
-            :mod (c / car-make
-                  :name (n / name
-                        :op1 "Ford"))))

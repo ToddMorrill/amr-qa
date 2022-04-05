@@ -1,8 +1,0 @@
-# ::snt How many religions have the relatives of waxiangs followed?
-(f / follow-02
-      :ARG0 (p / person
-            :ARG0-of (h / have-rel-role-91
-                  :ARG1 (w / waxiang)
-                  :ARG2 (r / relative)))
-      :ARG1 (r2 / religion
-            :quant (a / amr-unknown)))

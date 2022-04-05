@@ -1,5 +1,0 @@
-# ::snt What is the game whose genre is Mind sport?
-(s / sport
-      :mod (m / mind)
-      :domain (a / amr-unknown)
-      :mod (g / genre))

@@ -1,9 +1,0 @@
-# ::snt What is the city  of the television station whose affiliations is LATV?
-(c / city
-      :domain (a / amr-unknown)
-      :poss (s / station
-            :mod (t / television)
-            :ARG1-of (a2 / affiliate-01
-                  :ARG2 (c2 / company
-                        :name (n / name
-                              :op1 "LATV")))))

@@ -1,7 +1,0 @@
-# ::snt Who are the politicians whose death place is Ontario?
-(p / politician
-      :domain (a / amr-unknown)
-      :ARG1-of (d / die-01
-            :location (p2 / province
-                  :name (n / name
-                        :op1 "Ontario"))))

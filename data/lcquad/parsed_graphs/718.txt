@@ -1,8 +1,0 @@
-# ::snt What are the school mascots in Blytheville school district?
-(m / mascot
-      :domain (a / amr-unknown)
-      :mod (s / school)
-      :location (d / district
-            :name (n / name
-                  :op1 "Blytheville")
-            :mod (s2 / school)))

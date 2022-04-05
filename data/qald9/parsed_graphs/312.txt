@@ -1,6 +1,0 @@
-# ::snt What country is Sitecore from?
-(c / company
-      :name (n / name
-            :op1 "Sitecore")
-      :source (c2 / country
-            :mod (a / amr-unknown)))

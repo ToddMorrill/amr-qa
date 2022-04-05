@@ -1,9 +1,0 @@
-# ::snt Who is the writer of He's a Pirate ?
-(p / person
-      :ARG0-of (w / write-01
-            :ARG1 (p2 / publication
-                  :name (n / name
-                        :op1 "He's"
-                        :op2 "a"
-                        :op3 "Pirate")))
-      :domain (a / amr-unknown))

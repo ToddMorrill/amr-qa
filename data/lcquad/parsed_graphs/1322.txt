@@ -1,9 +1,0 @@
-# ::snt Sentinel High School  team is known as ?
-(k / know-02
-      :ARG1 (t / team
-            :mod (h / high-school
-                  :name (n / name
-                        :op1 "Sentinel"
-                        :op2 "High"
-                        :op3 "School")))
-      :ARG2 (a / amr-unknown))

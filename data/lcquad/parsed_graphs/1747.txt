@@ -1,9 +1,0 @@
-# ::snt Name whose youth club was FC Barcelona ?
-(n / name
-      :poss (c / club
-            :mod (y / youth)
-            :domain (t / team
-                  :name (n2 / name
-                        :op1 "FC"
-                        :op2 "Barcelona")))
-      :domain (a / amr-unknown))

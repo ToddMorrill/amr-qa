@@ -1,8 +1,0 @@
-# ::snt What are the awrds won by Laemmle Theatres ?
-(t / thing
-      :domain (a / amr-unknown)
-      :ARG1-of (w / win-01
-            :ARG0 (t2 / theater
-                  :name (n / name
-                        :op1 "Laemmle"
-                        :op2 "Theatres"))))

@@ -1,6 +1,0 @@
-# ::snt Where is Emmett Hughes from?
-(p / person
-      :name (n / name
-            :op1 "Emmett"
-            :op2 "Hughes")
-      :source (a / amr-unknown))

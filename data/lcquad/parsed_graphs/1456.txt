@@ -1,9 +1,0 @@
-# ::snt Name the home town of Rolando Gomez ?
-(n / name-01
-      :ARG1 (t / town
-            :mod (h / home)
-            :poss (p / person
-                  :name (n2 / name
-                        :op1 "Rolando"
-                        :op2 "Gomez")))
-      :polarity (a / amr-unknown))

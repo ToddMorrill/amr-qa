@@ -1,8 +1,0 @@
-# ::snt List the institute of Robert hall ?
-(l / list-01
-      :ARG1 (ii / institute
-            :poss (p / person
-                  :name (n / name
-                        :op1 "Robert"
-                        :op2 "Hall")))
-      :polarity (a / amr-unknown))

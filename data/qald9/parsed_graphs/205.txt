@@ -1,7 +1,0 @@
-# ::snt In which country does the Nile start?
-(s / start-01
-      :ARG1 (r / river
-            :name (n / name
-                  :op1 "Nile"))
-      :location (c / country
-            :mod (a / amr-unknown)))

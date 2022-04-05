@@ -1,7 +1,0 @@
-# ::snt What are some seas inside europe ?
-(s / sea
-      :location (c / continent
-            :name (n / name
-                  :op1 "Europe"))
-      :quant (s2 / some)
-      :mod (a / amr-unknown))

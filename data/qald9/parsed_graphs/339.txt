@@ -1,8 +1,0 @@
-# ::snt Who was Vincent van Gogh inspired by?
-(ii / inspire-01
-      :ARG1 (p / person
-            :name (n / name
-                  :op1 "Vincent"
-                  :op2 "van"
-                  :op3 "Gogh"))
-      :ARG2 (a / amr-unknown))

@@ -1,9 +1,0 @@
-# ::snt Who are the employer of Don R. Berlin?
-(c / company
-      :ARG0-of (e / employ-01
-            :ARG1 (p / person
-                  :name (n / name
-                        :op1 "Don"
-                        :op2 "R."
-                        :op3 "Berlin")))
-      :domain (a / amr-unknown))

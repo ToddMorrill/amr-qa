@@ -1,9 +1,0 @@
-# ::snt On how many subjects has Random house publishers published books?
-(p / publish-01
-      :ARG0 (c / company
-            :name (n / name
-                  :op1 "Random"
-                  :op2 "House"))
-      :ARG1 (b / book
-            :topic (s / subject
-                  :quant (a / amr-unknown))))

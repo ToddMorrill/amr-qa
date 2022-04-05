@@ -1,9 +1,0 @@
-# ::snt What is the area of Tar Heel Sports Network ?
-(a / area
-      :mod (a2 / amr-unknown)
-      :poss (c / company
-            :name (n / name
-                  :op1 "Tar"
-                  :op2 "Heel"
-                  :op3 "Sports"
-                  :op4 "Network")))

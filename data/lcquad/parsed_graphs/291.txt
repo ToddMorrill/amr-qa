@@ -1,8 +1,0 @@
-# ::snt Is Bacillus belong to the domain Bacteria?
-(b / belong-01
-      :ARG0 (b2 / bacterium
-            :name (n / name
-                  :op1 "Bacillus"))
-      :ARG1 (d / domain
-            :mod (b3 / bacteria))
-      :polarity (a / amr-unknown))
