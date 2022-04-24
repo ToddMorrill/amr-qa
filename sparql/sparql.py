@@ -29,6 +29,10 @@ def load_json(filepath):
     with open(filepath, 'r') as f:
         return json.load(f)
 
+def write_json(filepath, obj):
+    with open(filepath, 'w') as f:
+        return json.dump(obj, f)
+
 def load_pickle(filepath):
     with open(filepath, 'rb') as f:
         return pickle.load(f)
@@ -204,8 +208,16 @@ class AMR(object):
         for entity_idxs in self.graph_idxs:
             parents = []
             for idx in entity_idxs:
-                node = [x for x, y in self.indexed_graph.nodes(data=True) if y['index'] == idx][0]
-                parents.append(next(self.indexed_graph.predecessors(node)))
+                node = [x for x, y in self.indexed_graph.nodes(data=True) if y['index'] == idx]
+                if node:
+                    node = node[0]
+                    try:
+                        parents.append(next(self.indexed_graph.predecessors(node)))
+                    # catch case when node is root and there are no predecessors
+                    except StopIteration:
+                        pass
+                else:
+                    node = None
             
             # AMR entity nodes might not be found due to typos
             # e.g. New Yor City
@@ -241,9 +253,9 @@ class AMR(object):
         return self.entity_nodes
 
 class SPARQLConverter(object):
-    def __init__(self, amr, propbank_filepath) -> None:
+    def __init__(self, amr, propbank_mapping) -> None:
         self.amr = amr
-        self.propbank_mapping = load_pickle(propbank_filepath)
+        self.propbank_mapping = propbank_mapping
         self.propbank_predicates = set(list(self.propbank_mapping['relation_scores'].keys()))
         self.prefixes = {'http://dbpedia.org/ontology/': 'dbo:',
                     'http://dbpedia.org/resource/': 'res:',
@@ -352,6 +364,9 @@ class SPARQLConverter(object):
             amr_path = []
             # a_node_id may be None
             if a_node_id is not None:
+                # TODO: handle case where query is imperative and an entity node
+                # gets put in its own disjoint graph component (e.g. 23, 33)
+                # TODO: address nx.NetworkXNoPath for 54, 77, 177, 290
                 amr_path = nx.shortest_path(G, a_node_id, entity_node_id)
             collapsed_path = [a_node_id]
             source = a_node_id # n' in algo
@@ -435,8 +450,7 @@ class SPARQLConverter(object):
                         break
             type_edge = (node, 'type', entity_type)
             self.query_edges.add(type_edge)
-        breakpoint()
-
+        
     def ground_edges(self):
         grounded_edges = set()
         for src, edge, tgt in self.query_edges:
@@ -550,25 +564,51 @@ class SPARQLConverter(object):
         grounded_edges = self.ground_edges()
         self.clean_grounded_edges = self.replace_prefixes(grounded_edges)
 
+def generate_all(data, propbank_mapping):
+    results = {}
+    error_keys = []
+    for i in range(len(data)):
+        sentence = data[f'train_{i}']['text']
+        amr = data[f'train_{i}']['extended_amr']
+        example_amr = AMR(sentence=sentence, amr=amr)
+        entity_nodes = example_amr.get_entity_nodes()
+
+        try:
+            sparql = SPARQLConverter(example_amr, propbank_mapping)
+            sparql.algorithm_1()
+            query = sparql.generate_sparql()
+            # TODO: add after fixing errors
+            # 'sparql': query,
+            results[f'train_{i}'] = {'query_edges': sorted(list(sparql.query_edges)), 'error': ''}
+        except Exception as e:
+            key = f'train_{i}'
+            results[key] = {'error': str(e)}
+            error_keys.append(key)
+    return results, error_keys
+
 
 def main(args):
     qald = load_json(args.data_filepath)
     # set fast-aligner directory
     os.environ['FABIN_DIR'] = args.fast_align_dir
-    example = args.index
-    sentence = qald[f'train_{example}']['text']
-    amr = qald[f'train_{example}']['extended_amr']
-    sample_amr = AMR(sentence=sentence, amr=amr)
-    entity_nodes = sample_amr.get_entity_nodes()
+    propbank_mapping = load_pickle(args.propbank_filepath)
 
-    sparql = SPARQLConverter(sample_amr, args.propbank_filepath)
-    sparql.algorithm_1()
-    query = sparql.generate_sparql()
-    print(sample_amr.sentence)
-    print(qald[f'train_{example}']['sparql'])
-    print(query)
-    breakpoint()
+    if args.index is not None:
+        example = args.index
+        sentence = qald[f'train_{example}']['text']
+        amr = qald[f'train_{example}']['extended_amr']
+        sample_amr = AMR(sentence=sentence, amr=amr)
+        entity_nodes = sample_amr.get_entity_nodes()
 
+        sparql = SPARQLConverter(sample_amr, propbank_mapping)
+        sparql.algorithm_1()
+        query = sparql.generate_sparql()
+        print(sample_amr.sentence)
+        print(qald[f'train_{example}']['sparql'])
+        print(query)
+    else:
+        results, error_keys = generate_all(qald, propbank_mapping)
+        write_json('query_edges.json', results)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
