@@ -18,14 +18,21 @@ import requests
 
 def get_filepath(save_dir, url):
     filename = url.split('/')[-1]
+    # remove any url parameters
+    filename = filename.split('?')[0]
     return os.path.join(save_dir, filename)
 
 
-def download_save(url, save_dir):
+def download_save(url, save_dir, raw_bytes=False):
     response = requests.get(url)
     save_filepath = get_filepath(save_dir, response.url)
-    with open(save_filepath, 'w') as f:
-        json.dump(response.json(), f)
+    # useful for all filetypes other than JSON
+    if raw_bytes:
+        with open(save_filepath, 'wb') as f:
+            f.write(response.content)
+    else:
+        with open(save_filepath, 'w') as f:
+            json.dump(response.json(), f)
 
 def download_amr_model(url, save_dir):
     response = requests.get(url, stream=True)
@@ -38,7 +45,7 @@ def exists(save_dir, url, type='tar'):
     if type == 'tar':
         # remove file extension
         path_check = filepath[:filepath.index('.')]
-    elif type == 'json':
+    elif type == 'json' or type == 'other':
         path_check = filepath
     elif type == 'amr':
         dest_dir = os.path.split(amrlib.__file__)[0]
@@ -48,7 +55,7 @@ def exists(save_dir, url, type='tar'):
         model_type = 'model_stog' if 'parse' in folder_name else 'model_gtos'
         path_check = os.path.join(data_dir, model_type)
     else:
-        raise Exception('Argument type must be one of {tar, json, amr}.')
+        raise Exception('Argument type must be one of {tar, json, amr, other}.')
     return os.path.exists(path_check)
 
 
@@ -75,6 +82,7 @@ def main(args):
 
             # mv downloaded models to amrlib/data directory
             # https://amrlib.readthedocs.io/en/latest/install/
+            # TODO: refactor this code
             dest_dir = os.path.split(amrlib.__file__)[0]
             data_dir = os.path.join(dest_dir, 'data')
             os.makedirs(data_dir, exist_ok=True)
@@ -84,6 +92,13 @@ def main(args):
             model_type = 'model_stog' if 'parse' in folder_name else 'model_gtos'
             dst = os.path.join(data_dir, model_type)
             path = shutil.move(src, dst)
+
+    # TODO: determine why this is printing byte strings to the terminal
+    amr_to_dbpedia_url = 'https://github.com/IBM/kbqa-relation-linking/blob/master/SLING/data/probbank-dbpedia.pkl?raw=true'
+    # check if cached already
+    if not exists(save_dir=args.save_dir, url=amr_to_dbpedia_url, type='other'):
+        print(f'Downloading {amr_to_dbpedia_url.split("/")[-1]}.')
+        download_save(url=amr_to_dbpedia_url, save_dir=args.save_dir, raw_bytes=True)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()

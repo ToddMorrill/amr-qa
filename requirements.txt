@@ -6,3 +6,6 @@ unidecode
 word2number
 sentencepiece
 penman
+networkx
+matplotlib
+pydot
