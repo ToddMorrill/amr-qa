@@ -14,9 +14,7 @@ Examples:
         --index 254
 """
 import argparse
-import json
 import os
-import pickle
 
 import amrlib
 from amrlib.alignments.faa_aligner import FAA_Aligner
@@ -24,194 +22,165 @@ import networkx as nx
 import penman
 from penman.models import noop
 
-
-def load_json(filepath):
-    with open(filepath, 'r') as f:
-        return json.load(f)
-
-def write_json(filepath, obj):
-    with open(filepath, 'w') as f:
-        return json.dump(obj, f)
-
-def load_pickle(filepath):
-    with open(filepath, 'rb') as f:
-        return pickle.load(f)
-
-# BFS style traversal from root node to number nodes
-class IndexBFS(object):
-    def __init__(self, g, root):
-        self.g = g
-        self.root = root
-        # index the nodes
-        self.g.nodes[root]['index'] = '1'
-        self.visited = set()
-        self.frontier = [root]
-
-    def bfs(self):
-        while self.frontier:
-            node = self.frontier.pop(0)
-            if node in self.visited:
-                continue
-            else:
-                self.visited.add(node)
-
-            child_counter = 1
-            for child in self.g.successors(node):
-                # set index of children
-                # no index required if edge type is instance
-                if self.g[node][child]['role'] == ':instance':
-                    self.g.nodes[child]['index'] = None
-                    continue
-                # if index already set, don't set it again
-                # needed to avoid reindexing reentrant nodes
-                if 'index' not in self.g.nodes[child]:
-                    parent_index = self.g.nodes[node]['index']
-                    child_index = f'{parent_index}.{child_counter}'
-                    self.g.nodes[child]['index'] = child_index
-                
-                self.frontier.append(child)
-                child_counter += 1
-        return self.g
-
+import utils
+from utils import IndexBFS
 
 class AMR(object):
-    def __init__(self, sentence, amr) -> None:
+    """Data container for the sentence, multiple versions of the AMR graph, and
+    entities linked to AMR nodes."""
+    def __init__(self, sentence=None, amr=None, aligner=None) -> None:
         if sentence is None and amr is None:
             raise ValueError(
                 'At least one of "sentence" or "amr" must be passed.')
         self.sentence = sentence
         self.amr = amr
+        self.aligner = aligner
 
         # parse sentence if AMR isn't provided
         if self.amr is None:
             stog = amrlib.load_stog_model()
-            # TODO: determine if the return of parse_sents is subscriptable
             self.amr = stog.parse_sents([self.sentence])[0]
-            # for graph in graphs:
-            #     print(graph)
         # generate sentence if only AMR is provided
         elif self.sentence is None:
             gtos = amrlib.load_gtos_model()
             self.sentence = gtos.generate(graphs=[self.amr])[0]
+        
+        # create penman and networkx graphs of the amr
+        self.penman_g, self.di_g = self._create_graph()
 
-    def create_graph(self):
+    def _create_graph(self):
+        """Decodes the serialized AMR graph into a proper graph structure."""
+        # decode using the NoOpModel so arg-of relations don't get reversed
+        # this is necessary to index nodes properly for entity-to-AMR node alignment
         g = penman.decode(self.amr, noop.NoOpModel())
-        self.penman_g = g
         edge_list = []
-        # TODO: how to handle :ARG0-of relations
-        # e.g. index 5 from QALD-9
-        # https://penman.readthedocs.io/en/latest/api/penman.layout.html
         for src, role, tgt in g.triples:
             # e.g. '"Abraham"'
             if tgt.startswith('"'):
-                tgt = eval(tgt)
+                tgt = tgt[1:-1]
             # modify entity nodes so they don't conflict with AMR nodes
-            # e.g. Skype in both ('all0', 'Skype', {'role': ':surface_form'})
+            # e.g. Skype in both entity list and core AMR graph 
+            # ('all0', 'Skype', {'role': ':surface_form'})
             # and ('n', 'Skype', {'role': ':op1'})
             if role == ':surface_form':
-                # will need to account for this later
+                # will need to account for this later if using entity nodes
                 tgt = f'{tgt}<surface form>'
 
             edge_list.append((src, tgt, {'role': role}))
 
+        # create networkx graph
         di_g = nx.DiGraph()
         di_g.add_edges_from(edge_list)
-        return di_g
-
-    def surface_form_indexes(self):
-        word_idxs = []
-        for surface_form in self.surface_forms:
-            # assuming surface_form only appears once in the text
-            # TODO: handle cases where surface form doesn't appear in text (e.g typos, etc.)
-            # e.g. New Yor City
-            if surface_form not in self.sentence:
-                word_idxs.append([None])
-                continue
-            start_idx = self.sentence.index(surface_form)
-            end_idx = start_idx + len(surface_form)
-            # remove everything after (and including) surface form
-            pre_surface_form = self.sentence[:start_idx]
-            tokens_before = len(pre_surface_form.split())
-            tokens_in_surface_form = [
-                i + tokens_before for i in range(len(surface_form.split()))
-            ]
-            word_idxs.append(tokens_in_surface_form)
-
-        self.word_idxs = word_idxs
-
-    def link_surface_forms(self):
-        inference = FAA_Aligner()
+        return g, di_g
+    
+    def _align_amr_tokens(self):
+        """Aligns AMR nodes with sentence tokens."""
         # remove entity nodes from the graph to improve alignment quality
         split_amr = self.amr.split(':entities')
         if len(split_amr) == 2:
             amr_filtered = split_amr[0].strip() + ')'
         else:
             amr_filtered = split_amr[0]
+        
         # transform to list, which is the expected input format
         sentence_lower = [self.sentence.lower()]
         amr_filtered = [amr_filtered]
-        amr_surface_aligns, alignment_strings = inference.align_sents(
-            sentence_lower, amr_filtered)
-        self.amr_surface_aligned = amr_surface_aligns[0]
-        self.token_alignment = alignment_strings[0]
 
-        # use linked entities in AMR graph to retrieve surface forms
-        # create networkx graph of the amr
-        di_g = self.create_graph()
-        # assuming the amr graph AMR graph is annotated with surface form nodes
-        # TODO: adapt this to new entity format
-        self.surface_forms = []
-        for u, v, e in di_g.edges(data=True):
+        # align sentences with AMR nodes
+        amr_surface_aligns, alignment_strings = self.aligner.align_sents(
+            sentence_lower, amr_filtered)
+        return amr_surface_aligns[0], alignment_strings[0]
+    
+    def _get_surface_forms(self):
+        """Gets the surface forms correspond to the DBPedia entities provided
+        in the AMR graph."""
+        surface_forms = []
+        for u, v, e in self.di_g.edges(data=True):
             if e['role'] == ':surface_form':
-                # strip out unique info (e.g. <surface form>)
+                # strip out identifying info (e.g. <surface form>)
                 v = v.split('<surface form>')[0]
-                self.surface_forms.append(v)
-        
-        self.dbpedia_entities = []
+                surface_forms.append(v)
+        return surface_forms
+    
+    def _surface_form_token_indexes(self):
+        """Retrieves token positions in the sentence of the DBPedia entity
+        surface forms."""
+        token_idxs = []
         for surface_form in self.surface_forms:
-            # recall that surface_form nodes were made unique
-            surface_form = f'{surface_form}<surface form>'
-            parent = [x for x in di_g.predecessors(surface_form)][0]
-            for u, v, e in di_g.out_edges(parent, data=True):
-                if e['role'] == ':uri':
-                    self.dbpedia_entities.append(v)
+            # TODO: handle cases where surface form doesn't appear in text (e.g typos, etc.)
+            # e.g. New Yor City
+            if surface_form not in self.sentence:
+                token_idxs.append([None])
+                continue
+            # NB: assuming surface_form only appears once in the text
+            start_idx = self.sentence.index(surface_form)
+            # remove everything after (and including) surface form
+            pre_surface_form = self.sentence[:start_idx]
+            tokens_before = len(pre_surface_form.split())
+            tokens_in_surface_form = [
+                i + tokens_before for i in range(len(surface_form.split()))
+            ]
+            token_idxs.append(tokens_in_surface_form)
+
+        return token_idxs
+    
+    def _link_entities_to_amr_nodes(self):
+        """Links DBPedia entities to AMR nodes via the surface forms. In
+        particular, this method first aligns AMR nodes to sentence tokens. Then
+        it links DBPedia entities to sentence tokens, which completes the
+        mapping between DBPedia entities and AMR nodes."""
+        # align AMR nodes to sentence tokens
+        alignments = self._align_amr_tokens()
+        self.amr_surface_aligned, self.token_alignment = alignments
+
+        # get surface forms for all DBPedia entities
+        # NB: assuming the AMR graph is annotated with surface form nodes
+        # TODO: adapt this to new entity format, as needed
+        self.surface_forms = self._get_surface_forms()
 
         # identify the token index position of these surface forms in the sentence
-        self.surface_form_indexes()
+        self.token_idxs = self._surface_form_token_indexes()
 
-        # use alignment strings to narrow in on a node in the graph
-        # use alignment strings to retrieve position in graph
+        # use alignment strings to retrieve a node from the graph
+        # self.token_alignment is a string of the form
+        # [0-1.1 1-1.1.2 ...], where the number before the dash is the token
+        # index in the sentence, and the number after the dash is an index into
+        # AMR graph where each decimal corresponds to a level in the tree and
+        # the numbers correspond to the order of the child nodes
         alignments = {}
         for mapping in self.token_alignment.split():
             tok_idx, graph_idx = mapping.split('-')
             alignments[int(tok_idx)] = graph_idx
         self.alignments = alignments
 
-        # retrieve graph_idxs for surface form tokens
+        # retrieve graph_idxs for entity surface form tokens
         graph_idxs = []
-        for surface_form in self.word_idxs:
+        for surface_form in self.token_idxs:
             surface_form_g_idxs = []
-            for word_idx in surface_form:
-                if word_idx in alignments:
-                    surface_form_g_idxs.append(alignments[word_idx])
+            for token_idx in surface_form:
+                if token_idx in alignments:
+                    surface_form_g_idxs.append(alignments[token_idx])
             graph_idxs.append(surface_form_g_idxs)
-
         self.graph_idxs = graph_idxs
 
         # index the graph nodes according to the aligner
-        idx_bfs = IndexBFS(di_g, root=self.penman_g.top)
+        idx_bfs = IndexBFS(self.di_g, root=self.penman_g.top)
         self.indexed_graph = idx_bfs.bfs()
     
     def _get_entity_nodes(self):
-        # check if parent is name type, and if so, retrieve the parent above name to treat as the entity node
+        """Retrieves the AMR nodes that have been marked as entities."""
         entity_nodes = []
         for entity_idxs in self.graph_idxs:
             parents = []
             for idx in entity_idxs:
-                node = [x for x, y in self.indexed_graph.nodes(data=True) if y['index'] == idx]
+                # filter the graph for the particular node we're looking for
+                node = [node_ for node_, data in self.indexed_graph.nodes(data=True) if data['index'] == idx]
+                # AMR entity nodes might not be found due to typos
+                # e.g. New Yor City
                 if node:
                     node = node[0]
                     try:
+                        # get the parent of the entity node
                         parents.append(next(self.indexed_graph.predecessors(node)))
                     # catch case when node is root and there are no predecessors
                     except StopIteration:
@@ -219,38 +188,59 @@ class AMR(object):
                 else:
                     node = None
             
-            # AMR entity nodes might not be found due to typos
-            # e.g. New Yor City
             if not parents:
                 entity_nodes.append(None)
-            else:
-                # assert they all share the same parent
-                all_same = all(x == parents[0] for x in parents)
-                # TODO: what are the implications of this
-                # e.g. QALD index 7 violates this 
-                # assert all_same
-                parent = parents[0]
+                continue
             
-                # if parent is an instance of a name
-                if ('name' in self.indexed_graph[parent]) and (self.indexed_graph[parent]['name']['role'] == ':instance'):
-                    # then retrieve the parent of 'name' and treat that as an entity node
-                    grandparent = next(self.indexed_graph.predecessors(parent))
-                    entity_nodes.append(grandparent)
-                else:
-                    entity_nodes.append(node)
-            
-            # TODO: if edge type is mod, retrieve parent to treat as the entity node
-            # TODO: confirm if this is already handled by Algo 1
+            # should assert that all surface form tokens (e.g. "New", "York",
+            # "City") all share the same parent and determine what to do if they
+            # don't all share the same parent
+            # the parents may not be the same due to typos in the entities
+            # all_same = all(x == parents[0] for x in parents)
+            # assert all_same
+
+            # naively take the parent of the first token
+            parent = parents[0]
         
-        self.entity_nodes = entity_nodes
+            # if parent is an instance of a name
+            if ('name' in self.indexed_graph[parent]) and (self.indexed_graph[parent]['name']['role'] == ':instance'):
+                # then retrieve the parent of 'name' and treat that as an entity node
+                grandparent = next(self.indexed_graph.predecessors(parent))
+                entity_nodes.append(grandparent)
+            else:
+                entity_nodes.append(node)
+        return entity_nodes
+
+    def _get_dbpedia_entities(self):
+        """Retrieves the DBPedia entity resource for the surface forms in the AMR
+        graph."""
+        dbpedia_entities = []
+        for surface_form in self.surface_forms:
+            # recall that surface_form nodes were made unique
+            surface_form = f'{surface_form}<surface form>'
+            parent = [x for x in self.di_g.predecessors(surface_form)][0]
+            for u, v, e in self.di_g.out_edges(parent, data=True):
+                if e['role'] == ':uri':
+                    dbpedia_entities.append(v)
+        return dbpedia_entities
 
     def get_entity_nodes(self):
-        self.link_surface_forms()
-        self._get_entity_nodes()
-        # zip everything into one complete list
-        self.complete_alignments = list(
-            zip(self.entity_nodes, self.surface_forms, self.word_idxs, self.graph_idxs, self.dbpedia_entities))
-        return self.entity_nodes
+        # align DBPedia entities with AMR nodes
+        self._link_entities_to_amr_nodes()
+        # retrieve AMR nodes that have been marked as entities
+        self.entity_nodes = self._get_entity_nodes()
+        # retrieve the DBPedia entities for completeness
+        self.dbpedia_entities = self._get_dbpedia_entities()
+
+        # zip everything into one dictionary
+        complete_alignments = {}
+        complete_alignments['entity_nodes'] = self.entity_nodes
+        complete_alignments['surface_forms'] = self.surface_forms
+        complete_alignments['token_indexes'] = self.token_idxs
+        complete_alignments['graph_indexes'] = self.graph_idxs
+        complete_alignments['dbpedia_entities'] = self.dbpedia_entities
+        self.complete_alignments = complete_alignments
+        return complete_alignments
 
 class SPARQLConverter(object):
     def __init__(self, amr, propbank_mapping) -> None:
@@ -371,6 +361,7 @@ class SPARQLConverter(object):
             collapsed_path = [a_node_id]
             source = a_node_id # n' in algo
             rel_builder = ''
+            # TODO: if amr_path is empty, check if the question is of the form "Is horse racing a sport?"
             for idx, target in enumerate(amr_path[1:]):
                 # get instance type of node
                 node_type = [tgt for src, role, tgt in g.instances() if src == target]
@@ -473,6 +464,7 @@ class SPARQLConverter(object):
                     relations = self.propbank_mapping['relation_scores'][edge_component]
                     if len(relations) > 0:
                         relation = relations[0]['rel']
+            # TODO: use ASK queries to determine the order of the relation
             # TODO: address unlinked relations
             if relation != None:
                 grounded_edges.add((source_entity, relation, target_entity))
@@ -500,11 +492,28 @@ class SPARQLConverter(object):
 
     def generate_query(self):
         # determine the query type
+        # default to SELECT DISTINCT
         query_type = 'SELECT DISTINCT'
-        # TODO: implement logic for ASK queries
-        # TODO: implement logic for handling the target variable
-        # TODO: implement logic for sorting
-        # TODO: implement logic for counting
+        
+        # if no amr-unknown then ASK query
+        a = 'amr-unknown'
+        # a_node_id = None
+        a_node_ids = [src for src, role, tgt in self.amr.penman_g.instances() if (role == ':instance') and (tgt == a)]
+        if not a_node_ids:
+            query_type = 'ASK'
+        # TODO: check logic for handling amr-unknown connected to polarity edges
+        elif a_node_ids:
+            a_node_id = a_node_ids[0]
+            # amr-unknown connected to polarity edges
+            for src, role, tgt in self.amr.penman_g.edges() + self.amr.penman_g.attributes():
+                if ((src == a_node_id) or (tgt == a_node_id)) and (role == ':polarity'):
+                    query_type = 'ASK'
+                    break
+
+        # TODO: confirm logic for handling the target variable is already covered in algo_1
+        # TODO: implement logic for ORDER BY
+
+        # TODO: implement logic for counting (no QALD-9 queries require counting)
 
         # generate the query
         query_substrings = []
@@ -566,14 +575,14 @@ class SPARQLConverter(object):
         grounded_edges = self.ground_edges()
         self.clean_grounded_edges = self.replace_prefixes(grounded_edges)
 
-def generate_all(data, propbank_mapping):
+def generate_all(data, propbank_mapping, aligner=None):
     queries = {}
     query_edges = {}
     error_keys = []
     for i in range(len(data)):
         sentence = data[f'train_{i}']['text']
         amr = data[f'train_{i}']['extended_amr']
-        example_amr = AMR(sentence=sentence, amr=amr)
+        example_amr = AMR(sentence=sentence, amr=amr, aligner=aligner)
         entity_nodes = example_amr.get_entity_nodes()
         key = f'train_{i}'
         try:
@@ -591,18 +600,19 @@ def generate_all(data, propbank_mapping):
 
 
 def main(args):
-    qald = load_json(args.data_filepath)
+    qald = utils.load_json(args.data_filepath)
     # set fast-aligner directory
     os.environ['FABIN_DIR'] = args.fast_align_dir
-    propbank_mapping = load_pickle(args.propbank_filepath)
+    aligner = FAA_Aligner()
+    propbank_mapping = utils.load_pickle(args.propbank_filepath)
 
     if args.index is not None:
         example = args.index
         sentence = qald[f'train_{example}']['text']
         amr = qald[f'train_{example}']['extended_amr']
-        sample_amr = AMR(sentence=sentence, amr=amr)
+        sample_amr = AMR(sentence=sentence, amr=amr, aligner=aligner)
         entity_nodes = sample_amr.get_entity_nodes()
-
+        
         sparql = SPARQLConverter(sample_amr, propbank_mapping)
         sparql.algorithm_1()
         query = sparql.generate_sparql()
@@ -611,9 +621,9 @@ def main(args):
         print(query)
         breakpoint()
     else:
-        queries, query_edges, error_keys = generate_all(qald, propbank_mapping)
-        write_json('query_edges.json', query_edges)
-        write_json('generated_queries.json', queries)
+        queries, query_edges, error_keys = generate_all(qald, propbank_mapping, aligner=aligner)
+        utils.write_json('query_edges.json', query_edges)
+        utils.write_json('generated_queries.json', queries)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
