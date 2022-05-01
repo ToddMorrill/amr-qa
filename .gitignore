@@ -130,3 +130,4 @@ dmypy.json
 
 qald_9.json
 query_edges.json
+generated_queries.json

@@ -473,7 +473,9 @@ class SPARQLConverter(object):
                     relations = self.propbank_mapping['relation_scores'][edge_component]
                     if len(relations) > 0:
                         relation = relations[0]['rel']
-            grounded_edges.add((source_entity, relation, target_entity))
+            # TODO: address unlinked relations
+            if relation != None:
+                grounded_edges.add((source_entity, relation, target_entity))
         return grounded_edges
     
     def replace_prefixes(self, grounded_edges):
@@ -565,26 +567,27 @@ class SPARQLConverter(object):
         self.clean_grounded_edges = self.replace_prefixes(grounded_edges)
 
 def generate_all(data, propbank_mapping):
-    results = {}
+    queries = {}
+    query_edges = {}
     error_keys = []
     for i in range(len(data)):
         sentence = data[f'train_{i}']['text']
         amr = data[f'train_{i}']['extended_amr']
         example_amr = AMR(sentence=sentence, amr=amr)
         entity_nodes = example_amr.get_entity_nodes()
-
+        key = f'train_{i}'
         try:
             sparql = SPARQLConverter(example_amr, propbank_mapping)
             sparql.algorithm_1()
             query = sparql.generate_sparql()
             # TODO: add after fixing errors
-            # 'sparql': query,
-            results[f'train_{i}'] = {'query_edges': sorted(list(sparql.query_edges)), 'error': ''}
+            queries[key] = {'sparql': query, 'error': ''}
+            query_edges[key] = {'query_edges': sorted(list(sparql.query_edges)), 'error': ''}
         except Exception as e:
-            key = f'train_{i}'
-            results[key] = {'error': str(e)}
+            queries[key] = {'error': str(e)}
+            query_edges[key] = {'error': str(e)}
             error_keys.append(key)
-    return results, error_keys
+    return queries, query_edges, error_keys
 
 
 def main(args):
@@ -606,9 +609,11 @@ def main(args):
         print(sample_amr.sentence)
         print(qald[f'train_{example}']['sparql'])
         print(query)
+        breakpoint()
     else:
-        results, error_keys = generate_all(qald, propbank_mapping)
-        write_json('query_edges.json', results)
+        queries, query_edges, error_keys = generate_all(qald, propbank_mapping)
+        write_json('query_edges.json', query_edges)
+        write_json('generated_queries.json', queries)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
