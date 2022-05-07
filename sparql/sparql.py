@@ -147,19 +147,19 @@ class AMR(object):
         # index in the sentence, and the number after the dash is an index into
         # AMR graph where each decimal corresponds to a level in the tree and
         # the numbers correspond to the order of the child nodes
-        alignments = {}
+        amr_entity_alignments = {}
         for mapping in self.token_alignment.split():
             tok_idx, graph_idx = mapping.split('-')
-            alignments[int(tok_idx)] = graph_idx
-        self.alignments = alignments
+            amr_entity_alignments[int(tok_idx)] = graph_idx
+        self.amr_entity_alignments = amr_entity_alignments
 
         # retrieve graph_idxs for entity surface form tokens
         graph_idxs = []
         for surface_form in self.token_idxs:
             surface_form_g_idxs = []
             for token_idx in surface_form:
-                if token_idx in alignments:
-                    surface_form_g_idxs.append(alignments[token_idx])
+                if token_idx in self.amr_entity_alignments:
+                    surface_form_g_idxs.append(self.amr_entity_alignments[token_idx])
             graph_idxs.append(surface_form_g_idxs)
         self.graph_idxs = graph_idxs
 
@@ -233,16 +233,19 @@ class AMR(object):
         self.dbpedia_entities = self._get_dbpedia_entities()
 
         # zip everything into one dictionary
-        complete_alignments = {}
-        complete_alignments['entity_nodes'] = self.entity_nodes
-        complete_alignments['surface_forms'] = self.surface_forms
-        complete_alignments['token_indexes'] = self.token_idxs
-        complete_alignments['graph_indexes'] = self.graph_idxs
-        complete_alignments['dbpedia_entities'] = self.dbpedia_entities
-        self.complete_alignments = complete_alignments
-        return complete_alignments
+        alignments = {}
+        for idx, entity_node in enumerate(self.entity_nodes):
+            sub_dict = {}
+            sub_dict['surface_form'] = self.surface_forms[idx]
+            sub_dict['token_indexes'] = self.token_idxs[idx]
+            sub_dict['graph_indexes'] = self.graph_idxs[idx]
+            sub_dict['dbpedia_entity'] = self.dbpedia_entities[idx]
+            alignments[entity_node] = sub_dict
+        self.alignments = alignments
+        return alignments
 
 class SPARQLConverter(object):
+    """Converts AMR graphs to SPARQL queries."""
     def __init__(self, amr, propbank_mapping) -> None:
         self.amr = amr
         self.propbank_mapping = propbank_mapping
@@ -250,47 +253,55 @@ class SPARQLConverter(object):
         self.prefixes = {'http://dbpedia.org/ontology/': 'dbo:',
                     'http://dbpedia.org/resource/': 'res:',
                     'http://www.w3.org/2000/01/rdf-schema#': 'rdfs:'}
-    
-    def is_imperative(self):
+
+    def _is_imperative(self):
+        """Checks if the AMR graph is imperative based on the presence of an
+        'imperative' node."""
         imperative = False
-        for source, edge_label, dest in self.amr.penman_g.triples:
-            if edge_label == ':mode' and dest == 'imperative':
+        for src, role, tgt in self.amr.penman_g.triples:
+            if role == ':mode' and tgt == 'imperative':
                 imperative = True
         return imperative
     
-    def remove_source_node_edges(self, source, graph):
-        """TODO: address children"""
+    def _remove_source_node_edges(self, source, graph):
+        """Removes the root node of a graph along with all of its outbound and
+        inbound edges. NB: this does not delete child nodes or their edges."""
         filtered_instances = []
-        for instance in graph.instances():
-            src, role, tgt = instance
-            if src != source:
-                filtered_instances.append(instance)
+        for triple in graph.instances():
+            src, role, tgt = triple
+            if (src != source):
+                filtered_instances.append(triple)
         
         filtered_edges = []
-        for edge in graph.edges():
-            src, role, tgt = edge
+        for triple in graph.edges():
+            src, role, tgt = triple
             if (src != source) and (tgt != source):
-                filtered_edges.append(edge)
+                filtered_edges.append(triple)
         
         filtered_attributes = []
-        for attr in graph.attributes():
-            src, role, tgt = attr
+        for triple in graph.attributes():
+            src, role, tgt = triple
             if (src != source) and (tgt != source):
-                filtered_attributes.append(attr)
+                filtered_attributes.append(triple)
                 
         # create new graph
         new_g = penman.Graph(filtered_instances + filtered_edges + filtered_attributes)
         return new_g
     
-    def restructure_graph(self, g):
+    def _restructure_graph(self, g):
+        """If the graph is imperative, then make the ARG1 node of the root node
+        an 'amr-unknown' node. Then delete the source node and its edges. See
+        Algorithm 1, lines 3-6 - https://arxiv.org/pdf/2012.01707.pdf"""
         # retrieve the ARG1 node from r
         r = g.top
+
+        # retrieve ARG1 node of the source
         # TODO: what to do if ARG1 is not present?
         arg1 = None
         arg1s = [tgt for src, role, tgt in g.edges() if (role == ':ARG1') and (src == r)]
         if arg1s:
             arg1 = arg1s[0]
-            
+        
         # get idx for row where source == arg1 and set it as amr-unknown
         found = False
         for idx, instance in enumerate(g.instances()):
@@ -298,41 +309,49 @@ class SPARQLConverter(object):
             if src == arg1:
                 found = True
                 break
+        
         if found:
             instances = g.instances()
-            new_instance = penman.graph.Instance(source=src, role=role, target='amr-unknown')
+            # make the node an instance of amr-unknown
+            new_instance = penman.graph.Instance(source=instances[idx].source, role=':instance', target='amr-unknown')
             instances[idx] = new_instance
-                # update the graph
+            # update the graph
             g = penman.graph.Graph(triples=g.edges()+instances+g.attributes())
-                # delete r and it's edges
-            g = self.remove_source_node_edges(g.top, g)
+            # delete r and it's edges
+            g = self._remove_source_node_edges(g.top, g)
         return g
     
-    def handle_mod_edge(self, g):
+    def _handle_mod_edge(self, g):
+        """This function detects if the 'amr-unknown' node is a child of a
+        ':mod' edge, and if so, treats the parent as the 'amr-unknown' node.
+        See Algorithm 1, lines 7-9 - https://arxiv.org/pdf/2012.01707.pdf."""
         # treat parent on mod edge as the amr-unknown
-        # TODO: are we assuming only one amr-unknown will be present?
+        # NB: we are assuming only one amr-unknown will be present
         a = 'amr-unknown'
         a_node_id = None
         a_node_ids = [src for src, role, tgt in g.instances() if (role == ':instance') and (tgt == a)]
         if a_node_ids:
             a_node_id = a_node_ids[0]
+        
         # if there is a modifier edge
         for src, role, tgt in g.edges() + g.attributes():
-            if (src == a_node_id) and (role == ':mod'):
-                a_node_id = tgt
-                break
-            elif (tgt == a_node_id) and (role == ':mod'):
+            # if (src == a_node_id) and (role == ':mod'):
+            #     a_node_id = tgt
+            #     break
+            if (tgt == a_node_id) and (role == ':mod'):
                 a_node_id = src
                 break
         return a_node_id
     
-    def create_undirected_graph(self, g):
+    def _create_undirected_graph(self, g):
+        """Creates an undirected networkx graph so that shortest paths between
+        all entity nodes and the amr-unknown node can be computed."""
         G = nx.Graph()
         edge_list = []
         for src, role, tgt in g.edges():
             edge_list.append((src, tgt, {'role':role}))
         
-        # filter attributes
+        # filter attributes (i.e. ignore entity related attributes)
         for src, role, tgt in g.attributes():
             if role.startswith(':op'):
                 # handle quoted strings (e.g. '"Air"')
@@ -342,90 +361,83 @@ class SPARQLConverter(object):
         G.add_edges_from(edge_list)
         return G
     
-    def shortest_paths(self, g, G, a_node_id):
-        query_nodes = set()
-        query_edges = set()
-        for entity_node_id in self.amr.entity_nodes:
-            # may be None if entity node is mispelled
-            # e.g. New Yor City 
-            if entity_node_id is None:
-                continue
-            
-            amr_path = []
-            # a_node_id may be None
-            if a_node_id is not None:
-                # TODO: handle case where query is imperative and an entity node
-                # gets put in its own disjoint graph component (e.g. 23, 33)
-                # TODO: address nx.NetworkXNoPath for 54, 77, 177, 290
-                amr_path = nx.shortest_path(G, a_node_id, entity_node_id)
-            collapsed_path = [a_node_id]
-            source = a_node_id # n' in algo
-            rel_builder = ''
-            # TODO: if amr_path is empty, check if the question is of the form "Is horse racing a sport?"
-            for idx, target in enumerate(amr_path[1:]):
-                # get instance type of node
-                node_type = [tgt for src, role, tgt in g.instances() if src == target]
-                if node_type:
-                    node_type = node_type[0]
-                else:
-                    # e.g. for op{n} nodes such as 'Air'
-                    node_type = 'literal'
-                if node_type in self.propbank_predicates:
+    def _shortest_paths(self, g, G, entity_node_id):
+        """Finds the shortest paths between all entity nodes and 'amr-unknown'
+        node and creates query graph edges and nodes based on the path
+        information. See lines 11-24 in Algorithm 1 -
+        https://arxiv.org/pdf/2012.01707.pdf"""
+        amr_path = []
+        # amr_unkown_node_id may be None
+        if self.amr_unknown_node_id is not None:
+            # TODO: handle case where query is imperative and an entity node
+            # gets put in its own disjoint graph component (e.g. 23, 33)
+            # TODO: address nx.NetworkXNoPath for 54, 77, 177, 290
+            amr_path = nx.shortest_path(G, self.amr_unknown_node_id, entity_node_id)
+        collapsed_path = [self.amr_unknown_node_id]
+        source = self.amr_unknown_node_id # n' in Algorithm 1
+        rel_builder = ''
+        # TODO: if amr_path is empty, check if the question is of the form "Is horse racing a sport?"
+        for idx, target in enumerate(amr_path[1:]):
+            # get instance type of node
+            node_types = [tgt for src, role, tgt in g.instances() if src == target]
+            if node_types:
+                node_type = node_types[0]
+            else:
+                # e.g. for op{n} nodes such as 'Air'
+                node_type = 'literal'
+            if node_type in self.propbank_predicates:
+                rel = ''
+                # get relation type
+                for src, role, tgt in g.edges():
+                    if ((src == source) and (tgt == target)) or ((src == target) and (tgt == source)):
+                        rel = role
+                        break
+                # ignore core roles such as ARG{0,...,n}
+                if rel.startswith(':ARG'):
                     rel = ''
-                    # get relation type
-                    for src, role, tgt in g.edges():
-                        if ((src == source) and (tgt == target)) or ((src == target) and (tgt == source)):
-                            rel = role
-                            break
-                    # ignore core roles such as ARG{0,...,n}
-                    if rel.startswith(':ARG'):
-                        rel = ''
-                    else:
-                        # strip leading colon
-                        rel = rel[1:] + '|'
-                    
-                    # retrieve the second part of the relation exiting from target
-                    next_rel = ''
-                    # TODO: will we hit index out-of-bounds? 
-                    next_node_on_path = amr_path[1:][idx+1]
-                    # get relation type
-                    for src, role, tgt in g.edges():
-                        if ((src == next_node_on_path) and (tgt == target)) or ((src == target) and (tgt == next_node_on_path)):
-                            next_rel = role
-                            break
-                    # ignore core roles such as ARG{0,...,n}
-                    if next_rel.startswith(':ARG'):
-                        next_rel = ''
-                    else:
-                        next_rel = '|' + next_rel[1:]
-                    
-                    # equivalent to rel_builder + getRel
-                    rel_builder = rel_builder + rel + node_type + next_rel
-                # TODO: better understand def of A_c in algo 1
                 else:
-                    collapsed_path.append(target)
-                    query_nodes.add(source)
-                    query_nodes.add(target) # not done in the paper
-                    # if rel_builder = '', get relation type
-                    if not rel_builder:
-                        # if mod relation type, get target type as relation
-                        relations = [tgt for src, role, tgt in g.edges() + g.attributes() if (role == ':mod') & ((src == source) | (tgt == source))]
-                        if relations:
-                            # get instance type
-                            rel_builder = [tgt for src, role, tgt in g.instances() if (src == relations[0])][0]
-                    # TODO: can we switch the order here to form a valid query?
-                    query_edges.add((target, rel_builder, source))
-                    source = target
-                    rel_builder = ''
-        
-        self.query_nodes = query_nodes
-        self.query_edges = query_edges
+                    # strip leading colon
+                    rel = rel[1:] + '|'
+                    
+                # retrieve the second part of the relation exiting from target
+                next_rel = ''
+                # TODO: will we hit index out-of-bounds? 
+                next_node_on_path = amr_path[1:][idx+1]
+                # get relation type
+                for src, role, tgt in g.edges():
+                    if ((src == next_node_on_path) and (tgt == target)) or ((src == target) and (tgt == next_node_on_path)):
+                        next_rel = role
+                        break
+                # ignore core roles such as ARG{0,...,n}
+                if next_rel.startswith(':ARG'):
+                    next_rel = ''
+                else:
+                    next_rel = '|' + next_rel[1:]
+                    
+                # equivalent to rel_builder + getRel
+                rel_builder = rel_builder + rel + node_type + next_rel
+            # TODO: better understand def of A_c in algo 1
+            else:
+                collapsed_path.append(target)
+                self.query_nodes.add(source)
+                self.query_nodes.add(target) # not done in the paper
+                # if rel_builder = '', get relation type
+                if not rel_builder:
+                    # if mod relation type, get target type as relation
+                    relations = [tgt for src, role, tgt in g.edges() + g.attributes() if (role == ':mod') & ((src == source) | (tgt == source))]
+                    if relations:
+                        # get instance type
+                        rel_builder = [tgt for src, role, tgt in g.instances() if (src == relations[0])][0]
+                # TODO: can we switch the order here to form a valid query?
+                self.query_edges.add((target, rel_builder, source))
+                source = target
+                rel_builder = ''
 
-        # TODO: address the imperative case
-        # we're dropping the entity type (e.g. index 8)
-        # TODO: breakout into new method
-        # add "type" edges
+    def _get_type_edges(self, g):
+        """Adds "type" edges to the query edge set, which constrain the SPARQL
+        where clause (e.g. m type movie)."""
         # handle case when amr-unknown is on a mod edge (need parent type)
+        # TODO: address the imperative case - we're dropping the entity type (e.g. index 8)
         for node in self.query_nodes:
             entity_type = [tgt for src, role, tgt in g.instances() if (src == node) & (role == ':instance')]
             if entity_type:
@@ -441,20 +453,36 @@ class SPARQLConverter(object):
                         break
             type_edge = (node, 'type', entity_type)
             self.query_edges.add(type_edge)
+    
+    def _get_query_graph(self, g, G):
+        """This method generates the query graph, namely the nodes and edges,
+        that will be converted into the SPARQL where clause."""
+        self.query_nodes = set()
+        self.query_edges = set()
+        for entity_node_id in self.amr.entity_nodes:
+            # may be None if entity node is mispelled
+            # e.g. New Yor City 
+            if entity_node_id is None:
+                continue
+            
+            self._shortest_paths(g, G, entity_node_id)
         
-    def ground_edges(self):
+        self._get_type_edges(g)
+        
+    def _ground_edges(self):
+        """This method takes the entity variable placeholders found on the
+        query graph edges (variables are originally from the AMR graph) and
+        grounds them to known entities. This method also does naive relation
+        linking by looking up AMR predicates in the AMR-to-DBPedia dictionary."""
         grounded_edges = set()
         for src, edge, tgt in self.query_edges:
             # look for entity
             source_entity = src
             target_entity = tgt
-            # TODO: implement a dictionary for this
-            for item in self.amr.complete_alignments:
-                node, surface_form, token_idxs, node_idxs, entity = item
-                if src == node:
-                    source_entity = entity
-                elif tgt == node:
-                    target_entity = entity
+            if source_entity in self.amr.alignments:
+                source_entity = self.amr.alignments[src]['dbpedia_entity']
+            if target_entity in self.amr.alignments:
+                target_entity = self.amr.alignments[src]['dbpedia_entity']
             
             # if edge contains a dbpedia predicate, greedily choose the top one
             # TODO: any reasonable defaults for relation?
@@ -470,7 +498,9 @@ class SPARQLConverter(object):
                 grounded_edges.add((source_entity, relation, target_entity))
         return grounded_edges
     
-    def replace_prefixes(self, grounded_edges):
+    def _replace_prefixes(self, grounded_edges):
+        """This method replaces DBPedia prefixes with commonly used
+        placeholders. For example: http://dbpedia.org/resource/ -> res"""
         clean_grounded_edges = set()
         # replace prefixes
         for element in grounded_edges:
@@ -490,7 +520,32 @@ class SPARQLConverter(object):
             clean_grounded_edges.add((clean_src, relation, clean_tgt))
         return clean_grounded_edges
 
-    def generate_query(self):
+    def algorithm_1(self):
+        """Implements Algorithm 1 from https://arxiv.org/pdf/2012.01707.pdf,
+        which is responsible for generating a query graph, which forms an
+        intermediate representation that will be converted to the SPARQL where
+        clause. This method also implements relation linking."""
+        # line 3 of algorithm 1
+        g = self.amr.penman_g
+        if self._is_imperative():
+            g = self._restructure_graph(g)
+
+        # line 8 of algorithm 1
+        self.amr_unknown_node_id = self._handle_mod_edge(g)
+
+        # create undirected graph for shortest paths
+        G = self._create_undirected_graph(g)
+
+        # create the query graph
+        self._get_query_graph(g, G)
+
+        # do relation linking
+        grounded_edges = self._ground_edges()
+        self.grounded_edges = self._replace_prefixes(grounded_edges)
+    
+    def _get_query_components(self):
+        """This method generates all substrings required to generate the SPARQL
+        query."""
         # determine the query type
         # default to SELECT DISTINCT
         query_type = 'SELECT DISTINCT'
@@ -510,36 +565,29 @@ class SPARQLConverter(object):
                     query_type = 'ASK'
                     break
 
-        # TODO: confirm logic for handling the target variable is already covered in algo_1
         # TODO: implement logic for ORDER BY
-
         # TODO: implement logic for counting (no QALD-9 queries require counting)
 
-        # generate the query
+        # create the prefixes
         query_substrings = []
         for prefix in self.prefixes:
             query_substrings.append(f'PREFIX {self.prefixes[prefix]} <{prefix}>')
 
         query_substrings.append(query_type)
 
-        # get the variable
-        # TODO: what if there are 0 or more than 1 variables?
+        # get the main variable of the query
         variable = None
-        for element in self.clean_grounded_edges:
-            src, relation, tgt = element
-            if src.startswith('?'):
-                variable = src
-            elif tgt.startswith('?'):
-                variable = tgt
+        if hasattr(self, 'amr_unknown_node_id'):
+            variable = f'?{self.amr_unknown_node_id}'
         
         # may be no variables
         if variable is not None:
             query_substrings.append(variable)
         query_substrings.append('WHERE')
 
-        # prepare triples
+        # generate the where clause
         triples = ['{']
-        for element in self.clean_grounded_edges:
+        for element in self.grounded_edges:
             src, relation, tgt = element
             triples.append(f'{src} {relation} {tgt}.')
         triples.append('}')
@@ -547,35 +595,14 @@ class SPARQLConverter(object):
         return query_substrings
 
     def generate_sparql(self):
-        query_substrings = self.generate_query()
+        """Generates the SPARQL query for the specified AMR graph."""
+        query_substrings = self._get_query_components()
         # TODO: how to handle all the possible 2^n possible orderings of triples
         sparql = ' '.join(query_substrings)
         return sparql
 
-    def algorithm_1(self):
-        # AMR to query_graph
-        # Algorithm 1: https://arxiv.org/pdf/2012.01707.pdf
-
-        # if text is imperative
-        # check if :mode imperative in the edges
-        g = self.amr.penman_g
-        if self.is_imperative():
-            g = self.restructure_graph(g)
-
-        a_node_id = self.handle_mod_edge(g)
-
-        # create undirected graph for shortest paths
-        G = self.create_undirected_graph(g)
-
-        # create the query graph
-        self.shortest_paths(g, G, a_node_id)
-
-        # do relation linking
-        # TODO: add instance types
-        grounded_edges = self.ground_edges()
-        self.clean_grounded_edges = self.replace_prefixes(grounded_edges)
-
 def generate_all(data, propbank_mapping, aligner=None):
+    """Generates SPARQL queries from all the AMR graphs."""
     queries = {}
     query_edges = {}
     error_keys = []
@@ -612,7 +639,7 @@ def main(args):
         amr = qald[f'train_{example}']['extended_amr']
         sample_amr = AMR(sentence=sentence, amr=amr, aligner=aligner)
         entity_nodes = sample_amr.get_entity_nodes()
-        
+
         sparql = SPARQLConverter(sample_amr, propbank_mapping)
         sparql.algorithm_1()
         query = sparql.generate_sparql()

@@ -9,7 +9,7 @@ def load_json(filepath):
 def write_json(filepath, obj):
     """Writes the dictionary to the filepath."""
     with open(filepath, 'w') as f:
-        return json.dump(obj, f)
+        return json.dump(obj, f, indent=4)
 
 def load_pickle(filepath):
     """Loads and returns the pickle object."""
