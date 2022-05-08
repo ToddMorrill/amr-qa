@@ -92,7 +92,7 @@ def test_no_predictions():
 
 def test_no_ground_truth():
     ground_truth = set()
-    predictions = set('BCD')
+    predictions = set('ABC')
     recall, precision, f1 = evaluate_query(ground_truth, predictions)
     assert recall == precision == f1 == 0
 
