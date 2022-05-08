@@ -13,24 +13,26 @@ class BertRelLinker(Rel_linker):
     def __init__(self, config=None):
         super().__init__(config)
 
-        print("Initializing Relation Mapping from pickle mapping file ....")
+        # print("Initializing Relation Mapping from pickle mapping file ....")
 
-        with open(config['probbank_mapping_path'], 'rb') as f:
-            db = pickle.load(f)
-        self.relation_scores = db['relation_scores']
-        self.rel_arg_scores = db['rel_arg_scores']
-        self.binary_relation_scores = db['binary_relation_scores']
-        print("Relation Mappings: {} rel arg, {} binary, {} predicates".format(len(self.rel_arg_scores),
-                                                                               len(self.binary_relation_scores),
-                                                                               len(self.relation_scores)))
+        # with open(config['probbank_mapping_path'], 'rb') as f:
+        #     db = pickle.load(f)
+        # self.relation_scores = db['relation_scores']
+        # self.rel_arg_scores = db['rel_arg_scores']
+        # self.binary_relation_scores = db['binary_relation_scores']
+        # print("Relation Mappings: {} rel arg, {} binary, {} predicates".format(len(self.rel_arg_scores),
+        #                                                                        len(self.binary_relation_scores),
+        #                                                                        len(self.relation_scores)))
+        self.relation_scores = config['relation_scores']
 
         self.bert_tokenizer = config['bert_tokenizer_class'].from_pretrained(config['bert_model_type'], 
                                                                           do_lower_case=config['do_lower_case'])
         self.bert_model = config['bert_model'].from_pretrained(config['bert_model_type'])
     
-    def get_relation_candidates(self, question: str, params=None):
+    def get_relation_candidates(self, params=None):
 
         relation_scores = {}
+        question = params['question']
 
         #### Initialize the relation_scores to be the mapping values ####
         for item in self.relation_scores[params['edge_component']]:
@@ -70,15 +72,6 @@ class BertRelLinker(Rel_linker):
 
         return list(relation_scores.keys())[:params['top-K']]
 
-
-def calibrate(predicted_relations):
-    output = []
-    for rel in predicted_relations:
-        if 'dbp' in rel:
-            new_rel = rel.replace('dbp', 'dbo')
-            output.append(new_rel)
-    return output
-
 if __name__ == "__main__":
     config = {
         'probbank_mapping_path': './data/probbank-dbpedia.pkl',
@@ -91,6 +84,7 @@ if __name__ == "__main__":
     # hyperparameters
     top_k = 1
     threshold = 0.9
+    do_cap = False
 
     # bert rel linker
     rel_linker = BertRelLinker(config)
@@ -108,26 +102,26 @@ if __name__ == "__main__":
             continue
         question = d_item['question']
         gold_relations = d_item['relations']
-        if len(gold_relations) == 0:
-            continue
-        top_k = len(gold_relations)
-        params = {
-            'edge_component': d_item['edge_component'],
-            'top-K': top_k,
-            'threshold': threshold,
-            'do_cap': False,
-            'calibrate': False
-        }
-        predicted_relations = rel_linker.get_relation_candidates(question, params=params)
-        if params['calibrate']:
-            predicted_relations = calibrate(predicted_relations)
+
+        if d_item['edge_component'] == '' and len(gold_relations) == 0:
+            predicted_relations = []
+            p, r, f1 = 1, 1, 1
+        else:
+            top_k = len(gold_relations)
+            params = {
+                'edge_component': d_item['edge_component'],
+                'top-K': top_k,
+                'threshold': threshold,
+                'do_cap': do_cap
+            }
+            predicted_relations = rel_linker.get_relation_candidates(question, params=params)
+            p, r, f1 = precision_recall_f1(predicted_relations, gold_relations)
 
         print("QID: {}".format(d))
         print("edge comp: {}".format(d_item['edge_component']))
         print("gold: {}".format(", ".join(gold_relations)))
         print("predicted: {}\n".format(", ".join(predicted_relations)))
         
-        p, r, f1 = precision_recall_f1(predicted_relations, gold_relations)
         print('---------------------------------------')
         print("QID: {}\nQuestion: {}\n".format(d, question))
         print("P: {}, R: {}, F1: {}".format(p, r, f1))

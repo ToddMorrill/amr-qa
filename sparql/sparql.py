@@ -21,6 +21,9 @@ from amrlib.alignments.faa_aligner import FAA_Aligner
 import networkx as nx
 import penman
 from penman.models import noop
+from transformers import BertTokenizer, BertModel
+
+from relation_linking import bert_rel_linker, ask_validation
 
 import utils
 from utils import IndexBFS
@@ -246,13 +249,26 @@ class AMR(object):
 
 class SPARQLConverter(object):
     """Converts AMR graphs to SPARQL queries."""
-    def __init__(self, amr, propbank_mapping) -> None:
+    def __init__(self, amr, propbank_mapping, question) -> None:
         self.amr = amr
         self.propbank_mapping = propbank_mapping
         self.propbank_predicates = set(list(self.propbank_mapping['relation_scores'].keys()))
         self.prefixes = {'http://dbpedia.org/ontology/': 'dbo:',
                     'http://dbpedia.org/resource/': 'res:',
                     'http://www.w3.org/2000/01/rdf-schema#': 'rdfs:'}
+        self.relation_linker_config = {
+            'bert_model_type': 'bert-base-uncased',
+            'do_lower_case': True,
+            'bert_tokenizer_class': BertTokenizer,
+            'bert_model': BertModel,
+            'relation_scores': self.propbank_mapping['relation_scores']
+        }
+        self.relation_linker_params = {
+            'question': question,
+            'top-K': 1,
+            'threshold': 0.9,
+            'do_cap': False
+        }
 
     def _is_imperative(self):
         """Checks if the AMR graph is imperative based on the presence of an
@@ -469,11 +485,11 @@ class SPARQLConverter(object):
         
         self._get_type_edges(g)
         
-    def _ground_edges(self):
+    def _ground_edges(self)
         """This method takes the entity variable placeholders found on the
         query graph edges (variables are originally from the AMR graph) and
-        grounds them to known entities. This method also does naive relation
-        linking by looking up AMR predicates in the AMR-to-DBPedia dictionary."""
+        grounds them to known entities. This method does Bert-based relation
+        linking."""
         grounded_edges = set()
         for src, edge, tgt in self.query_edges:
             # look for entity
@@ -484,18 +500,29 @@ class SPARQLConverter(object):
             if target_entity in self.amr.alignments:
                 target_entity = self.amr.alignments[src]['dbpedia_entity']
             
-            # if edge contains a dbpedia predicate, greedily choose the top one
-            # TODO: any reasonable defaults for relation?
+            # relation = None
+            # for edge_component in edge.split('|'):
+            #     if edge_component in self.propbank_mapping['relation_scores']:
+            #         relations = self.propbank_mapping['relation_scores'][edge_component]
+            #         if len(relations) > 0:
+            #             relation = relations[0]['rel']
+
+            # Bert-based relation linking
             relation = None
+            rel_linker = bert_rel_linker.BertRelLinker(self.relation_linker_config)
             for edge_component in edge.split('|'):
-                if edge_component in self.propbank_mapping['relation_scores']:
-                    relations = self.propbank_mapping['relation_scores'][edge_component]
-                    if len(relations) > 0:
-                        relation = relations[0]['rel']
-            # TODO: use ASK queries to determine the order of the relation
+                self.relation_linker_params['edge_component'] = edge_component
+                relation = rel_linker.get_relation_candidates(params=self.relation_linker_params)[0]  # top-1 relation
+
+            # use ASK queries to determine the order of the relation, may need to use _replace prefixes
             # TODO: address unlinked relations
             if relation != None:
-                grounded_edges.add((source_entity, relation, target_entity))
+                ask_validator = ask_validation.ASK_Validator()
+                if ask_validator.validate(self.prefixes, (target_entity, relation, source_entity)) == 'true':
+                    grounded_edges.add((target_entity, relation, source_entity))    
+                else:
+                    grounded_edges.add((source_entity, relation, target_entity))
+                    
         return grounded_edges
     
     def _replace_prefixes(self, grounded_edges):
@@ -640,7 +667,7 @@ def main(args):
         sample_amr = AMR(sentence=sentence, amr=amr, aligner=aligner)
         entity_nodes = sample_amr.get_entity_nodes()
 
-        sparql = SPARQLConverter(sample_amr, propbank_mapping)
+        sparql = SPARQLConverter(sample_amr, propbank_mapping, sentence)
         sparql.algorithm_1()
         query = sparql.generate_sparql()
         print(sample_amr.sentence)
