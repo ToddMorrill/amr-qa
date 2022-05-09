@@ -1,2 +1,4 @@
 requests
 yapf
+sparqlwrapper
+pytest

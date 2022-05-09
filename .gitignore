@@ -127,3 +127,17 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+.DS_Store
+
+qald_9.json
+query_edges.json
+generated_queries.json
+*qald-9-*
+test-data.json
+train-data.json
+generate_result.json
+qald9_result.json
+lc-test-sparql.json
+lc-train-sparql.json
+qald9-train-result.json
+qald9-test-result.json
