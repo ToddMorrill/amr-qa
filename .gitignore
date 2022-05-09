@@ -128,6 +128,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+.DS_Store
 qald_9.json
 query_edges.json
 generated_queries.json
