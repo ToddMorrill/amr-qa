@@ -10,8 +10,8 @@ Examples:
     
     $ python -m amrqa.evaluate \
         --ground-truth ~/Documents/data/amr-qa/evaluate/qald9_result.json \
-        --predictions ~/Documents/data/amr-qa/evaluate/generate_result.json \
-        --save-dir ~/Documents/data/amr-qa/evaluate/groundtruth22-vs-predictions22-v1
+        --predictions ~/Documents/data/amr-qa/generate/v2/generated_results.json \
+        --save-dir ~/Documents/data/amr-qa/evaluate/v2
 """
 import argparse
 import os

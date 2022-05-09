@@ -7,8 +7,8 @@ Examples:
         --save-file result.json 
     
     $ python -m amrqa.query \
-        --query-file ~/Documents/data/amr-qa/evaluate/generated_queries.json \
-        --save-file ~/Documents/data/amr-qa/evaluate/generated_resultv1.json
+        --query-file ~/Documents/data/amr-qa/generate/v2/generated_queries.json \
+        --save-file ~/Documents/data/amr-qa/generate/v2/generated_results.json
 """
 import argparse
 import json
@@ -48,7 +48,7 @@ def get_query_results(input_file, out_file):
             avg_query_time = sum(query_times) / len(query_times)
             print(
                 f'Average query time at iteration {idx}: {avg_query_time:.2f}'
-                'seconds/query.')
+                ' seconds/query.')
 
     with open(out_file, "w") as f2:
         return json.dump(result, f2, indent=4)
