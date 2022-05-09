@@ -1,21 +1,37 @@
 # amr-qa
-This repo contains procedures that map natural language questions to SPARQL queries via AMR representations.
+This repo maps natural language questions to SPARQL queries via AMR representations
 
-## Configuring the environment
+## Project setup
+### Library installations
 ```
-# create a virtual environment
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Downloading data
+### Data downloads and configuration
+```
+# download datasets and AMR models
+python data/download.py \
+    --save-dir <your-local-directory>
 
-## Querying the SPARQL API
+# install the BLINK entity linker
+# https://amrlib.readthedocs.io/en/latest/wiki/ 
+```
 
-## Evaluate the system
+### Install the AMR-to-text aligner (fast align)
+```
+# https://github.com/clab/fast_align
+sudo apt-get install libgoogle-perftools-dev libsparsehash-dev
+git clone https://github.com/clab/fast_align.git
+cd fast_align
+mkdir build
+cd build
+cmake ..
+make
+```
 
-## Run tests
+### Run tests
 ```
 # within the main directory
 python -m pytest

@@ -127,8 +127,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-.DS_Store
 
+.DS_Store
 qald_9.json
 query_edges.json
 generated_queries.json
@@ -141,3 +141,4 @@ lc-test-sparql.json
 lc-train-sparql.json
 qald9-train-result.json
 qald9-test-result.json
+generated_queries_v1.json
