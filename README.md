@@ -30,3 +30,9 @@ cd build
 cmake ..
 make
 ```
+
+### Run tests
+```
+# within the main directory
+python -m pytest
+```

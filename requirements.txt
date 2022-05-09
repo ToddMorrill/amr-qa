@@ -9,3 +9,5 @@ penman
 networkx
 matplotlib
 pydot
+sparqlwrapper
+pytest

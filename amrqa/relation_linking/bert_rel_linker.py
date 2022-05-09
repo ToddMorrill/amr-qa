@@ -1,36 +1,23 @@
-from rel_linker_module import Rel_linker
-from utils import precision_recall_f1, f1_score
+from .utils import precision_recall_f1, f1_score
 
-import pickle
 import json
 import torch
 from transformers import BertTokenizer, BertModel
 
-from IPython import embed
-
-class BertRelLinker(Rel_linker):
-
+class BERTRelationLinker(object):
+    """This class links relations by first looking up candidate DBPedia
+    relations in a predefined dictionary. It then ranks these candidates
+    according to a BERT-based dot product."""
     def __init__(self, config=None):
-        super().__init__(config)
-
-        # print("Initializing Relation Mapping from pickle mapping file ....")
-
-        # with open(config['probbank_mapping_path'], 'rb') as f:
-        #     db = pickle.load(f)
-        # self.relation_scores = db['relation_scores']
-        # self.rel_arg_scores = db['rel_arg_scores']
-        # self.binary_relation_scores = db['binary_relation_scores']
-        # print("Relation Mappings: {} rel arg, {} binary, {} predicates".format(len(self.rel_arg_scores),
-        #                                                                        len(self.binary_relation_scores),
-        #                                                                        len(self.relation_scores)))
+        self.config = config
         self.relation_scores = config['relation_scores']
-
         self.bert_tokenizer = config['bert_tokenizer_class'].from_pretrained(config['bert_model_type'], 
                                                                           do_lower_case=config['do_lower_case'])
+        # TODO: push to GPU, if possible
         self.bert_model = config['bert_model'].from_pretrained(config['bert_model_type'])
     
     def get_relation_candidates(self, params=None):
-
+        """Takes in params and returns top-K candidate DBPedia relations."""
         relation_scores = {}
         question = params['question']
 
@@ -87,7 +74,7 @@ if __name__ == "__main__":
     do_cap = False
 
     # bert rel linker
-    rel_linker = BertRelLinker(config)
+    rel_linker = BERTRelationLinker(config)
 
     ##### Evaluate the relation linker refering to SLING evalution scripts #####
     with open('./data/dev_qald9_rel.json') as jfile:
