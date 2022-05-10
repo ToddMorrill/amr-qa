@@ -1,35 +1,17 @@
 from SPARQLWrapper import SPARQLWrapper, XML
 import xml.etree.ElementTree as ET
-from IPython import embed
 
-# sparql = SPARQLWrapper("http://dbpedia.org/sparql")
-# sparql.setQuery("""
-#     ASK WHERE {
-#         ?a dbo:deathPlace <http://dbpedia.org/resource/Abraham_Lincoln>.
-#     }
-# """)
-# sparql.setReturnFormat(XML)
-# results = sparql.query().convert()
-# # print(type(results.toxml()))
-# xml_results = results.toxml()
-# root = ET.fromstring(xml_results)
-# for child in root.findall("*"):
-#     if 'boolean' in child.tag:
-#         true_order = child.text
-# print(true_order)
 
-# ?a dbo:deathPlace <http://dbpedia.org/resource/Abraham_Lincoln>.
-
-class ASK_Validator():
+class ASKValidator(object):
+    """Determines the appropriate ordering of triples (i.e.
+    (entity1 relation entity2) or (entity2 relation entity1))."""
 
     def __init__(self) -> None:
         self.sparql = SPARQLWrapper("http://dbpedia.org/sparql")
-    
+
     def validate(self, prefixes, edge_triple):
-        """
-        edge_triple: (entity1, relation, entity2)
-        returns: correct order of the edge (source_entity, relation, target_entity)
-        """
+        """Returns the correct order of the edge per DBPedia relations:
+        (source_entity, relation, target_entity)."""
         entity1, relation, entity2 = edge_triple
 
         # clean up the format of entities
@@ -39,7 +21,7 @@ class ASK_Validator():
                 if entity1.startswith(prefix):
                     clean_entity1 = "<{}>".format(entity1)
                     break
-            
+
             clean_entity2 = f'?{entity2}'
             for prefix in prefixes:
                 if entity2.startswith(prefix):
@@ -62,15 +44,19 @@ class ASK_Validator():
 
         return is_correct_order
 
+
 if __name__ == "__main__":
-    prefixes = {'http://dbpedia.org/ontology/': 'dbo:',
-                    'http://dbpedia.org/resource/': 'res:',
-                    'http://www.w3.org/2000/01/rdf-schema#': 'rdfs:'}
+    prefixes = {
+        'http://dbpedia.org/ontology/': 'dbo:',
+        'http://dbpedia.org/resource/': 'res:',
+        'http://www.w3.org/2000/01/rdf-schema#': 'rdfs:'
+    }
 
     # edge_triple = ('a', 'dbo:deathPlace', 'http://dbpedia.org/resource/Abraham_Lincoln')
-    edge_triple = ('http://dbpedia.org/resource/Abraham_Lincoln', 'dbo:deathPlace', 'a')
+    edge_triple = ('http://dbpedia.org/resource/Abraham_Lincoln',
+                   'dbo:deathPlace', 'a')
 
-    ask_validator = ASK_Validator()
+    ask_validator = ASKValidator()
     if ask_validator.validate(prefixes, edge_triple) == 'false':
         print('not a valid order')
     else:
