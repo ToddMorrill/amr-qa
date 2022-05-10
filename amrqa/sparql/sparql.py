@@ -9,14 +9,14 @@ Examples:
     
     $ python -m amrqa.sparql.sparql \
         --data-filepath ./amrqa/sparql/qald_9.json \
-        --fast-align-dir /home/iron-man/Documents/fast_align/build \
-        --propbank-filepath /home/iron-man/Documents/data/amr-qa/probbank-dbpedia.pkl \
+        --fast-align-dir ~/Documents/fast_align/build \
+        --propbank-filepath ~/Documents/data/amr-qa/probbank-dbpedia.pkl \
         --index 254
     
     $ python -m amrqa.sparql.sparql \
         --data-filepath ./amrqa/sparql/qald_9.json \
-        --fast-align-dir /home/iron-man/Documents/fast_align/build \
-        --propbank-filepath /home/iron-man/Documents/data/amr-qa/probbank-dbpedia.pkl \
+        --fast-align-dir ~/Documents/fast_align/build \
+        --propbank-filepath ~/Documents/data/amr-qa/probbank-dbpedia.pkl \
         --save-dir ~/Documents/data/amr-qa/generate/v2
 """
 import argparse
