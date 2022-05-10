@@ -12,6 +12,12 @@ Examples:
         --fast-align-dir /home/iron-man/Documents/fast_align/build \
         --propbank-filepath /home/iron-man/Documents/data/amr-qa/probbank-dbpedia.pkl \
         --index 254
+    
+    $ python -m amrqa.sparql.sparql \
+        --data-filepath ./amrqa/sparql/qald_9.json \
+        --fast-align-dir /home/iron-man/Documents/fast_align/build \
+        --propbank-filepath /home/iron-man/Documents/data/amr-qa/probbank-dbpedia.pkl \
+        --save-dir ~/Documents/data/amr-qa/generate/v2
 """
 import argparse
 import os
@@ -19,7 +25,9 @@ import os
 from amrlib.alignments.faa_aligner import FAA_Aligner
 import networkx as nx
 import penman
+from transformers import BertTokenizer, BertModel
 
+from ..relation_linking import bert_rel_linker, ask_validation
 from . import utils
 from .amr import AMR
 
@@ -27,7 +35,7 @@ from .amr import AMR
 class SPARQLConverter(object):
     """Converts AMR graphs to SPARQL queries."""
 
-    def __init__(self, amr, propbank_mapping) -> None:
+    def __init__(self, amr, propbank_mapping, relation_linker) -> None:
         self.amr = amr
         self.propbank_mapping = propbank_mapping
         self.propbank_predicates = set(
@@ -37,6 +45,7 @@ class SPARQLConverter(object):
             'http://dbpedia.org/resource/': 'res:',
             'http://www.w3.org/2000/01/rdf-schema#': 'rdfs:'
         }
+        self.relation_linker = relation_linker
 
     def _is_imperative(self):
         """Checks if the AMR graph is imperative based on the presence of an
@@ -287,8 +296,8 @@ class SPARQLConverter(object):
     def _ground_edges(self):
         """This method takes the entity variable placeholders found on the
         query graph edges (variables are originally from the AMR graph) and
-        grounds them to known entities. This method also does naive relation
-        linking by looking up AMR predicates in the AMR-to-DBPedia dictionary."""
+        grounds them to known entities. This method does Bert-based relation
+        linking."""
         grounded_edges = set()
         for src, edge, tgt in self.query_edges:
             # look for entity
@@ -299,19 +308,36 @@ class SPARQLConverter(object):
             if target_entity in self.amr.alignments:
                 target_entity = self.amr.alignments[src]['dbpedia_entity']
 
-            # if edge contains a dbpedia predicate, greedily choose the top one
-            # TODO: any reasonable defaults for relation?
+            # relation = None
+            # for edge_component in edge.split('|'):
+            #     if edge_component in self.propbank_mapping['relation_scores']:
+            #         relations = self.propbank_mapping['relation_scores'][edge_component]
+            #         if len(relations) > 0:
+            #             relation = relations[0]['rel']
+
+            # Bert-based relation linking
+            relation_linker_params = {'question': self.amr.sentence, 'top-K': 1, 'threshold': 0.6, 'do_cap': False}
             relation = None
             for edge_component in edge.split('|'):
                 if edge_component in self.propbank_mapping['relation_scores']:
-                    relations = self.propbank_mapping['relation_scores'][
-                        edge_component]
-                    if len(relations) > 0:
-                        relation = relations[0]['rel']
-            # TODO: use ASK queries to determine the order of the relation
+                    relation_linker_params['edge_component'] = edge_component
+                    relation = self.relation_linker.get_relation_candidates(
+                        params=relation_linker_params)[
+                            0]  # top-1 relation
+
+            # use ASK queries to determine the order of the relation, may need to use _replace prefixes
             # TODO: address unlinked relations
             if relation != None:
-                grounded_edges.add((source_entity, relation, target_entity))
+                ask_validator = ask_validation.ASK_Validator()
+                if ask_validator.validate(
+                        self.prefixes,
+                    (target_entity, relation, source_entity)) == 'true':
+                    grounded_edges.add(
+                        (target_entity, relation, source_entity))
+                else:
+                    grounded_edges.add(
+                        (source_entity, relation, target_entity))
+
         return grounded_edges
 
     def _replace_prefixes(self, grounded_edges):
@@ -424,7 +450,7 @@ class SPARQLConverter(object):
         return sparql
 
 
-def generate_all(data, propbank_mapping, aligner=None):
+def generate_all(data, propbank_mapping, relation_linker, aligner=None):
     """Generates SPARQL queries from all the AMR graphs."""
     queries = {}
     query_edges = {}
@@ -436,7 +462,7 @@ def generate_all(data, propbank_mapping, aligner=None):
         entity_nodes = example_amr.get_entity_nodes()
         key = f'train_{i}'
         try:
-            sparql = SPARQLConverter(example_amr, propbank_mapping)
+            sparql = SPARQLConverter(example_amr, propbank_mapping, relation_linker)
             sparql.algorithm_1()
             query = sparql.generate_sparql()
             # TODO: add after fixing errors
@@ -458,6 +484,15 @@ def main(args):
     os.environ['FABIN_DIR'] = args.fast_align_dir
     aligner = FAA_Aligner()
     propbank_mapping = utils.load_pickle(args.propbank_filepath)
+    # BERT-based relation linker - only load once
+    relation_linker_config = {
+        'bert_model_type': 'bert-base-uncased',
+        'do_lower_case': True,
+        'bert_tokenizer_class': BertTokenizer,
+        'bert_model': BertModel,
+        'relation_scores': propbank_mapping['relation_scores']
+    }
+    relation_linker = bert_rel_linker.BERTRelationLinker(relation_linker_config)
 
     if args.index is not None:
         example = args.index
@@ -466,7 +501,7 @@ def main(args):
         sample_amr = AMR(sentence=sentence, amr=amr, aligner=aligner)
         entity_nodes = sample_amr.get_entity_nodes()
 
-        sparql = SPARQLConverter(sample_amr, propbank_mapping)
+        sparql = SPARQLConverter(sample_amr, propbank_mapping, relation_linker)
         sparql.algorithm_1()
         query = sparql.generate_sparql()
         print(sample_amr.sentence)
@@ -475,9 +510,14 @@ def main(args):
     else:
         queries, query_edges, error_keys = generate_all(qald,
                                                         propbank_mapping,
+                                                        relation_linker=relation_linker,
                                                         aligner=aligner)
-        utils.write_json('query_edges.json', query_edges)
-        utils.write_json('generated_queries.json', queries)
+        os.makedirs(args.save_dir, exist_ok=True)
+        query_edges_filepath = os.path.join(args.save_dir, 'query_edges.json')
+        gen_queries_filepath = os.path.join(args.save_dir,
+                                            'generated_queries.json')
+        utils.write_json(query_edges_filepath, query_edges)
+        utils.write_json(gen_queries_filepath, queries)
 
 
 if __name__ == '__main__':
@@ -492,5 +532,8 @@ if __name__ == '__main__':
         help='Filepath where the PropBank to DBPedia mapping is stored.')
     parser.add_argument('--index',
                         help='Example index within the data file to parse.')
+    parser.add_argument(
+        '--save-dir',
+        help='Directory where the generated queries will be saved.')
     args = parser.parse_args()
     main(args)

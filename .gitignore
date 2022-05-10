@@ -128,7 +128,11 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# mac auxiliary files
 .DS_Store
+
+dev_qald9_rel.json
+probbank-dbpedia.pkl
 qald_9.json
 query_edges.json
 generated_queries.json
