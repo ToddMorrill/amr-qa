@@ -134,8 +134,6 @@ class WikiAdderBlink:
         # Find the index of the parent in the graph.triples
         # The index technically doesn't matter but it may impact the print order
         parent_triples = [t for t in graph.triples if t[1] == ':instance' and t[0] == svar]
-        if len(parent_triples) != 1:
-            logger.error('%s Graph lookup error for %s returned %s' % (gid, svar, parent_triples))
         index = graph.triples.index(parent_triples[0])
         # Now add this to the graph just after the parent and add an empty epidata entry
         # string attributes are quoted
